@@ -355,13 +355,11 @@ function doSearch(keyword) {
 els.nextButton.addEventListener("click", () => {
   setCurrentIndex(currentIndex + 1);
   render();
-  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 els.prevButton.addEventListener("click", () => {
   setCurrentIndex(currentIndex - 1);
   render();
-  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 els.favButton.addEventListener("click", toggleFav);

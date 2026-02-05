@@ -265,8 +265,253 @@
       "questions": [
         {
           "id": "q-001",
-          "question": "请简单介绍一下您孩子的兴趣与学习习惯。",
-          "answer": "孩子对阅读与科学实验兴趣浓厚，习惯在作业前进行时间规划并主动复盘。"
+          "question": "您如何理解 TIS 的探究式学习（Inquiry-based Learning）？\nHow do you understand TIS’s inquiry-based learning?",
+          "answer": "逻辑 (Logic): 强调学习是一个提出问题并寻找答案的过程，而非被动接受知识。\nWe see learning as an active process of asking questions and seeking answers, rather than just passive absorption of facts."
+        },
+        {
+          "id": "q-002",
+          "question": "如果孩子回家说“老师今天没教新单词，而是让我们讨论如何保护海洋”，您会担心她的学术进度吗？\nIf your child says the teacher didn't teach \"new words\" but had them discuss ocean conservation instead, would you worry about academic progress?",
+          "answer": "逻辑 (Logic): 展现对超学科学习（Transdisciplinary learning）的信任，认为软技能比死记硬背更重要。\nNot at all. We value the development of critical thinking and real-world problem-solving skills over traditional rote memorization."
+        },
+        {
+          "id": "q-003",
+          "question": "您如何定义“学习成功”？\nHow do you define \"success\" in learning?",
+          "answer": "逻辑 (Logic): 成功是保持持续的好奇心和终身学习的能力，而不仅仅是高分。\nSuccess is when a child remains curious, asks meaningful questions, and develops the tools to be a lifelong learner."
+        },
+        {
+          "id": "q-004",
+          "question": "当孩子问出一个您也不知道答案的科学问题时，您通常会怎么做？\nWhat do you usually do when your child asks a scientific question you don’t know the answer to?",
+          "answer": "逻辑 (Logic): 展现共同探究的精神，而不是给出标准答案。\nI would say, \"That’s a great question! Let’s find out the answer together,\" and guide her through the research process."
+        },
+        {
+          "id": "q-005",
+          "question": "您对 IB PYP 课程中的“行动（Action）”这一环节如何理解？\nHow do you understand the \"Action\" component in the IB PYP curriculum?",
+          "answer": "逻辑 (Logic): 学习应该导致行为的改变，鼓励孩子将课堂知识应用到现实中解决问题。\nWe believe learning should inspire real-world change, encouraging children to take what they learn and apply it to make a positive impact."
+        },
+        {
+          "id": "q-006",
+          "question": "在 TIS，我们强调“学生自主性（Agency）”。您在生活中如何给孩子提供选择权？\nWe emphasize \"Student Agency.\" How do you provide choices for your child in daily life?",
+          "answer": "逻辑 (Logic): 展现尊重孩子的意见，在可控范围内给予决策权。\nWe involve her in age-appropriate decisions, such as planning weekend activities or choosing which skills she wants to focus on."
+        },
+        {
+          "id": "q-007",
+          "question": "如果孩子在完成一项探究任务时感到沮丧并想放弃，您会如何介入？\nIf your child feels frustrated with an inquiry task and wants to quit, how would you intervene?",
+          "answer": "逻辑 (Logic): 给予情感支持，但鼓励她寻找不同的解决方法，而非代劳。\nI would acknowledge her frustration but encourage her to look at the problem from a different angle rather than doing the work for her."
+        },
+        {
+          "id": "q-008",
+          "question": "您如何培养孩子的自律能力，而不是依靠外在的压力？\nHow do you foster self-discipline in your child instead of relying on external pressure?",
+          "answer": "逻辑 (Logic): 强调通过理解目标和建立常规来培养内在动力。\nWe focus on building intrinsic motivation by helping her understand the \"why\" behind her actions and establishing consistent routines."
+        },
+        {
+          "id": "q-009",
+          "question": "您认为 2 年级的孩子应该具备什么样的独立生活能力？\nWhat level of independence do you expect from a Grade 2 student?",
+          "answer": "逻辑 (Logic): 能够管理自己的学习用品，尝试解决简单的社交矛盾。\nWe expect her to be responsible for her own belongings and to begin taking initiative in solving minor daily challenges independently."
+        },
+        {
+          "id": "q-010",
+          "question": "当学校提倡让孩子自己制定学习计划时，作为家长您最担心什么？\nWhen the school encourages students to set their own learning goals, what is your biggest concern?",
+          "answer": "逻辑 (Logic): 诚实表达担忧，但展现对孩子潜力的信任和对学校系统的支持。\nMy only concern is her managing her time effectively, but I trust that with the school’s guidance, this is a vital skill for her future."
+        },
+        {
+          "id": "q-011",
+          "question": "作为一所“苹果杰出学校”，我们大量使用 iPad。您对孩子使用电子设备有什么看法？\nAs an Apple Distinguished School, we use iPads extensively. What is your view on screen time?",
+          "answer": "逻辑 (Logic): 视技术为“创作工具”而非“娱乐工具”，强调数字素养。\nWe see technology as a powerful tool for creation and research. We focus on teaching \"digital citizenship\" rather than just limiting screen time."
+        },
+        {
+          "id": "q-012",
+          "question": "您如何向孩子解释“多元化（Diversity）”这个概念？\nHow do you explain the concept of \"Diversity\" to your child?",
+          "answer": "逻辑 (Logic): 强调差异是让世界更精彩的原因，而非隔阂。\nWe explain that the world is like a colorful garden; it is the different flowers that make it beautiful and interesting."
+        },
+        {
+          "id": "q-013",
+          "question": "在一个没有任何主导国籍的学校里，您希望孩子学到什么？\nIn a school with no dominant nationality, what do you hope your child learns?",
+          "answer": "逻辑 (Logic): 学习跨文化沟通的弹性，打破成见。\nI hope she develops the cultural agility to collaborate with anyone, regardless of their background or language."
+        },
+        {
+          "id": "q-014",
+          "question": "您如何看待孩子在学校接触到与您家庭背景完全不同的价值观？\nHow do you feel about your child being exposed to values different from your family’s background?",
+          "answer": "逻辑 (Logic): 持开放包容态度，认为这是培养批判性思维的机会。\nWe welcome it. Exposure to different perspectives helps her develop her own critical thinking and a more inclusive worldview."
+        },
+        {
+          "id": "q-015",
+          "question": "您的家庭如何实践“可持续发展”的理念？\nHow does your family practice the concept of \"Sustainability\"?",
+          "answer": "逻辑 (Logic): 举具体的家庭习惯例子（回收、减少浪费）。\nWe practice it daily through simple actions like waste sorting and choosing sustainable products to show her we care for the planet."
+        },
+        {
+          "id": "q-016",
+          "question": "TIS 搬迁到高轮网关新校区后，您认为这对您的家庭意味着什么？\nWhat does the move to the Takanawa Gateway campus mean for your family?",
+          "answer": "逻辑 (Logic): 期待更先进的设施和与未来城市社区的连接。\nWe are excited about the innovative facilities and the opportunities for our child to learn in such a forward-looking urban environment."
+        },
+        {
+          "id": "q-017",
+          "question": "如果老师对您孩子的评价与您的观察不符，您会如何沟通？\nIf a teacher’s assessment differs from your observation, how would you communicate?",
+          "answer": "逻辑 (Logic): 保持协作和好奇的态度，寻求共同理解。\nI would schedule a meeting to listen to the teacher's perspective first, aiming to find a common ground for my child’s growth."
+        },
+        {
+          "id": "q-018",
+          "question": "您愿意如何参与 TIS 的家长社区？\nHow do you plan to contribute to the TIS parent community?",
+          "answer": "逻辑 (Logic): 展现主动性，提供具体的技能支持。\nI would love to share my expertise in [field] during career days or help organize multicultural community events."
+        },
+        {
+          "id": "q-019",
+          "question": "您认为国际学校最核心的价值是什么？\nWhat do you believe is the core value of an international school?",
+          "answer": "逻辑 (Logic): 建立连接世界的能力和对人类共同命运的关怀。\nThe core value is building the ability to connect globally and fostering a shared responsibility for our collective future."
+        },
+        {
+          "id": "q-020",
+          "question": "在 2 年级这个关键阶段，您对孩子的社交发展有什么期待？\nWhat are your expectations for your child's social development in Grade 2?",
+          "answer": "逻辑 (Logic): 能够建立更深层的友谊，学会倾听和有效的反馈。\nWe hope she learns to listen actively to others and give and receive feedback in a respectful, constructive way."
+        },
+        {
+          "id": "q-021",
+          "question": "您如何管理孩子在高度移动（高流动性）社区中的离别情绪？\nHow do you help your child manage the \"goodbyes\" in a highly mobile international community?",
+          "answer": "逻辑 (Logic): 强调友谊的质量而非长度，利用技术保持连接。\nWe teach her that while people move, true connections remain. We use technology to stay in touch and celebrate the global nature of her friendships."
+        },
+        {
+          "id": "q-022",
+          "question": "您对 TIS 的新校区智能管理系统有什么看法？\nWhat is your opinion on the smart management systems at the new campus?",
+          "answer": "逻辑 (Logic): 展现对数据赋能教育的支持，同时关注隐私。\nWe appreciate how data can personalize learning, as long as it’s used to empower students and respect their privacy."
+        },
+        {
+          "id": "q-023",
+          "question": "您在寻找什么样的教育合作伙伴？\nWhat kind of educational partner are you looking for?",
+          "answer": "逻辑 (Logic): 寻找一个透明、创新且能挑战孩子潜能的平台。\nWe are looking for a school that is transparent, innovative, and challenges our child to think beyond the classroom boundaries."
+        },
+        {
+          "id": "q-024",
+          "question": "为什么选择 TIS 而不是更传统的英式或美式学校？\nWhy TIS over a more traditional British or American school?",
+          "answer": "逻辑 (Logic): 追求更纯粹的探究氛围和真正的无国籍化国际感。\nBecause we value TIS’s pure inquiry approach and its truly diverse, non-nationalistic environment that prepares children for a globalized future."
+        },
+        {
+          "id": "q-025",
+          "question": "您有什么问题想问我们吗？\nDo you have any questions for us?",
+          "answer": "逻辑 (Logic): 询问关于学生如何参与社区项目或新校区的独特探究机会。\nHow will students be involved in the surrounding smart city projects at Takanawa Gateway this year？"
+        },
+        {
+          "id": "q-026",
+          "question": "如果你发现花园里有一只你从未见过的奇怪昆虫，你会怎么做？\nWhat would you do if you found a strange insect in the garden that you’ve never seen before?",
+          "answer": "逻辑 (Logic): 展示探究的意愿（观察、画下来、去查书）。\nI would look at it closely, maybe take a photo or draw it, and then go to the library to find out what it is!"
+        },
+        {
+          "id": "q-027",
+          "question": "你最想发明什么机器来帮助世界？\nIf you could invent a machine to help the world, what would it be?",
+          "answer": "逻辑 (Logic): 展示创造力和解决问题的意识。\nI want to invent a \"Ocean Cleaner\" that can pick up all the plastic in the sea and turn it into energy!"
+        },
+        {
+          "id": "q-028",
+          "question": "你最喜欢在 iPad 上做什么“酷”的事情？\nWhat is the \"coolest\" thing you like to do on an iPad?",
+          "answer": "逻辑 (Logic): 强调“创造”而非“消费”。\nI love making stop-motion movies with my toys or drawing digital art."
+        },
+        {
+          "id": "q-029",
+          "question": "告诉我一个你最近问妈妈或爸爸的“为什么”？\nTell me a \"Why\" question you asked your parents recently.",
+          "answer": "逻辑 (Logic): 展现活跃的思维。\nI asked, \"Why do some trees stay green in winter while others lose their leaves?\""
+        },
+        {
+          "id": "q-030",
+          "question": "你觉得学习最快乐的时刻是什么时候？\nWhen is the happiest moment for you during learning?",
+          "answer": "逻辑 (Logic): 强调发现新事物的快感。\nThe moment when I finally figure out how something works by myself!"
+        },
+        {
+          "id": "q-031",
+          "question": "如果你今天可以决定全班同学学什么，你会选什么主题？\nIf you could decide what the whole class learns today, what theme would you choose?",
+          "answer": "逻辑 (Logic): 展示个人兴趣和领导意识。\nI would choose \"Space Exploration\" because I want everyone to learn how astronauts live on Mars!"
+        },
+        {
+          "id": "q-032",
+          "question": "当你在做手工但材料不够了，你会怎么办？\nWhat do you do if you are making a craft but run out of materials?",
+          "answer": "逻辑 (Logic): 展示灵活性和资源整合能力。\nI would look for other things, like empty boxes or leaves, to see if I can use them instead."
+        },
+        {
+          "id": "q-033",
+          "question": "如果你觉得老师给的任务太简单了，你会对老师说什么？\nWhat would you say to the teacher if you feel a task is too easy?",
+          "answer": "逻辑 (Logic): 展现诚实沟通和挑战自我的意愿。\nI would say, \"Teacher, I’ve finished this. Can I try something more challenging now?\""
+        },
+        {
+          "id": "q-034",
+          "question": "你更喜欢自己选书看，还是让老师帮你选？\nDo you prefer picking your own books or having the teacher pick for you?",
+          "answer": "逻辑 (Logic): 展示自主选择的偏好。\nI like picking my own because I know which topics make me the most curious!"
+        },
+        {
+          "id": "q-035",
+          "question": "如果你和朋友在玩游戏时意见不合，你会怎么做？\nWhat would you do if you and your friend disagree while playing a game?",
+          "answer": "逻辑 (Logic): 展现协商和解决冲突的能力。\nI would say, \"Let’s listen to each other's ideas and maybe combine them to make a new game!\""
+        },
+        {
+          "id": "q-036",
+          "question": "如果你有一个从很远国家来的新同学，他不会说你的语言，你怎么跟他交朋友？\nIf you have a new classmate from far away who doesn't speak your language, how will you befriend them?",
+          "answer": "逻辑 (Logic): 展现超越语言的同理心。\nI would use smiles, gestures, and show him around the classroom. We can play with Legos together because you don't need words for that!"
+        },
+        {
+          "id": "q-037",
+          "question": "你觉得来自不同国家的朋友在一起玩有什么有趣的地方？\nWhat is fun about having friends from many different countries?",
+          "answer": "逻辑 (Logic): 展现对差异的正面认可。\nIt’s fun because we can learn about different games, different food, and even different ways to say \"Hello!\""
+        },
+        {
+          "id": "q-038",
+          "question": "你在小组作业中通常扮演什么角色？\nWhat role do you usually take in group work?",
+          "answer": "逻辑 (Logic): 展现自我认知（如：记录员、组织者、创意者）。\nI like to be the \"Idea Person\" who thinks of fun things to do, but I also like to help everyone stay on task."
+        },
+        {
+          "id": "q-039",
+          "question": "当别人在说话时，你会怎么做？\nWhat do you do when someone else is speaking?",
+          "answer": "逻辑 (Logic): 展示良好的倾听习惯。\nI look at them and listen carefully, so I can understand what they are thinking."
+        },
+        {
+          "id": "q-040",
+          "question": "如果你做错了事，你会怎么对老师或同学说？\nWhat would you say if you made a mistake?",
+          "answer": "逻辑 (Logic): 展现诚实和修补关系的意愿。\nI would say \"I'm sorry, I made a mistake. How can I fix it?\""
+        },
+        {
+          "id": "q-041",
+          "question": "你觉得未来的学校会是什么样子的？\nWhat do you think schools will look like in the future?",
+          "answer": "逻辑 (Logic): 展示想象力和对科技的积极预判。\nI think there will be holograms and robots that help us do science experiments!"
+        },
+        {
+          "id": "q-042",
+          "question": "除了看视频，你觉得 iPad 还能帮我们学到什么？\nBesides watching videos, what else can an iPad help us learn?",
+          "answer": "逻辑 (Logic): 展现对工具多功能的认识。\nIt helps us research things, record our voices for stories, and even code simple games."
+        },
+        {
+          "id": "q-043",
+          "question": "你喜欢在室外探究还是在室内学习？\nDo you prefer exploring outdoors or learning indoors?",
+          "answer": "逻辑 (Logic): 展现对自然的观察力。\nI love exploring outdoors because you can find real things like plants and rocks to study."
+        },
+        {
+          "id": "q-044",
+          "question": "如果你可以去世界上任何一个地方观察一种动物，你想去哪？\nIf you could go anywhere in the world to observe an animal, where would you go?",
+          "answer": "逻辑 (Logic): 展现对全球自然知识的了解。\nI would go to the Amazon rainforest to see how colorful parrots interact with each other!"
+        },
+        {
+          "id": "q-045",
+          "question": "你觉得科学家每天都在做什么？\nWhat do you think scientists do every day?",
+          "answer": "逻辑 (Logic): 展现对科学过程（实验、观察）的理解。\nThey ask questions, do experiments, and look at data to find out new things about the world."
+        },
+        {
+          "id": "q-046",
+          "question": "你为什么想来这所新校区上学？\nWhy do you want to come to this new campus?",
+          "answer": "逻辑 (Logic): 展现对新环境的兴奋和期待。\nBecause it looks like a future city, and I want to use all the cool labs and libraries here!"
+        },
+        {
+          "id": "q-047",
+          "question": "如果你在学校迷路了，你会怎么做？\nWhat would you do if you got lost in school?",
+          "answer": "逻辑 (Logic): 展现解决问题的镇定。\nI would find a teacher or a big student and ask, \"Can you help me find my classroom, please?\""
+        },
+        {
+          "id": "q-048",
+          "question": "告诉我一个你最喜欢的探究项目。\nTell me about your favorite inquiry project.",
+          "answer": "逻辑 (Logic): 展现对 IB UOI 的记忆和热情。\nI loved learning about \"How things move.\" We made paper planes to see which wing shape flies the furthest!"
+        },
+        {
+          "id": "q-049",
+          "question": "你有什么问题想问面试官吗？\nDo you have any questions for the interviewer?",
+          "answer": "逻辑 (Logic): 展现好奇心。\nWhat is your favorite part of this new school building?"
+        },
+        {
+          "id": "q-050",
+          "question": "用三个词形容“最好的学校”应该是什么样的？\nUse three words to describe \"the best school.\"",
+          "answer": "逻辑 (Logic): 展现其价值观（如：Fun, Creative, Global）。\nFun, Brave, and Full of Questions!"
         }
       ]
     },
@@ -277,8 +522,253 @@
       "questions": [
         {
           "id": "q-001",
-          "question": "Why do you think a British curriculum is a good fit for your child?",
-          "answer": "We value a balanced education that encourages curiosity, communication, and independent thinking, which aligns well with the British curriculum."
+          "question": "在众多课程体系中，为什么您认为英国国家课程（ENC）最适合您的孩子？\nWhy do you believe the English National Curriculum (ENC) is the best fit for your child among other systems?",
+          "answer": "逻辑 (Logic): 展示对英式教育严谨性、结构化以及未来衔接 A-Levels 优势的认可。\nWe value the structured rigor of the British system and its proven track record in preparing students for global excellence through A-Levels."
+        },
+        {
+          "id": "q-002",
+          "question": "BST 追求“不设限的卓越”。您对孩子在 Year 3 的学术表现有何具体期待？\nBST strives for \"Excellence without Limits.\" What are your specific academic expectations for your child in Year 3?",
+          "answer": "逻辑 (Logic): 强调平衡。既希望有扎实的读写算能力，也希望培养独立思考的习惯。\nWe hope she develops strong literacy and numeracy skills while fostering a mindset that embraces intellectual challenges."
+        },
+        {
+          "id": "q-003",
+          "question": "如果您发现孩子的数学进度超前或落后于班级平均水平，您会如何配合学校？\nIf you find your child is ahead of or behind the class average in math, how would you collaborate with the school?",
+          "answer": "逻辑 (Logic): 展现对差异化教学（Differentiation）的理解，表达对学校专业判断的信任。\nWe trust the school’s differentiated approach and would work closely with the teacher to provide appropriate support or extension at home."
+        },
+        {
+          "id": "q-004",
+          "question": "您如何看待 A-Levels 与 IB 课程在大学申请中的差异？\nHow do you view the differences between A-Levels and IB in terms of university applications?",
+          "answer": "逻辑 (Logic): 展现对 A-Levels 能够让学生深度钻研感兴趣学科这一特性的偏好。\nWe appreciate the depth and specialization that A-Levels offer, allowing students to excel in subjects they are truly passionate about."
+        },
+        {
+          "id": "q-005",
+          "question": "在英式教育中，作业不仅是巩固知识，更是培养纪律。您如何管理孩子的家庭学习时间？\nIn British education, homework is about discipline as much as knowledge. How do you manage your child’s home learning?",
+          "answer": "逻辑 (Logic): 展示有规律的家庭环境和对孩子学习习惯的引导。\nWe maintain a consistent routine that balances focused study time with relaxation, ensuring she develops self-discipline early on."
+        },
+        {
+          "id": "q-006",
+          "question": "BST 非常看重“韧性（Resilience）”。请分享一次您引导孩子面对挫折的经历。\nBST values resilience. Please share a time you guided your child through a setback.",
+          "answer": "逻辑 (Logic): 展示父母不急于“救火”，而是引导孩子分析问题并再次尝试的态度。\nWhen she struggled with a difficult task, I encouraged her to analyze what went wrong and try a different approach instead of giving up."
+        },
+        {
+          "id": "q-007",
+          "question": "您如何看待英式传统的纪律观和礼仪要求？\nWhat is your view on traditional British views on discipline and etiquette?",
+          "answer": "逻辑 (Logic): 表达对礼貌、准时、整洁等价值观的高度认同。\nWe believe that good manners and respect for rules are essential foundations for a child’s character and future social success."
+        },
+        {
+          "id": "q-008",
+          "question": "如果您的孩子在学校违反了规定被惩罚，您的第一反应是什么？\nIf your child were disciplined at school for breaking a rule, what would be your first reaction?",
+          "answer": "逻辑 (Logic): 展现家校统一战线，先了解事实并支持学校的纪律教育。\nMy first reaction would be to listen to the school’s perspective and use it as a learning moment to help her understand the importance of boundaries."
+        },
+        {
+          "id": "q-009",
+          "question": "您认为在这个竞争激烈的世界，孩子最需要的心理品质是什么？\nWhat psychological quality do you think a child needs most in this competitive world?",
+          "answer": "逻辑 (Logic): 紧扣 BST 的核心：韧性（Resilience）和适应能力。\nA strong sense of resilience—the ability to bounce back from failure with even greater determination."
+        },
+        {
+          "id": "q-010",
+          "question": "您如何培养孩子的集体荣誉感和团队合作精神？\nHow do you cultivate a sense of collective honor and teamwork in your child?",
+          "answer": "逻辑 (Logic): 认可学院制（House System）的价值，强调个人对团队的责任。\nWe encourage her to participate in team activities where she learns that individual effort contributes to the group’s shared success."
+        },
+        {
+          "id": "q-011",
+          "question": "BST 提供丰富的课外活动（ECA）。您认为音乐、艺术和体育在教育中占什么位置？\nBST offers extensive ECAs. What role do you think music, arts, and sports play in education?",
+          "answer": "逻辑 (Logic): 认为它们是“必修”而非“选修”，是培养全面人格的关键。\nThey are integral to a holistic education, helping to develop creativity, physical health, and emotional intelligence beyond academics."
+        },
+        {
+          "id": "q-012",
+          "question": "我们的学生经常要在全校面前演讲或表演，您如何准备孩子的自信心？\nOur students often perform or speak in front of the school. How do you prepare your child’s confidence?",
+          "answer": "逻辑 (Logic): 鼓励表达，提供各种展示的机会，不畏惧聚光灯。\nWe encourage her to share her ideas at home and provide opportunities for her to perform in front of family and friends to build her public speaking comfort."
+        },
+        {
+          "id": "q-013",
+          "question": "您对 BST 的户外教育（Outdoor Education）项目持什么态度？\nWhat is your attitude toward BST’s outdoor education programs?",
+          "answer": "逻辑 (Logic): 全力支持，认为大自然是培养勇气和生存能力的课堂。\nWe fully support it; we believe that outdoor challenges are vital for building character, teamwork, and a respect for nature."
+        },
+        {
+          "id": "q-014",
+          "question": "如果您的孩子在某项兴趣（如钢琴或足球）中遇到瓶颈想放弃，您会怎么做？\nIf your child wants to quit a hobby like piano or football due to a plateau, what would you do?",
+          "answer": "逻辑 (Logic): 强调坚持的价值，引导其度过瓶颈期，而非轻易妥协。\nI would encourage her to persevere through the \"dip,\" helping her realize that real mastery comes after overcoming difficult patches."
+        },
+        {
+          "id": "q-015",
+          "question": "您如何评价 BST 麻布台之丘新校区的设施对孩子成长的影响？\nHow do you evaluate the impact of BST’s Azabudai Hills facilities on your child’s growth?",
+          "answer": "逻辑 (Logic): 欣赏顶级的城市资源与现代教育空间的结合。\nThe world-class facilities provide an inspiring environment that encourages students to aim high and explore their full potential in the heart of Tokyo."
+        },
+        {
+          "id": "q-016",
+          "question": "作为家长，您能为 BST 的社区（如 PTA）带来什么贡献？\nAs a parent, what can you contribute to the BST community (e.g., PTA)?",
+          "answer": "逻辑 (Logic): 展现具体技能或参与意愿，强调对学校活动的积极支持。\nI would love to offer my skills in [your skill] and actively support school events to help strengthen our community spirit."
+        },
+        {
+          "id": "q-017",
+          "question": "您如何定义一个“理想的家校关系”？\nHow do you define an \"ideal home-school relationship\"?",
+          "answer": "逻辑 (Logic): 透明沟通、互相信任、目标一致。\nAn ideal relationship is based on mutual trust and open communication, where both sides work as partners for the child’s best interests."
+        },
+        {
+          "id": "q-018",
+          "question": "如果孩子反映在学校感到不快乐，您会采取什么步骤？\nIf your child reports being unhappy at school, what steps would you take?",
+          "answer": "逻辑 (Logic): 冷静观察，及时、建设性地与班主任（Class Teacher）沟通。\nI would first talk to my child to understand the root cause, then promptly reach out to the class teacher to find a constructive solution together."
+        },
+        {
+          "id": "q-019",
+          "question": "BST 是一个非常国际化但有浓厚英国色彩的社区。您如何确保您的家庭能融入其中？\nBST is a highly international yet distinctly British community. How will your family ensure a good fit?",
+          "answer": "逻辑 (Logic): 展示对多元文化的包容和对英式校园文化的向往。\nWe embrace diversity and look forward to participating in British traditions while sharing our own cultural background with the community."
+        },
+        {
+          "id": "q-020",
+          "question": "您如何平衡孩子的社交生活与学业压力？\nHow do you balance your child’s social life and academic pressure?",
+          "answer": "逻辑 (Logic): 强调高质量的社交是减压阀，也是学习社交技巧的途径。\nWe believe a healthy social life supports academic success by building the emotional well-being and social skills she needs to thrive."
+        },
+        {
+          "id": "q-021",
+          "question": "为什么选择 BST 而不是东京的其他国际学校？\nWhy choose BST over other international schools in Tokyo?",
+          "answer": "逻辑 (Logic): 结合 BST 的学术传统、麻布台校区优势以及对英式精英教育的向往。\nWe are drawn to BST’s perfect blend of traditional British values and its modern, ambitious vision for education in Tokyo."
+        },
+        {
+          "id": "q-022",
+          "question": "您希望您的女儿在毕业时具备哪三个核心特质？\nWhat three core qualities do you hope your daughter possesses by the time she graduates?",
+          "answer": "逻辑 (Logic): 如：Resilience (韧性), Integrity (正直), Ambition (抱负)。\nI hope she is resilient in the face of challenges, possesses high integrity, and has the ambition to make a positive global impact."
+        },
+        {
+          "id": "q-023",
+          "question": "如果我们要您的前任校长描述您的家庭，您觉得他会怎么说？\nIf we asked your previous principal to describe your family, what do you think they would say?",
+          "answer": "逻辑 (Logic): 展示一个积极参与、支持学校工作且重视教育的家庭形象。\nThey would likely describe us as a supportive and engaged family that values education and maintains a strong partnership with the school."
+        },
+        {
+          "id": "q-024",
+          "question": "您对孩子未来的高等教育有初步规划吗？\nDo you have any preliminary plans for your child’s future higher education?",
+          "answer": "逻辑 (Logic): 表达对世界顶尖大学（如 G5 或常春藤）的愿景，展现学术志向。\nWe aspire for her to attend a world-class university, and we believe the foundation laid at BST will be crucial for that goal."
+        },
+        {
+          "id": "q-025",
+          "question": "您还有什么想要向我们了解的吗？\nDo you have any questions for us?",
+          "answer": "逻辑 (Logic): 询问关于如何支持 Year 3 的学术过渡或 House System 的具体运作。\nHow does the school specifically support the transition into Key Stage 2 to ensure students maintain their confidence?"
+        },
+        {
+          "id": "q-026",
+          "question": "你能向我介绍一下你自己吗？\nCould you introduce yourself to me?",
+          "answer": "逻辑 (Logic): 考察流利度、自信心以及基本的自我认知。\n\"My name is [Name], I am seven years old. I love reading and playing football, and I am very excited to be here.\""
+        },
+        {
+          "id": "q-027",
+          "question": "如果你需要老师的帮助，你会怎么说？\nIf you need help from your teacher at school, what would you do or say?",
+          "answer": "逻辑 (Logic): 考察礼仪（Politeness）和社交沟通技巧。\n\"I would raise my hand, wait for the teacher, and say: 'Excuse me, could you please help me with this task?'\""
+        },
+        {
+          "id": "q-028",
+          "question": "你觉得“有礼貌（Polite）”是什么意思？\nWhat does it mean to be \"polite\"?",
+          "answer": "逻辑 (Logic): 考察对社会价值观和尊重的理解。\n\"It means saying 'please' and 'thank you,' listening when others talk, and being kind to everyone.\""
+        },
+        {
+          "id": "q-029",
+          "question": "见到面试官时，你会如何打招呼？\nHow should you greet the interviewer today?",
+          "answer": "逻辑 (Logic): 考察第一印象、眼神交流和礼貌态度。\n(Child should look at the interviewer, smile, and say: \"Good morning/afternoon, it's nice to meet you.\")"
+        },
+        {
+          "id": "q-030",
+          "question": "你最喜欢你的哪一个朋友？为什么？\nWho is your best friend? Why do you like them?",
+          "answer": "逻辑 (Logic): 考察对友谊品质的理解（如：诚实、好玩、爱帮助人）。\n\"I like my friend [Name] because she is very kind and we always have fun playing games together at break time.\""
+        },
+        {
+          "id": "q-031",
+          "question": "你最喜欢的科目是什么？为什么？\nWhat is your favorite subject at school? Why?",
+          "answer": "逻辑 (Logic): 考察对学科的热情以及逻辑解释能力。\n\"I love Science because I like doing experiments and finding out how the world works.\""
+        },
+        {
+          "id": "q-032",
+          "question": "你喜欢读书吗？最近读过哪本让你印象深刻的书？\nDo you like reading? What is a book you’ve read recently that you enjoyed?",
+          "answer": "逻辑 (Logic): 考察阅读水平（Literacy）和记忆力。\n\"Yes, I love reading. I just finished [Book Name], and my favorite part was when the main character solved the mystery.\""
+        },
+        {
+          "id": "q-033",
+          "question": "遇到很难的数学题时，你会怎么做？\nWhat do you do when you face a very difficult math problem?",
+          "answer": "逻辑 (Logic): 考察面对挑战的态度（Resilience）。\n\"I would try it again, maybe draw a picture to help, and if I’m still stuck, I’ll ask my teacher for a hint.\""
+        },
+        {
+          "id": "q-034",
+          "question": "你觉得写字和算术哪个更有趣？\nDo you think writing or math is more fun?",
+          "answer": "逻辑 (Logic): 考察个人偏好，并观察其如何为自己的选择辩护。\n\"I like writing stories because I can use my imagination to create new worlds and characters.\""
+        },
+        {
+          "id": "q-035",
+          "question": "如果你可以教全班同学一件事情，你会教什么？\nIf you could teach the whole class one thing, what would it be?",
+          "answer": "逻辑 (Logic): 考察自信心和对自身特长的认知。\n\"I would teach them how to play chess because it’s a great game that makes your brain think hard.\""
+        },
+        {
+          "id": "q-036",
+          "question": "如果你在运动会上输了比赛，你会怎么做？\nIf you lose a race on Sports Day, what would you do?",
+          "answer": "逻辑 (Logic): 考察体育精神（Sportsmanship）和情绪控制。\n\"I would feel a bit sad, but I would go and say 'Well done' to the winner because they ran a great race.\""
+        },
+        {
+          "id": "q-037",
+          "question": "告诉我一件你练习了很久才学会的事情。\nTell me about something that took you a long time to learn.",
+          "answer": "逻辑 (Logic): 考察毅力（Perseverance）和成就感。\n\"It took me a long time to learn how to ride a bike without training wheels, but I kept practicing every weekend until I did it.\""
+        },
+        {
+          "id": "q-038",
+          "question": "当老师指出你的作业里有错误时，你会怎么想？\nHow do you feel and think when your teacher corrects a mistake in your work?",
+          "answer": "逻辑 (Logic): 考察成长型思维（Growth Mindset）。\n\"I think it’s good because now I know how to do it correctly next time. Mistakes help me learn.\""
+        },
+        {
+          "id": "q-039",
+          "question": "如果你觉得一项任务很难，你会害怕吗？\nAre you afraid of doing something difficult? Why?",
+          "answer": "逻辑 (Logic): 考察勇于尝试的精神。\n\"No, I’m not afraid because difficult things are like a puzzle, and it feels amazing when you finally finish them.\""
+        },
+        {
+          "id": "q-040",
+          "question": "如果你画的一幅画被不小心弄脏了，你会怎么办？\nIf your drawing gets a smudge on it by accident, what would you do?",
+          "answer": "逻辑 (Logic): 考察灵活性和解决问题的能力。\n\"I would try to turn the smudge into something else, like a cloud or a tree, and keep drawing!\""
+        },
+        {
+          "id": "q-041",
+          "question": "你喜欢体育课（PE）吗？你最擅长什么运动？\nDo you like PE? What sport are you best at?",
+          "answer": "逻辑 (Logic): 考察体育参与度和身体协调意识。\n\"Yes, I love PE! I’m quite good at football because I enjoy running and being part of a team.\""
+        },
+        {
+          "id": "q-042",
+          "question": "你会弹奏乐器或者唱歌吗？\nDo you play an instrument or do you like to sing?",
+          "answer": "逻辑 (Logic): 考察艺术修养（Musicality）。\n\"I play the piano. My favorite song to play is [Song Name] because it sounds very happy.\""
+        },
+        {
+          "id": "q-043",
+          "question": "如果我们要举行一场戏剧表演，你想演什么角色？\nIf we were to have a play, what role would you like to act?",
+          "answer": "逻辑 (Logic): 考察创造力和表达欲望。\n\"I would like to be the hero of the story because I want to show everyone how to be brave.\""
+        },
+        {
+          "id": "q-044",
+          "question": "你在周末通常喜欢做什么？\nWhat do you usually like to do on weekends?",
+          "answer": "逻辑 (Logic): 考察生活丰富度和兴趣广度。\n\"I like going to the park with my family, riding my scooter, and sometimes we go to a museum together.\""
+        },
+        {
+          "id": "q-045",
+          "question": "你喜欢在户外玩还是在教室里？为什么？\nDo you prefer playing outdoors or staying in the classroom? Why?",
+          "answer": "逻辑 (Logic): 考察对环境的偏好（BST非常注重户外教育）。\n\"I love playing outdoors because I like fresh air and I can run around and explore things in nature.\""
+        },
+        {
+          "id": "q-046",
+          "question": "你知道 BST 有“学院制（House System）”吗？你希望你的学院获胜吗？\nDo you know about the \"House System\"? Do you want your House to win first place?",
+          "answer": "逻辑 (Logic): 考察集体意识和竞争意识。\n\"Yes! I want my House to win, but the most important thing is that we all try our best and help each other.\""
+        },
+        {
+          "id": "q-047",
+          "question": "当你看到同学在哭，你会怎么办？\nWhat would you do if you saw a classmate crying?",
+          "answer": "逻辑 (Logic): 考察同理心（Empathy）。\n\"I would go to them, ask if they are okay, and maybe get a teacher if they are very sad.\""
+        },
+        {
+          "id": "q-048",
+          "question": "如果大家都在教室里吵闹，你会怎么做？\nWhat would you do if everyone else was being noisy in the classroom?",
+          "answer": "逻辑 (Logic): 考察自律（Self-discipline）和潜在的领导力。\n\"I would stay quiet and follow the rules, and maybe remind my friends that we need to listen to the teacher.\""
+        },
+        {
+          "id": "q-049",
+          "question": "你对来到 BST 上学最期待的事情是什么？\nWhat are you most excited about when you think of coming to BST?",
+          "answer": "逻辑 (Logic): 考察对新环境的积极向往。\n\"I’m excited to make new friends from different countries and use the amazing new library at Azabudai Hills!\""
+        },
+        {
+          "id": "q-050",
+          "question": "你有什么问题想问我（面试官）吗？\nDo you have any questions for me?",
+          "answer": "逻辑 (Logic): 考察好奇心和主动提问的能力。\n\"What is your favorite tradition at this school?\" 或者 \"What kind of clubs can I join in Year 3?\""
         }
       ]
     }
