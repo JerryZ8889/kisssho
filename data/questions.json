@@ -1,10 +1,286 @@
 {
-  "version": 1,
-  "questions": [
+  "version": 2,
+  "schools": [
     {
-      "id": "q-001",
-      "question": "请问您为何选择我们清泉女校，而不是男女混合的学校；",
-      "answer": "我认可你们学校的教育理念，培养优秀的女性，这是最关键的。而且你们有悠久的教学历史，这些是我的首要考虑因素，是否男女混合，是我考虑中排位比较靠后的。"
+      "id": "school-1",
+      "name": "Seisen International School",
+      "menuName": "清泉女校",
+      "questions": [
+        {
+          "id": "q-001",
+          "question": "请问您如何理解清泉的校训“Learning to Love”？\nHow do you understand our motto, \"Learning to Love\"?",
+          "answer": "逻辑 (Logic): 强调爱是学习的动力。先学会爱他人、爱世界，才会产生探索世界的动力。\nWe believe love is the foundation of motivation. When a child learns to care for others and the world, they naturally develop a desire to explore and learn about it."
+        },
+        {
+          "id": "q-002",
+          "question": "在家中，您是如何通过日常生活细节培养孩子的同情心（Compassion）的？\nHow do you cultivate compassion in your child through daily life?",
+          "answer": "逻辑 (Logic): 举具体的“小事”。比如带孩子观察他人的需要，或在家人疲惫时引导孩子关心。\nWe focus on small gestures, like encouraging her to notice when a friend is left out or teaching her to offer a glass of water to a tired family member."
+        },
+        {
+          "id": "q-003",
+          "question": "您对孩子参与宗教文化活动（如圣诞弥撒）持什么态度？\nWhat is your attitude toward your child participating in religious events like Christmas Mass?",
+          "answer": "逻辑 (Logic): 表达尊重与拥抱。强调重视普世价值、仪式感和敬畏心。\nWe respect and embrace it. We value universal values like peace and kindness, and we want our child to grow up in an environment with a sense of wonder and respect."
+        },
+        {
+          "id": "q-004",
+          "question": "您如何看待“社会服务（Service Learning）”在小学教育中的重要性？\nHow do you see the importance of \"Service Learning\" in primary education?",
+          "answer": "逻辑 (Logic): 强调这是“公民责任”而非任务。让孩子明白自己是世界的一部分。\nIt’s a civic responsibility. We want her to understand that she is part of a larger global community and has a duty to help make it better."
+        },
+        {
+          "id": "q-005",
+          "question": "如果孩子在学校因为坚持公平而受到了“委屈”，您会如何引导她？\nHow would you guide her if she felt \"wronged\" at school for standing up for fairness?",
+          "answer": "逻辑 (Logic): 表现出理性和引导。支持坚持正义，但教导非暴力、有尊严的沟通。\nI would support her integrity but guide her to express her feelings through non-violent and dignified communication rather than just complaining."
+        },
+        {
+          "id": "q-006",
+          "question": "为什么您认为女校适合您女儿现阶段的发展？\nWhy do you believe an all-girls education is right for your daughter now?",
+          "answer": "逻辑 (Logic): 强调“安全感”与“去标签化”。女孩能更勇敢地尝试STEM和体育，建立核心自信。\nIt provides a \"safe space\" free from gender stereotypes, allowing her to confidently explore subjects like STEM and sports and build her core self-esteem."
+        },
+        {
+          "id": "q-007",
+          "question": "您希望女儿在清泉获得哪些在共学制学校可能无法获得的特质？\nEN: What traits do you hope she gains at Seisen that she might not get in a co-ed school?",
+          "answer": "逻辑 (Logic): 强调“Voice（发声）”。所有领导岗位都由女孩担任，培养不设限的人生观。\nI hope she finds her \"Voice.\" In an all-girls school, every leadership role is held by a girl, which fosters a limitless mindset."
+        },
+        {
+          "id": "q-008",
+          "question": "您认为“女性领导力”的核心是什么？\nWhat do you think is the core of \"Female Leadership\"?",
+          "answer": "逻辑 (Logic): 强调“服务型领导力（Servant Leadership）”。通过激励和帮助他人来达成目标。\nWe believe it is \"Servant Leadership\"—leading by inspiring and helping others, focusing on empathy and collaboration rather than just authority."
+        },
+        {
+          "id": "q-009",
+          "question": "当女儿表现出不自信或退缩时，您通常会用什么方式鼓励她？\nHow do you encourage her when she feels insecure or shy?",
+          "answer": "逻辑 (Logic): 强调“陪伴与接纳”。鼓励进行“微小的尝试（Small Steps）”，而非强迫。\nWe focus on acceptance and presence. I encourage her to take \"small steps\" and acknowledge her efforts rather than pressuring her to be brave instantly."
+        },
+        {
+          "id": "q-010",
+          "question": "清泉采用IB PYP，意味着可能没有大量的机械作业，您对此有何看法？\nWe use the IB PYP, which means less rote homework. What is your view on this?",
+          "answer": "逻辑 (Logic): 表达赞同。重点应放在“深度思考”和“批判性思维”上。\nWe fully agree. We believe education should focus on deep thinking and critical analysis rather than repetitive drills."
+        },
+        {
+          "id": "q-011",
+          "question": "如果孩子在某个探究课题中进度较慢，您会介入干预还是等待她的自主觉醒？\nIf your child progresses slowly in an inquiry project, do you intervene or wait for her own discovery?",
+          "answer": "逻辑 (Logic): 强调“成长型思维”。支持探究过程，愿意给孩子留白，相信自主探索。\nWe believe in a \"growth mindset.\" We are willing to give her the space to discover answers at her own pace, as self-found knowledge is more lasting."
+        },
+        {
+          "id": "q-012",
+          "question": "您如何平衡孩子在艺术、体育与学术之间的精力分配？\nHow do you balance arts, sports, and academics?",
+          "answer": "逻辑 (Logic): 认为它们是互补的。艺术培养审美，体育培养韧性，是成功的基石。\nWe see them as complementary. Arts build aesthetics and sports build resilience, both of which are essential foundations for academic success."
+        },
+        {
+          "id": "q-013",
+          "question": "您对2年级孩子的英语读写能力有怎样的预期？\nWhat are your expectations for your Grade 2 child's English literacy?",
+          "answer": "逻辑 (Logic): 避开考级。重点是：培养终身阅读的热爱，以及清晰表达想法的自信。\nOur goal isn't just grades; we want her to develop a lifelong love for reading and the confidence to express her thoughts clearly in English."
+        },
+        {
+          "id": "q-014",
+          "question": "请描述一下您女儿最让您感到骄傲的一个非学术方面的闪光点。\nPlease describe a non-academic moment that made you proud of your daughter.",
+          "answer": "逻辑 (Logic): 讲一个关于“坚韧”或“善良”的小故事。\nI was proud when she insisted on finishing a complex puzzle even after it broke, showing her resilience and patience."
+        },
+        {
+          "id": "q-015",
+          "question": "您的家庭在周末通常会有哪些共同参与的活动？\nWhat activities does your family usually do together on weekends?",
+          "answer": "逻辑 (Logic): 强调“连接”。如自然探索、亲子阅读或志愿者活动。\nWe enjoy \"connecting\"—whether it's exploring nature, shared reading time, or helping out in community volunteer events."
+        },
+        {
+          "id": "q-016",
+          "question": "在家庭决策中，您会给孩子多大的发言权？\nHow much \"voice\" do you give your child in family decisions?",
+          "answer": "逻辑 (Logic): 强调“尊重”。在合适范围内给选择权，培养“Agency（自主性）”。\nWe value her input and give her choices within age-appropriate limits to help develop her sense of \"agency\" and decision-making skills."
+        },
+        {
+          "id": "q-017",
+          "question": "当孩子面对失败（比如比赛输了）时，您的第一句话通常会说什么？\nWhat is the first thing you say when your child faces failure?",
+          "answer": "逻辑 (Logic): “没关系，我们学到了什么？”看作学习机会。\nI usually say, \"It’s okay; what did we learn from this?\" We view failure as a valuable learning opportunity rather than an endpoint."
+        },
+        {
+          "id": "q-018",
+          "question": "您的孩子在阅读方面有什么偏好？您如何参与她的阅读生活？\nWhat are your child's reading preferences, and how do you participate?",
+          "answer": "逻辑 (Logic): 提到会讨论书中的情感和价值观。\nShe loves stories about friendship. We read together and discuss the characters' feelings and choices, rather than just finishing the story."
+        },
+        {
+          "id": "q-019",
+          "question": "您愿意为学校的SPA（家长会）贡献哪些时间或技能？\nHow would you like to contribute to our SPA (Parents Association)?",
+          "answer": "逻辑 (Logic): 态度积极，根据专业（设计、财务、活动策划）提出意愿。\nI am very eager to help. Given my background in [Design/Finance], I would love to support school events or creative projects."
+        },
+        {
+          "id": "q-020",
+          "question": "如果学校需要家长志愿者参与校外教学活动，您的支持意愿如何？\nAre you willing to volunteer for school field trips or activities?",
+          "answer": "逻辑 (Logic): 展现协作精神。\nAbsolutely. We value the partnership between home and school and see parent involvement as a vital part of a child's education."
+        },
+        {
+          "id": "q-021",
+          "question": "您如何处理与其他家长之间可能出现的育儿观念分歧？\nHow do you handle disagreements with other parents regarding parenting?",
+          "answer": "逻辑 (Logic): 建设性沟通，尊重差异，维护社区和谐。\nI believe in constructive communication and respecting different perspectives while seeking common ground to maintain a harmonious community."
+        },
+        {
+          "id": "q-022",
+          "question": "描述一次您与孩子学校老师成功合作解决问题的经历。\nDescribe a time you successfully worked with a teacher to solve a problem.",
+          "answer": "逻辑 (Logic): 展示讲道理、配合学校的态度。\nProvide a brief example of open communication with a previous teacher to help your child overcome a specific challenge."
+        },
+        {
+          "id": "q-023",
+          "question": "您对未来五年内女儿在清泉的成长有什么具体的愿景？\nWhat is your 5-year vision for your daughter’s growth at Seisen?",
+          "answer": "逻辑 (Logic): 希望她成为自信、有同理心、能独立思考且乐于奉献的“清泉女孩”。\nI hope to see her blossom into a confident, empathetic, and independent young woman who is eager to serve her community."
+        },
+        {
+          "id": "q-024",
+          "question": "您认为家长在孩子2年级这个阶段，最重要的角色是什么？\nWhat do you think is the most important role for a parent during Grade 2?",
+          "answer": "逻辑 (Logic): “脚手架（Scaffolding）”。支持与放手的平衡。\nTo be a \"Scaffolding\"—providing the necessary support when she faces challenges while learning when to step back and let her grow independently."
+        },
+        {
+          "id": "q-025",
+          "question": "为什么在东京这么多优秀的国际学校中，清泉是您的第一选择？\nWhy is Seisen your first choice among schools in Tokyo?",
+          "answer": "逻辑 (Logic): 结合“爱与关怀”氛围和价值观高度契合。\nBecause of Seisen’s unique culture of \"Love and Care.\" We are looking for a community that aligns with our family values, not just an academic institution."
+        },
+        {
+          "id": "q-026",
+          "question": "如果让你用三个词来形容你自己，你会选哪三个？\nIf you could use three words to describe yourself, which ones would you choose?",
+          "answer": "引导 (Tip): 建议包含性格、学习和行动三个维度。\nI would say Kind, Curious, and Helpful."
+        },
+        {
+          "id": "q-027",
+          "question": "你最喜欢自己的地方是什么？\nWhat is your favorite thing about yourself?",
+          "answer": "引导 (Tip): 展现思维深度，解释“为什么”。\nI like my imagination because I can create wonderful stories when I draw."
+        },
+        {
+          "id": "q-028",
+          "question": "在家里的所有角落，你最喜欢待在哪里？为什么？\nWhere is your favorite corner at home? Why?",
+          "answer": "引导 (Tip): 体现安全感和个人兴趣。\nI love my reading nook because it’s quiet and I can read my favorite books there."
+        },
+        {
+          "id": "q-029",
+          "question": "如果你可以变成一个小动物，你想变什么？\nIf you could turn into a little animal, what would you be?",
+          "answer": "引导 (Tip): 选择具有正面特质的动物。\nI want to be a honeybee because they work hard together and help the flowers grow."
+        },
+        {
+          "id": "q-030",
+          "question": "告诉我一件你最近学会的、觉得很酷的事情。\nTell me about something cool you learned recently.",
+          "answer": "引导 (Tip): 展示对学习的热情。\nI learned how to skip rope! It was hard at first, but now I can do ten in a row."
+        },
+        {
+          "id": "q-031",
+          "question": "如果你看到一个小妹妹在操场上找不到妈妈了，你会怎么做？\nWhat would you do if you saw a little girl lost on the playground?",
+          "answer": "引导 (Tip): 体现关怀与安全意识。\nI would stay with her and hold her hand, then I would look for a teacher to help find her mommy."
+        },
+        {
+          "id": "q-032",
+          "question": "你的好朋友今天看起来不开心，你会对她说什么？\nYour friend looks sad today. What would you say to her?",
+          "answer": "引导 (Tip): 体现情感支持。\nI would give her a hug and ask, \"Are you okay? Do you want to play a game with me?\""
+        },
+        {
+          "id": "q-033",
+          "question": "如果有一个新同学来到班级，你会怎么欢迎她？\nHow would you welcome a new student to your class?",
+          "answer": "引导 (Tip): 体现包容性。\nI would say \"Hello!\" and show her where the toys are, then introduce her to my other friends."
+        },
+        {
+          "id": "q-034",
+          "question": "你曾经分享过自己最喜欢的玩具吗？那时候你心里是什么感觉？\nHave you ever shared your favorite toy? How did you feel?",
+          "answer": "引导 (Tip): 体现分享带来的快乐。\nYes! I felt very happy because I saw my friend smiling when we played together."
+        },
+        {
+          "id": "q-035",
+          "question": "当你和好朋友想玩不同的游戏时，你们通常怎么决定听谁的？\nHow do you decide what to play when you and your friend want different games?",
+          "answer": "引导 (Tip): 体现协商和公平能力。\nWe can use \"Rock-Paper-Scissors\" or we can take turns—play her game first and then mine."
+        },
+        {
+          "id": "q-036",
+          "question": "如果老师布置了一个你完全不会的任务，你会怎么办？\nWhat do you do if your teacher gives you a task you don’t know how to do?",
+          "answer": "引导 (Tip): 体现自主尝试与礼貌求助。\nI would try my best first. If I still can't do it, I will say, \"Excuse me, teacher, could you show me how to do this?\""
+        },
+        {
+          "id": "q-037",
+          "question": "告诉我一个你觉得“很难”但最后你做到了的事情。\nTell me about something that was \"hard\" but you finished it anyway.",
+          "answer": "引导 (Tip): 强调不放弃的过程。\nLearning to ride my bike was very hard, and I fell down twice, but I kept trying and now I can ride fast!"
+        },
+        {
+          "id": "q-038",
+          "question": "如果你的乐高积木倒了，你会哭还是重新搭？\nIf your Lego tower falls down, do you cry or rebuild it?",
+          "answer": "引导 (Tip): 体现韧性。\nI won't cry. I will rebuild it, and maybe this time I can make it even taller!"
+        },
+        {
+          "id": "q-039",
+          "question": "你喜欢一个人看书，还是喜欢大家坐在一起听故事？\nDo you like reading by yourself or listening to a story with everyone?",
+          "answer": "引导 (Tip): 展示对知识的渴望。\nI like both! I love reading quietly, but listening to a story with friends is very fun too."
+        },
+        {
+          "id": "q-040",
+          "question": "你最喜欢问的一个问题是什么？（关于这个世界的）\nWhat is your favorite question to ask about the world?",
+          "answer": "引导 (Tip): 展示好奇心。\nI always ask, \"Why do the stars shine only at night?\""
+        },
+        {
+          "id": "q-041",
+          "question": "如果你有一根魔棒，但只能用来帮助别人，你想变出什么？\nIf you had a magic wand that could only help others, what would you wish for?",
+          "answer": "引导 (Tip): 答案指向他人。\nI would wish for all the sick children in the world to get better and be healthy."
+        },
+        {
+          "id": "q-042",
+          "question": "你觉得“善良”是什么颜色？为什么？\nWhat color is \"kindness\"? Why?",
+          "answer": "引导 (Tip): 给出理由，体现思维联觉。\nI think kindness is yellow because it feels warm and bright like the sun."
+        },
+        {
+          "id": "q-043",
+          "question": "如果你可以给学校增加一个节日，你想过什么节？\nIf you could add a new holiday to school, what would it be?",
+          "answer": "引导 (Tip): 体现关怀的主题。\nI would add a \"Thank You Day\" where everyone gives a small card to their teachers and friends."
+        },
+        {
+          "id": "q-044",
+          "question": "你心目中的“超级英雄”是什么样子的？\nWhat does a \"Superhero\" look like to you?",
+          "answer": "引导 (Tip): 强调保护与帮助。\nA superhero is someone who is very brave and uses their power to protect people and help the world."
+        },
+        {
+          "id": "q-045",
+          "question": "如果你要画一幅关于“爱”的画，你会画些什么？\nIf you were to draw a picture of \"Love,\" what would be in it?",
+          "answer": "引导 (Tip): 描述温馨场景。\nI would draw my whole family holding hands under a big heart and a rainbow."
+        },
+        {
+          "id": "q-046",
+          "question": "你最喜欢妈妈/爸爸对你说的哪句话？\nWhat is your favorite thing your mom or dad says to you?",
+          "answer": "引导 (Tip): 体现积极的家庭互动。\nI love it when they say, \"I am so proud of you for trying your best!\""
+        },
+        {
+          "id": "q-047",
+          "question": "你在家里会帮忙做家务吗？比如收拾桌子。\nDo you help with chores at home, like tidying up the table?",
+          "answer": "引导 (Tip): 展示责任感。\nYes, I always tidy up my toys after playing and I help my mommy set the table for dinner."
+        },
+        {
+          "id": "q-048",
+          "question": "如果我们要玩一个游戏，你能不能教我规则？\nCan you teach me the rules if we were to play a game together?",
+          "answer": "引导 (Tip): 考查逻辑表达，选个简单的（如Hide and Seek）。\nSure! In Hide and Seek, one person closes their eyes and counts to ten, and the others find a place to hide!"
+        },
+        {
+          "id": "q-049",
+          "question": "你今天来清泉，最让你觉得有趣的东西是什么？\nWhat is the most interesting thing you saw at Seisen today?",
+          "answer": "引导 (Tip): 观察校园环境。\nI saw the beautiful stained glass and the big playground. Everyone looked so friendly!"
+        },
+        {
+          "id": "q-050",
+          "question": "你想在清泉认识很多新姐妹吗？你最想和她们一起做什么？\nDo you want to make new \"sisters\" at Seisen? What do you want to do with them?",
+          "answer": "引导 (Tip): 表现对集体生活的向往。\nYes! I want to play games and learn how to draw beautiful pictures with my new sisters."
+        }
+      ]
+    },
+    {
+      "id": "school-2",
+      "name": "Tokyo International School",
+      "menuName": "东京国际",
+      "questions": [
+        {
+          "id": "q-001",
+          "question": "请简单介绍一下您孩子的兴趣与学习习惯。",
+          "answer": "孩子对阅读与科学实验兴趣浓厚，习惯在作业前进行时间规划并主动复盘。"
+        }
+      ]
+    },
+    {
+      "id": "school-3",
+      "name": "The British School in Tokyo",
+      "menuName": "英国学校",
+      "questions": [
+        {
+          "id": "q-001",
+          "question": "Why do you think a British curriculum is a good fit for your child?",
+          "answer": "We value a balanced education that encourages curiosity, communication, and independent thinking, which aligns well with the British curriculum."
+        }
+      ]
     }
   ]
 }

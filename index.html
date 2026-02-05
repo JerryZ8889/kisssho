@@ -13,7 +13,6 @@
       <div class="container header-inner">
         <div class="brand">
           <div class="brand-title">东京国际学校面试题库</div>
-          <div class="brand-subtitle">单题阅读 · 搜索 · 收藏 · 继续查看</div>
         </div>
         <div class="header-actions">
           <button class="ghost-button" id="searchButton" type="button">搜索</button>
@@ -25,7 +24,18 @@
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <h1 class="hero-title">把准备做到心里有数</h1>
+            <div class="hero-head">
+              <h1 class="hero-title" id="heroTitle">某某学校面试</h1>
+              <div class="school-menu">
+                <button class="ghost-button icon-button" id="schoolMenuButton" type="button" aria-label="选择学校">
+                  ☰
+                </button>
+                <div class="menu-panel hidden" id="schoolMenuPanel">
+                  <div class="menu-title">选择学校</div>
+                  <div class="menu-list" id="schoolMenuList"></div>
+                </div>
+              </div>
+            </div>
             <p class="hero-desc">
               题目按顺序展示，到最后一题会从头开始。支持收藏与继续查看。
             </p>
@@ -35,10 +45,10 @@
               <div class="metric-value" id="metricCount">—</div>
               <div class="metric-label">题目数量</div>
             </div>
-            <div class="metric">
+            <button class="metric metric-button" id="metricFavCard" type="button">
               <div class="metric-value" id="metricFav">—</div>
               <div class="metric-label">已收藏</div>
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -80,6 +90,17 @@
         <div class="search-results" id="searchResults"></div>
         <div class="modal-actions">
           <button class="ghost-button" value="cancel" type="button" id="searchCloseButton">关闭</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="modal" id="favoritesModal">
+      <form class="modal-card search-card" method="dialog" id="favoritesForm">
+        <div class="modal-title">收藏题目</div>
+        <div class="modal-desc" id="favoritesCount">共 0 题</div>
+        <div class="search-results" id="favoritesResults"></div>
+        <div class="modal-actions">
+          <button class="ghost-button" value="cancel" type="button" id="favoritesCloseButton">关闭</button>
         </div>
       </form>
     </dialog>
