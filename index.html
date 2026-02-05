@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <title>东京国际学校面试题库</title>
+    <link rel="preload" href="./assets/styles.css" as="style" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-title">东京国际学校面试题库</div>
+          <div class="brand-subtitle">单题阅读 · 搜索 · 收藏 · 继续查看</div>
+        </div>
+        <div class="header-actions">
+          <button class="ghost-button" id="searchButton" type="button">搜索</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 class="hero-title">把准备做到心里有数</h1>
+            <p class="hero-desc">
+              题目按顺序展示，到最后一题会从头开始。支持收藏与继续查看。
+            </p>
+          </div>
+          <div class="hero-metrics" id="metrics">
+            <div class="metric">
+              <div class="metric-value" id="metricCount">—</div>
+              <div class="metric-label">题目数量</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value" id="metricFav">—</div>
+              <div class="metric-label">已收藏</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container content">
+        <div class="card" id="card">
+          <div class="card-top">
+            <div class="progress" id="progress">—</div>
+            <div class="badges">
+              <span class="badge subtle" id="badgeFav">收藏</span>
+            </div>
+          </div>
+
+          <div class="q-title">问题</div>
+          <div class="q-text" id="questionText">加载中…</div>
+
+          <div class="a-title">
+            <span>答案</span>
+          </div>
+          <div class="a-text" id="answerText"></div>
+
+          <div class="actions">
+            <button class="secondary-button" id="favButton" type="button">收藏</button>
+            <div class="spacer"></div>
+            <button class="ghost-button" id="prevButton" type="button">上一题</button>
+            <button class="primary-button" id="nextButton" type="button">下一题</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="searchModal">
+      <form class="modal-card search-card" method="dialog" id="searchForm">
+        <div class="modal-title">搜索题目</div>
+        <label class="field">
+          <div class="field-label">关键词</div>
+          <input class="input" id="searchInput" type="search" placeholder="例如：选择学校 / self introduction" />
+        </label>
+        <div class="search-results" id="searchResults"></div>
+        <div class="modal-actions">
+          <button class="ghost-button" value="cancel" type="button" id="searchCloseButton">关闭</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>
