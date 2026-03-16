@@ -1,110 +1,444 @@
-<!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="color-scheme" content="light dark" />
-    <title>东京国际学校面试题库</title>
-    <link rel="preload" href="./assets/styles.css" as="style" />
-    <link rel="stylesheet" href="./assets/styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <div class="brand-title">东京国际学校面试题库</div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KISSHO K.K. | 吉祥株式会社</title>
+  <meta name="description" content="KISSHO K.K. — Tokyo international school consulting and educational IT services. Official website under construction." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:    #c4362a;
+      --red-lt: #d9534f;
+      --gold:   #d4a853;
+      --gold-lt:#e8c87a;
+      --cream:  #faf8f5;
+      --warm:   #f3efe8;
+      --dark:   #2a2118;
+      --mid:    #6b5d50;
+      --muted:  #a09080;
+      --border: rgba(196, 54, 42, 0.15);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'EB Garamond', 'Noto Serif JP', Georgia, serif;
+      background: var(--cream);
+      color: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ─── TOP STRIPE ─── */
+    .top-stripe {
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, var(--red), var(--gold), var(--red));
+    }
+
+    /* ─── MAIN WRAPPER ─── */
+    .page {
+      width: 100%;
+      max-width: 780px;
+      padding: 56px 40px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* ─── LOGO ─── */
+    .logo-wrap {
+      margin-bottom: 32px;
+    }
+
+    .logo-wrap svg {
+      width: 200px;
+      height: 200px;
+    }
+
+    /* ─── STATUS PILL ─── */
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(196, 54, 42, 0.07);
+      border: 1px solid rgba(196, 54, 42, 0.25);
+      border-radius: 40px;
+      padding: 7px 20px;
+      margin-bottom: 44px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      animation: pulse 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.35; transform: scale(0.65); }
+    }
+
+    .status-text {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      color: var(--red);
+    }
+
+    /* ─── WELCOME BLOCK ─── */
+    .welcome {
+      text-align: center;
+      margin-bottom: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .welcome-en {
+      font-size: 1.35rem;
+      line-height: 1.75;
+      color: var(--dark);
+      font-weight: 400;
+    }
+
+    .welcome-zh {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: var(--mid);
+      font-family: 'Noto Serif SC', 'SimSun', serif;
+    }
+
+    .welcome-ja {
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--mid);
+      font-family: 'Noto Serif JP', 'Yu Mincho', serif;
+    }
+
+    em {
+      font-style: italic;
+      color: var(--red);
+    }
+
+    /* ─── ORNAMENT ─── */
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      max-width: 400px;
+      margin: 4px auto 40px;
+    }
+
+    .orn-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+    }
+
+    .orn-line.rev {
+      background: linear-gradient(to left, transparent, var(--gold));
+    }
+
+    .orn-diamond {
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ─── INFO CARD ─── */
+    .info-card {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--red);
+      border-radius: 2px;
+      background: #ffffff;
+      padding: 36px 40px 32px;
+      box-shadow: 0 2px 20px rgba(196, 54, 42, 0.05);
+    }
+
+    .card-heading {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* info rows */
+    .info-section {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .info-row {
+      display: flex;
+      gap: 16px;
+    }
+
+    .info-label {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      min-width: 110px;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+
+    .info-value {
+      font-size: 0.97rem;
+      color: var(--dark);
+      line-height: 1.65;
+    }
+
+    /* divider inside card */
+    .card-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 24px 0;
+    }
+
+    /* team */
+    .team-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .member-name {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+
+    .member-title {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-family: 'EB Garamond', Georgia, serif;
+    }
+
+    .member-email a {
+      font-size: 0.88rem;
+      color: var(--red);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .member-email a:hover {
+      border-color: var(--red);
+    }
+
+    /* ─── SERVICES NOTE ─── */
+    .services-note {
+      margin-top: 36px;
+      background: var(--warm);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 2px 2px 0;
+      padding: 16px 20px;
+    }
+
+    .services-note p {
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.75;
+      font-family: 'Noto Serif SC', 'Noto Serif JP', 'EB Garamond', serif;
+    }
+
+    .services-note p + p {
+      margin-top: 6px;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      margin-top: 48px;
+      text-align: center;
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 560px) {
+      .page { padding: 40px 20px 60px; }
+      .logo-wrap svg { width: 160px; height: 160px; }
+      .welcome-en { font-size: 1.15rem; }
+      .info-card { padding: 28px 22px 24px; }
+      .info-row { flex-direction: column; gap: 4px; }
+      .info-label { min-width: unset; }
+      .team-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <main class="page">
+
+    <!-- Logo (SVG inline, background removed) -->
+    <div class="logo-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" aria-label="KISSHO 吉祥株式会社 Logo">
+        <g transform="translate(200, 200) scale(1.25) translate(-200, -200)">
+          <!-- Torii gate with book -->
+          <g transform="translate(200, 139)">
+            <path d="M -55 12 L -55 -18 Q -55 -36 -36 -42 L 0 -54 L 36 -42 Q 55 -36 55 -18 L 55 12"
+              fill="none" stroke="#c4362a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="-62" y1="-6" x2="62" y2="-6" stroke="#c4362a" stroke-width="3.2"/>
+            <line x1="-42" y1="-6" x2="-42" y2="30" stroke="#c4362a" stroke-width="3.8"/>
+            <line x1="42" y1="-6" x2="42" y2="30" stroke="#c4362a" stroke-width="3.8"/>
+            <circle cx="0" cy="-54" r="6" fill="#d4a853"/>
+            <path d="M -15 10 Q 0 3 15 10 M -15 10 L -15 22 Q 0 15 15 22 L 15 10"
+              fill="none" stroke="#d4a853" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          <!-- 吉祥 -->
+          <text x="200" y="239"
+            font-family="'Noto Serif SC', 'STSong', 'SimSun', serif"
+            font-size="64" font-weight="700" fill="#c4362a"
+            text-anchor="middle" letter-spacing="10">吉祥</text>
+          <!-- Divider ornament -->
+          <line x1="105" y1="257" x2="165" y2="257" stroke="#d4a853" stroke-width="1.2"/>
+          <circle cx="200" cy="257" r="3" fill="#d4a853"/>
+          <line x1="235" y1="257" x2="295" y2="257" stroke="#d4a853" stroke-width="1.2"/>
+          <!-- KISSHO CO., LTD -->
+          <text x="200" y="287"
+            font-family="'Georgia', 'Times New Roman', serif"
+            font-size="16" fill="#8a7a6a"
+            text-anchor="middle" letter-spacing="4">KISSHO CO., LTD</text>
+          <!-- Tagline -->
+          <text x="200" y="317"
+            font-family="'Noto Serif SC', 'STSong', 'SimSun', serif"
+            font-size="13" fill="#a09080"
+            text-anchor="middle" letter-spacing="5">日本国际学校 · 教育咨询</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Status Badge -->
+    <div class="status-pill">
+      <span class="pulse-dot"></span>
+      <span class="status-text">Website Under Construction &nbsp;·&nbsp; 制作中 &nbsp;·&nbsp; 建设中</span>
+    </div>
+
+    <!-- Welcome (trilingual) -->
+    <div class="welcome">
+      <p class="welcome-en">
+        Our official website is currently under construction.<br>
+        We look forward to welcoming you very soon. — <em>Betty &amp; Jerry</em>
+      </p>
+      <p class="welcome-zh">
+        吉祥株式会社官方网站正在建设中，敬请期待。<br>— <em>Betty &amp; Jerry</em>
+      </p>
+      <p class="welcome-ja">
+        吉祥株式会社の公式サイトを現在制作中です。<br>もうすぐお会いできることを楽しみにしています。— <em>Betty &amp; Jerry</em>
+      </p>
+    </div>
+
+    <!-- Ornament divider -->
+    <div class="ornament">
+      <div class="orn-line"></div>
+      <div class="orn-diamond"></div>
+      <div class="orn-line rev"></div>
+    </div>
+
+    <!-- Company Info Card -->
+    <div class="info-card">
+      <div class="card-heading">Company Information &nbsp;·&nbsp; 会社情報 &nbsp;·&nbsp; 公司信息</div>
+
+      <div class="info-section">
+
+        <div class="info-row">
+          <span class="info-label">Company</span>
+          <span class="info-value">KISSHO K.K.（吉祥株式会社）</span>
         </div>
-        <div class="header-actions">
-          <button class="ghost-button" id="searchButton" type="button">搜索</button>
+
+        <div class="info-row">
+          <span class="info-label">Address</span>
+          <span class="info-value">
+            KISSHO BLDG. 101, 5-8-19 MEJIRO<br>
+            TOSHIMA-KU, Tokyo 171-0031, Japan
+          </span>
         </div>
+
+        <div class="info-row">
+          <span class="info-label">Services</span>
+          <span class="info-value">
+            International School Consulting &nbsp;·&nbsp; Educational IT Products
+          </span>
+        </div>
+
+        <div class="card-divider"></div>
+
+        <!-- Team -->
+        <div class="info-row">
+          <span class="info-label">Contact</span>
+          <div class="team-row">
+            <div class="team-member">
+              <span class="member-name">Jerry</span>
+              <span class="member-title">Co-Founder &amp; IT Director</span>
+              <span class="member-email"><a href="mailto:jerry@kissho.school">jerry@kissho.school</a></span>
+            </div>
+            <div class="team-member">
+              <span class="member-name">Betty</span>
+              <span class="member-title">Co-Founder &amp; Business Director</span>
+              <span class="member-email"><a href="mailto:betty@kissho.school">betty@kissho.school</a></span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /info-section -->
+
+      <!-- Services note -->
+      <div class="services-note">
+        <p>我们专注于服务东京国际学校的学生及家长，提供入学咨询与升学规划服务。</p>
+        <p>We serve students and families at Tokyo international schools, offering admissions consulting and academic planning.</p>
+        <p>東京のインターナショナルスクールに通う生徒・ご家族向けに、入学相談・進学支援サービスを提供しています。</p>
       </div>
-    </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-text">
-            <div class="hero-head">
-              <h1 class="hero-title" id="heroTitle">某某学校面试</h1>
-              <div class="school-menu">
-                <button class="ghost-button icon-button" id="schoolMenuButton" type="button" aria-label="选择学校">
-                  ☰
-                </button>
-                <div class="menu-panel hidden" id="schoolMenuPanel">
-                  <div class="menu-title">选择学校</div>
-                  <div class="menu-list" id="schoolMenuList"></div>
-                </div>
-              </div>
-            </div>
-            <p class="hero-desc">
-              题目按顺序展示，到最后一题会从头开始。支持收藏与继续查看。
-            </p>
-          </div>
-          <div class="hero-metrics" id="metrics">
-            <div class="metric">
-              <div class="metric-value" id="metricCount">—</div>
-              <div class="metric-label">题目数量</div>
-            </div>
-            <button class="metric metric-button" id="metricFavCard" type="button">
-              <div class="metric-value" id="metricFav">—</div>
-              <div class="metric-label">已收藏</div>
-            </button>
-          </div>
-        </div>
-      </section>
+    </div><!-- /info-card -->
 
-      <section class="container content">
-        <div class="card" id="card">
-          <div class="card-top">
-            <div class="progress" id="progress">—</div>
-            <div class="badges">
-              <span class="badge subtle" id="badgeFav">收藏</span>
-            </div>
-          </div>
+    <footer class="footer">
+      &copy; 2025 KISSHO K.K. &nbsp;·&nbsp; 吉祥株式会社 &nbsp;·&nbsp; All Rights Reserved
+    </footer>
 
-          <div class="q-title">问题</div>
-          <div class="q-text" id="questionText">加载中…</div>
+  </main>
 
-          <div class="a-title">
-            <span>答案</span>
-          </div>
-          <div class="a-text" id="answerText"></div>
-
-          <div class="actions">
-            <button class="secondary-button" id="favButton" type="button">收藏</button>
-            <div class="spacer"></div>
-            <button class="ghost-button" id="prevButton" type="button">上一题</button>
-            <button class="primary-button" id="nextButton" type="button">下一题</button>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <dialog class="modal" id="searchModal">
-      <form class="modal-card search-card" method="dialog" id="searchForm">
-        <div class="modal-title">搜索题目</div>
-        <label class="field">
-          <div class="field-label">关键词</div>
-          <input class="input" id="searchInput" type="search" placeholder="例如：选择学校 / self introduction" />
-        </label>
-        <div class="search-results" id="searchResults"></div>
-        <div class="modal-actions">
-          <button class="ghost-button" value="cancel" type="button" id="searchCloseButton">关闭</button>
-        </div>
-      </form>
-    </dialog>
-
-    <dialog class="modal" id="favoritesModal">
-      <form class="modal-card search-card" method="dialog" id="favoritesForm">
-        <div class="modal-title">收藏题目</div>
-        <div class="modal-desc" id="favoritesCount">共 0 题</div>
-        <div class="search-results" id="favoritesResults"></div>
-        <div class="modal-actions">
-          <button class="ghost-button" value="cancel" type="button" id="favoritesCloseButton">关闭</button>
-        </div>
-      </form>
-    </dialog>
-
-    <script type="module" src="./assets/app.js"></script>
-  </body>
+</body>
 </html>
