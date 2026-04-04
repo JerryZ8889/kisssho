@@ -1,4 +1,4 @@
-(function() {
+﻿(function() {
   function buildMetaItems(items) {
     return items.map(function(item) {
       return '<span>' + item + '</span>';
@@ -32,7 +32,7 @@
         '</div>' +
       '</section>' +
       '<div class="article-cover">' +
-        '<img src="' + data.cover.src + '" alt="' + data.cover.alt + '"' + (data.cover.style ? ' style="' + data.cover.style + '"' : '') + ' />' +
+        '<img loading="eager" fetchpriority="high" decoding="async" src="' + data.cover.src + '" alt="' + data.cover.alt + '"' + (data.cover.style ? ' style="' + data.cover.style + '"' : '') + ' />' +
       '</div>' +
       data.body +
       buildCta(data.cta);
@@ -69,7 +69,7 @@
               '<h2>What Stood Out</h2>' +
               '<p>SIS has been around since 1991, making it one of the earlier IB schools in Tokyo. The launch of the high school in 2024 is meaningful because a complete K-12 story changes how families evaluate continuity.</p>' +
               '<p>The two-campus arrangement also works better in reality than it sounds on paper: younger children stay at Seaside, while upper elementary through high school move to the Main Campus.</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（上）_1_贝蒂星妈_来自小红书网页版.jpg" alt="Students at SIS" /><p class="article-img-caption">SIS feels energetic and lived-in. The campus never felt staged for visitors.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（上）_1_贝蒂星妈_来自小红书网页版.jpg" alt="Students at SIS" /><p class="article-img-caption">SIS feels energetic and lived-in. The campus never felt staged for visitors.</p></div>' +
               '<h2>Admissions Team: Fast and Responsive</h2>' +
               '<p>The admissions officer who hosted me was quick, warm, and highly professional. That same speed showed up in school communication too: messages often received replies early the next morning.</p>' +
               '<p>In Tokyo parent circles, SIS has a reputation for moving fast. After visiting, I understood why.</p>' +
@@ -78,14 +78,14 @@
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
               '<h2>Campus Tour: Compact, But Thought Through</h2>' +
               '<p>The elementary building is small, and the upper grades are housed nearby. Even so, SIS has clearly invested in making each space functional rather than decorative.</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（下）_6_贝蒂星妈_来自小红书网页版.jpg" alt="Classroom corridor at SIS" /><p class="article-img-caption">Student work fills the corridors. Learning is visible here.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（下）_6_贝蒂星妈_来自小红书网页版.jpg" alt="Classroom corridor at SIS" /><p class="article-img-caption">Student work fills the corridors. Learning is visible here.</p></div>' +
               '<p>One thing I liked immediately was the writing displayed outside classrooms. Even younger children were being asked to express an opinion and support it with reasons. It felt like real thinking, not template memorization.</p>' +
               '<p>The science room, music room, library, and project spaces all felt genuinely used. For a city school with limited footprint, SIS does a very good job of turning space into learning value.</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（下）_10_贝蒂星妈_来自小红书网页版.jpg" alt="Library at SIS" /><p class="article-img-caption">The library and project areas reinforce the school’s inquiry-based direction.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（下）_10_贝蒂星妈_来自小红书网页版.jpg" alt="Library at SIS" /><p class="article-img-caption">The library and project areas reinforce the school’s inquiry-based direction.</p></div>' +
               '<h2>Two Practical Strengths for Families</h2>' +
               '<p>First, SIS offers Chinese language learning. For Chinese-speaking families, this is a real advantage in a city where very few schools support mother-tongue maintenance in any formal way.</p>' +
               '<p>Second, the location across from Konami Sports Club is simply smart. SIS uses nearby infrastructure to solve a common city-campus problem: limited in-house sports space.</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（下）_3_贝蒂星妈_来自小红书网页版.jpg" alt="Chinese class at SIS" /><p class="article-img-caption">Chinese support and practical sports access both matter more than many families first realize.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（下）_3_贝蒂星妈_来自小红书网页版.jpg" alt="Chinese class at SIS" /><p class="article-img-caption">Chinese support and practical sports access both matter more than many families first realize.</p></div>' +
             '</div></div></section>' +
             '<section class="section section--warm"><div class="container container--narrow"><div class="article-content">' +
               '<h2>Admissions Rhythm</h2>' +
@@ -130,7 +130,7 @@
               '<h2>印象に残った点</h2>' +
               '<p>SIS は 1991 年創立で、東京では比較的早い時期から IB を取り入れてきた学校です。2024 年の高校部開設は、学校を長期で見る家庭にとって大きなポイントです。</p>' +
               '<p>Seaside と Main の二拠点体制も、実際に見るとよく機能しているように感じました。紙の上で見るより、移行の流れが自然です。</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（上）_1_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の生徒" /><p class="article-img-caption">見学用に整えられた学校というより、日常が動いている学校という印象でした。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（上）_1_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の生徒" /><p class="article-img-caption">見学用に整えられた学校というより、日常が動いている学校という印象でした。</p></div>' +
               '<h2>入試チームのスピード感</h2>' +
               '<p>案内してくれた入試担当の先生は、とてもテンポがよく、対応も明るく的確でした。その印象はメール対応にも表れていて、返信の速さはかなり際立っていました。</p>' +
               '<div class="article-pullquote">「有名かどうかより、学校と家族の相性が合うかどうかのほうが重要です。」</div>' +
@@ -138,14 +138,14 @@
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
               '<h2>校内見学: 小さいけれどよく考えられている</h2>' +
               '<p>キャンパス規模は大きくありませんが、各スペースがきちんと目的を持って使われています。飾りではなく、日常の学びに結びついている印象でした。</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（下）_6_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の廊下" /><p class="article-img-caption">廊下には生徒作品が並び、学びが自然に可視化されていました。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（下）_6_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の廊下" /><p class="article-img-caption">廊下には生徒作品が並び、学びが自然に可視化されていました。</p></div>' +
               '<p>特に印象に残ったのは子どもたちの英作文です。テンプレート暗記ではなく、自分の意見と理由を書く練習が入っていました。</p>' +
               '<p>理科室、音楽室、図書・プロジェクトスペースも、実際に機能している空気がありました。都心型キャンパスとしてはかなり上手に運用していると思います。</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（下）_10_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の図書スペース" /><p class="article-img-caption">Inquiry 型の学びを支える空間づくりが見えました。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（下）_10_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の図書スペース" /><p class="article-img-caption">Inquiry 型の学びを支える空間づくりが見えました。</p></div>' +
               '<h2>家庭にとって実務的な強み</h2>' +
               '<p>まず、中国語学習の機会があること。中国語家庭にとって、母語維持は後から困るテーマなので、これは実用的な利点です。</p>' +
               '<p>次に、向かいの Konami Sports Club を活用できること。校内に巨大な運動施設がなくても、運動環境をしっかり確保できています。</p>' +
-              '<div class="article-img-wrap reveal"><img src="品川/日本国际学校系列10-品川国际（下）_3_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の中国語授業" /><p class="article-img-caption">言語維持と運動環境は、どちらも入学後に効いてくるポイントです。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="品川/日本国际学校系列10-品川国际（下）_3_贝蒂星妈_来自小红书网页版.jpg" alt="SIS の中国語授業" /><p class="article-img-caption">言語維持と運動環境は、どちらも入学後に効いてくるポイントです。</p></div>' +
             '</div></div></section>' +
             '<section class="section section--warm"><div class="container container--narrow"><div class="article-content">' +
               '<h2>出願テンポはかなり速い</h2>' +
@@ -183,7 +183,7 @@
               '<p>Geography matters more than many families expect. Minato remains the densest cluster, followed by Setagaya and Shibuya, while Kanagawa and the Tama area matter for schools with larger campuses.</p>' +
               '<ul><li>37 schools offer a full K-12 path</li><li>33 are preschool-only</li><li>The rest cover mixed ranges such as elementary to middle or middle to high school</li></ul>' +
               '<p>We usually advise families to pay close attention to international accreditation such as CIS, WASC, or NEASC. It is not the whole story, but it is one of the clearest quality signals.</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/选校 风格3.jpg" alt="School interior" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">How a school uses space often tells you a great deal about its priorities and educational philosophy.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/选校 风格3.jpg" alt="School interior" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">How a school uses space often tells you a great deal about its priorities and educational philosophy.</p></div>' +
             '</div></div></section>' +
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
               '<h2>Curriculum Is the First Strategic Decision</h2>' +
@@ -202,7 +202,7 @@
               '<h3>4. Budget</h3><p>Year one is usually much more expensive than the headline tuition once enrollment, facilities, transport, uniforms, materials, and activities are included.</p>' +
               '<h3>5. School Culture</h3><p>Nationality mix, newcomer support, buddy systems, and even religious background affect whether a child feels they belong.</p>' +
               '<h3>6. Maintaining Chinese</h3><p>Very few Tokyo schools offer structured Chinese. If mother-tongue maintenance matters, build it into the decision early.</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/选校 风格1.jpg" alt="Student life" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">School choice is not only about curriculum. It is about the full environment your child will inhabit for years.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/选校 风格1.jpg" alt="Student life" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">School choice is not only about curriculum. It is about the full environment your child will inhabit for years.</p></div>' +
             '</div></div></section>' +
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
               '<h2>When Should You Start?</h2>' +
@@ -237,7 +237,7 @@
               '<p>港区、世田谷区、渋谷区は依然として重要ですが、神奈川や多摩エリアも候補になり得ます。東京では、住む場所と学校選びが同時に決まることがよくあります。</p>' +
               '<ul><li>K-12 の一貫校は 37 校</li><li>幼児部のみは 33 校</li><li>そのほかは混合学年構成です</li></ul>' +
               '<p>CIS、WASC、NEASC などの国際認証は、学校の質を見るうえで有効な外部指標です。</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/选校 风格3.jpg" alt="学校の空間" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">空間の使い方を見ると、その学校が何を重視しているかがよく見えます。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/选校 风格3.jpg" alt="学校の空間" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">空間の使い方を見ると、その学校が何を重視しているかがよく見えます。</p></div>' +
             '</div></div></section>' +
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
               '<h2>最初の戦略判断はカリキュラム</h2>' +
@@ -256,7 +256,7 @@
               '<h3>4. 予算</h3><p>初年度は学費に加え、入学金、施設費、校バス、教材、制服などで大きく増えるのが一般的です。</p>' +
               '<h3>5. 学校文化</h3><p>国籍構成、新入生支援、buddy system、宗教色などは居心地を左右します。</p>' +
               '<h3>6. 中国語維持</h3><p>必要なら学校選びの段階で組み込むべきです。後回しにすると難しくなります。</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/选校 风格1.jpg" alt="学校生活" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">カリキュラムだけでなく、その学校でどんな日常を送るかまで考える必要があります。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/选校 风格1.jpg" alt="学校生活" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">カリキュラムだけでなく、その学校でどんな日常を送るかまで考える必要があります。</p></div>' +
             '</div></div></section>' +
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
               '<h2>いつから準備するか</h2>' +
@@ -301,7 +301,7 @@
               '<h2>AP: Flexibility Inside the American System</h2>' +
               '<p>AP is not a full stand-alone curriculum. It is best understood as advanced coursework within the American high-school model. The key advantage is flexibility: students can combine academic challenge with sports, arts, leadership, and service.</p>' +
               '<p>That flexibility is powerful, but it also means the family must plan more actively. In the US pathway, GPA, APs, testing, extracurriculars, essays, and recommendations all interact.</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/3.1 三个核心组件.png" alt="Classroom learning" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">The core difference is not just subject names. It is the daily logic of learning and assessment.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/3.1 三个核心组件.png" alt="Classroom learning" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">The core difference is not just subject names. It is the daily logic of learning and assessment.</p></div>' +
             '</div></div></section>' +
             '<section class="section section--warm"><div class="container container--narrow"><div class="article-content">' +
               '<h2>Quick Comparison</h2>' +
@@ -343,7 +343,7 @@
               '<p>A-Level は、得意科目がはっきりしている生徒にとって非常に効率のよいルートです。少ない科目に集中できるので、理数系が強い子や英国志向の家庭には相性が良いです。</p>' +
               '<h2>AP: アメリカ式の柔軟さ</h2>' +
               '<p>AP は独立した一貫カリキュラムというより、アメリカ式高校教育の中で難度の高い科目を取っていく仕組みです。学業と課外活動を並行して組み立てやすいのが強みです。</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/3.1 三个核心组件.png" alt="学習風景" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">違いは科目名ではなく、毎日の学び方と評価のされ方にあります。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/3.1 三个核心组件.png" alt="学習風景" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">違いは科目名ではなく、毎日の学び方と評価のされ方にあります。</p></div>' +
             '</div></div></section>' +
             '<section class="section section--warm"><div class="container container--narrow"><div class="article-content">' +
               '<h2>比較の要点</h2>' +
@@ -383,7 +383,7 @@
               '<h2>What MAP Actually Measures</h2>' +
               '<p>MAP Growth, developed by NWEA, is a computer-adaptive test. Questions become harder after correct answers and easier after incorrect ones. The system is trying to locate the student’s real level, not to produce a paper where every child can finish comfortably.</p>' +
               '<p>That is why getting many questions wrong near the middle or end is normal. For first-time families, this is often the single most important thing to understand.</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/4.1.jpg" alt="Student taking MAP" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">The goal of MAP is not a perfect paper. The goal is to find a child’s real academic boundary.</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/4.1.jpg" alt="Student taking MAP" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">The goal of MAP is not a perfect paper. The goal is to find a child’s real academic boundary.</p></div>' +
               '<h3>Core Sections</h3><p>MAP usually tests Reading, Language Usage, and Mathematics. For Chinese-speaking students, reading and language usage are usually harder to raise quickly than math.</p>' +
             '</div></div></section>' +
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +
@@ -433,7 +433,7 @@
               '<h2>MAP は何を測っているのか</h2>' +
               '<p>MAP Growth は NWEA が開発した adaptive test です。正解すれば難しくなり、不正解なら易しくなります。目的は子どもの本当の学力帯を特定することです。</p>' +
               '<p>つまり、途中から難しく感じるのは正常です。初回受験の家庭にとっては、この点を理解するだけでもかなり意味があります。</p>' +
-              '<div class="article-img-wrap reveal"><img src="图片/4.1.jpg" alt="MAP 受験イメージ" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">MAP の目的は満点ではなく、今の実力帯を正確に測ることです。</p></div>' +
+              '<div class="article-img-wrap reveal"><img loading="lazy" decoding="async" src="图片/4.1.jpg" alt="MAP 受験イメージ" style="width:100%;display:block;border-radius:var(--radius);" /><p class="article-img-caption">MAP の目的は満点ではなく、今の実力帯を正確に測ることです。</p></div>' +
               '<h3>主要セクション</h3><p>通常は Reading、Language Usage、Mathematics の 3 分野です。中国語家庭では、長期的には reading が最も上がりにくいことが多いです。</p>' +
             '</div></div></section>' +
             '<section class="section"><div class="container container--narrow"><div class="article-content">' +

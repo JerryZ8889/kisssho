@@ -1,10 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KISSHO | 吉祥书院 — 东京国际学校咨询</title>
-  <meta name="description" content="面向东京华人家庭的国际学校入学咨询、选校工具、MAP备考与中文练习。吉祥书院官方网站。" />
+  <title
+    data-i18n-zh="KISSHO | 吉祥书院 — 东京国际学校咨询"
+    data-i18n-en="KISSHO | Tokyo International School Consulting"
+    data-i18n-ja="KISSHO | 東京インターナショナルスクール相談"
+  >KISSHO | 吉祥书院 — 东京国际学校咨询</title>
+  <meta
+    name="description"
+    content="面向东京华人家庭的国际学校入学咨询、选校工具、MAP备考与中文练习。吉祥书院官方网站。"
+    data-i18n-attr="content"
+    data-i18n-zh="面向东京华人家庭的国际学校入学咨询、选校工具、MAP备考与中文练习。吉祥书院官方网站。"
+    data-i18n-en="International school consulting, school selection tools, MAP prep, and Chinese literacy support for families in Tokyo."
+    data-i18n-ja="東京のご家庭向けに、インターナショナルスクール相談、学校選択ツール、MAP対策、中国語学習支援を提供しています。"
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -47,7 +58,7 @@
           <button class="lang-btn">日本語</button>
         </div>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -67,7 +78,7 @@
             </div>
           </div>
           <div class="hero-image reveal">
-            <img src="图片/mejiro.jpg" alt="吉祥书院" style="width:100%;height:100%;object-fit:cover;display:block;" />
+            <img loading="eager" fetchpriority="high" decoding="async" src="图片/mejiro.jpg" alt="吉祥书院" style="width:100%;height:100%;object-fit:cover;display:block;" />
           </div>
         </div>
       </div>
@@ -127,7 +138,7 @@
         <div class="articles-grid">
           <a class="article-card reveal" href="article-school-selection.html" style="text-decoration:none;color:inherit;display:block;">
             <div class="article-image" style="overflow:hidden;">
-              <img src="图片/选校 走进校园.jpg" alt="东京国际学校选校指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+              <img loading="lazy" decoding="async" src="图片/选校 走进校园.jpg" alt="东京国际学校选校指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
             </div>
             <div class="article-body">
               <span class="article-tag en">Methodology</span>
@@ -137,7 +148,7 @@
           </a>
           <a class="article-card reveal" href="article-curriculum-guide.html" style="text-decoration:none;color:inherit;display:block;">
             <div class="article-image" style="overflow:hidden;">
-              <img src="图片/3 封面.jpg" alt="IB A-Level AP 课程体系" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+              <img loading="lazy" decoding="async" src="图片/3 封面.jpg" alt="IB A-Level AP 课程体系" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
             </div>
             <div class="article-body">
               <span class="article-tag en">Curriculum</span>
@@ -147,7 +158,7 @@
           </a>
           <a class="article-card reveal" href="article-map-guide.html" style="text-decoration:none;color:inherit;display:block;">
             <div class="article-image" style="overflow:hidden;">
-              <img src="图片/4 封面.png" alt="MAP 测试备考指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+              <img loading="lazy" decoding="async" src="图片/4 封面.png" alt="MAP 测试备考指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
             </div>
             <div class="article-body">
               <span class="article-tag en">MAP Prep</span>
@@ -172,7 +183,7 @@
             <a class="btn btn-ghost" href="about.html" data-i18n="index.about.btn">了解更多</a>
           </div>
           <div class="about-photo reveal">
-            <img src="图片/3.1.png" alt="Betty & Jerry — 吉祥书院创始人" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;border-radius:var(--radius);" />
+            <img loading="lazy" decoding="async" src="图片/3.1.png" alt="Betty & Jerry — 吉祥书院创始人" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;border-radius:var(--radius);" />
           </div>
         </div>
       </div>
@@ -182,44 +193,7 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
-          <p class="footer-brand-desc">面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。</p>
-          <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</p>
-        </div>
-        <div>
-          <div class="footer-heading en">Navigation</div>
-          <ul class="footer-links">
-            <li><a href="schools.html" data-i18n="nav.schools">学校探索</a></li>
-            <li><a href="articles.html" data-i18n="nav.articles">深度文章</a></li>
-            <li><a href="tools.html" data-i18n="nav.tools">学习工具</a></li>
-            <li><a href="services.html" data-i18n="nav.services">咨询服务</a></li>
-            <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-heading en">Contact</div>
-          <ul class="footer-contact-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span>企微号：13732203788</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20a8 8 0 0 1-8-8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a8 8 0 0 1-8 8Z"/><path d="M8 10h8M8 14h5"/></svg><span>小红书：待填充</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.03Z"/></svg><span>待填充：电话号码</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>betty@kissho.school</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
-        <div class="lang-switch" style="border-left:1px solid rgba(255,255,255,0.15);margin-left:0;padding-left:16px;">
-          <button class="lang-btn active" style="color:rgba(255,255,255,0.7);">中文</button>
-          <button class="lang-btn" style="color:rgba(255,255,255,0.4);">EN</button>
-          <button class="lang-btn" style="color:rgba(255,255,255,0.4);">日本語</button>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script src="script.js"></script>
 </body>

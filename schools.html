@@ -50,6 +50,15 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
+    .results-page-info {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+    .results-page-info strong {
+      color: var(--text);
+    }
     .results-count strong {
       color: var(--text);
       font-size: 1.05rem;
@@ -138,6 +147,33 @@
       color: var(--muted);
     }
     .no-results p { margin-bottom: 8px; }
+    .results-pagination {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .btn-page {
+      background: #fff;
+      border: 1px solid var(--border);
+      color: var(--mid);
+      padding: 8px 18px;
+      font-size: 0.84rem;
+      font-family: inherit;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .btn-page:hover:not(:disabled) {
+      border-color: var(--red);
+      color: var(--red);
+      background: var(--warm-bg);
+    }
+    .btn-page:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
     #searchResultsSection { display: none; }
   </style>
 </head>
@@ -261,10 +297,17 @@
         <!-- Search Results -->
         <div id="searchResultsSection">
           <div class="results-header">
-            <div class="results-count" id="resultsCount"></div>
+            <div>
+              <div class="results-count" id="resultsCount"></div>
+              <div class="results-page-info" id="resultsPageInfo"></div>
+            </div>
             <button class="btn-reset" id="resetBtn" data-i18n="schools.btn.reset">重置筛选 · 显示全部</button>
           </div>
           <div class="schools-grid" id="schoolsGrid"></div>
+          <div class="results-pagination" id="resultsPagination" hidden>
+            <button class="btn-page" id="prevPageBtn" type="button">上一页</button>
+            <button class="btn-page" id="nextPageBtn" type="button">下一页</button>
+          </div>
         </div>
 
         <!-- 数据说明 -->
@@ -289,32 +332,7 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
-          <p class="footer-brand-desc">面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。</p>
-          <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</p>
-        </div>
-        <div>
-          <div class="footer-heading en">Navigation</div>
-          <ul class="footer-links"><li><a href="schools.html" data-i18n="nav.schools">学校探索</a></li><li><a href="articles.html" data-i18n="nav.articles">深度文章</a></li><li><a href="tools.html" data-i18n="nav.tools">学习工具</a></li><li><a href="services.html" data-i18n="nav.services">咨询服务</a></li><li><a href="about.html" data-i18n="nav.about">关于我们</a></li></ul>
-        </div>
-        <div>
-          <div class="footer-heading en">Contact</div>
-          <ul class="footer-contact-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span>企微号：13732203788</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>betty@kissho.school</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
-        <div class="lang-switch" style="border-left:1px solid rgba(255,255,255,0.15);margin-left:0;padding-left:16px;"><button class="lang-btn active" style="color:rgba(255,255,255,0.7);">中文</button><button class="lang-btn" style="color:rgba(255,255,255,0.4);">EN</button><button class="lang-btn" style="color:rgba(255,255,255,0.4);">日本語</button></div>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script src="schools-data.js"></script>
   <script src="script.js"></script>
@@ -325,6 +343,14 @@
       var resultsSection = document.getElementById('searchResultsSection');
       var schoolsGrid = document.getElementById('schoolsGrid');
       var resultsCount = document.getElementById('resultsCount');
+      var resultsPageInfo = document.getElementById('resultsPageInfo');
+      var resultsPagination = document.getElementById('resultsPagination');
+      var prevPageBtn = document.getElementById('prevPageBtn');
+      var nextPageBtn = document.getElementById('nextPageBtn');
+      var pageSize = 24;
+      var currentPage = 1;
+      var activeSchools = SCHOOLS_DATA.slice();
+      var activeIsAll = true;
 
       var translations = {
         regions: {
@@ -614,16 +640,43 @@
         '</div>';
       }
 
+      function renderPagination(total) {
+        if (!resultsPageInfo || !resultsPagination || !prevPageBtn || !nextPageBtn) return;
+
+        var totalPages = Math.max(1, Math.ceil(total / pageSize));
+        var start = total ? ((currentPage - 1) * pageSize + 1) : 0;
+        var end = total ? Math.min(currentPage * pageSize, total) : 0;
+
+        resultsPageInfo.innerHTML = total
+          ? window.kisshoT('schools.pagination.summary', { page: currentPage, pages: totalPages, start: start, end: end, total: total })
+          : '';
+
+        prevPageBtn.textContent = window.kisshoT('schools.pagination.prev');
+        nextPageBtn.textContent = window.kisshoT('schools.pagination.next');
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage === totalPages;
+        resultsPagination.hidden = totalPages <= 1;
+      }
+
       function showResults(schools, isAll, scroll) {
+        activeSchools = schools.slice();
+        activeIsAll = !!isAll;
         resultsSection.style.display = 'block';
         if (!schools.length) {
           resultsCount.innerHTML = window.kisshoT('schools.results.none');
           schoolsGrid.innerHTML = '<div class="no-results"><p>' + window.kisshoT('schools.no_results.text') + '</p><p style="font-size:0.85rem;">' + window.kisshoT('schools.no_results.hint') + '</p></div>';
+          renderPagination(0);
         } else {
+          var totalPages = Math.max(1, Math.ceil(schools.length / pageSize));
+          currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+          var startIndex = (currentPage - 1) * pageSize;
+          var visibleSchools = schools.slice(startIndex, startIndex + pageSize);
+
           resultsCount.innerHTML = isAll
             ? window.kisshoT('schools.results.all', { n: schools.length })
             : window.kisshoT('schools.results.filtered', { n: schools.length });
-          schoolsGrid.innerHTML = schools.map(renderCard).join('');
+          schoolsGrid.innerHTML = visibleSchools.map(renderCard).join('');
+          renderPagination(schools.length);
         }
         if (scroll) resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
@@ -631,6 +684,7 @@
       function refreshResults(scroll) {
         var filters = getFilters();
         var isAll = !filters.region && !filters.curr && !filters.grade && !filters.tuition;
+        currentPage = 1;
         showResults(isAll ? SCHOOLS_DATA : filterSchools(filters), isAll, scroll);
       }
 
@@ -643,12 +697,26 @@
         selectConfig.curr.element.value = '';
         selectConfig.grade.element.value = '';
         selectConfig.tuition.element.value = '';
+        currentPage = 1;
         showResults(SCHOOLS_DATA, true, false);
+      });
+
+      prevPageBtn.addEventListener('click', function() {
+        if (currentPage === 1) return;
+        currentPage -= 1;
+        showResults(activeSchools, activeIsAll, true);
+      });
+
+      nextPageBtn.addEventListener('click', function() {
+        var totalPages = Math.max(1, Math.ceil(activeSchools.length / pageSize));
+        if (currentPage >= totalPages) return;
+        currentPage += 1;
+        showResults(activeSchools, activeIsAll, true);
       });
 
       document.addEventListener('kissho:langchange', function(event) {
         renderSelectOptions(event.detail && event.detail.lang ? event.detail.lang : currentLang());
-        refreshResults(false);
+        showResults(activeSchools, activeIsAll, false);
       });
 
       renderSelectOptions(currentLang());
