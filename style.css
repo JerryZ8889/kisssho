@@ -203,20 +203,27 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-family: 'Noto Serif SC', serif;
   font-size: 0.92rem;
   padding: 12px 28px;
+  min-height: 50px;
   border-radius: var(--radius);
   text-decoration: none;
   transition: all 0.25s;
   cursor: pointer;
+  line-height: 1.2;
+  text-align: center;
+  align-self: flex-start;
+  max-width: 100%;
   border: none;
 }
 
 .btn-primary {
   background: var(--red);
   color: var(--white);
+  border: 1px solid transparent;
 }
 
 .btn-primary:hover { background: var(--red-lt); }
@@ -369,7 +376,13 @@ main > .page-hero + .section { padding-top: 58px; }
   color: var(--mid);
 }
 
-.hero-cta { margin-top: 8px; }
+.hero-cta {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
 
 .hero-image {
   border-radius: var(--radius);
@@ -1073,25 +1086,25 @@ main > .page-hero + .section { padding-top: 58px; }
 .site-footer {
   background: var(--dark);
   color: rgba(255, 255, 255, 0.6);
-  padding: 56px 0 40px;
+  padding: 48px 0 30px;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 40px;
+  gap: 40px;
+  margin-bottom: 30px;
 }
 
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .footer-logo-text { font-size: 1.1rem; font-weight: 700; color: rgba(255, 255, 255, 0.9); }
 
-.footer-brand-desc { font-size: 0.85rem; line-height: 1.8; }
+.footer-brand-desc { font-size: 0.84rem; line-height: 1.7; max-width: 32ch; }
 
 .footer-heading {
   font-family: 'EB Garamond', Georgia, serif;
@@ -1099,14 +1112,14 @@ main > .page-hero + .section { padding-top: 58px; }
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .footer-links a {
@@ -1122,14 +1135,14 @@ main > .page-hero + .section { padding-top: 58px; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   font-size: 0.88rem;
 }
 
 .footer-contact-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .footer-contact-list svg {
@@ -1141,13 +1154,15 @@ main > .page-hero + .section { padding-top: 58px; }
 
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 24px;
+  padding-top: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 12px;
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
 }
 
 .footer-bottom .lang-switch {
@@ -1364,7 +1379,7 @@ main > .page-hero + .section { padding-top: 58px; }
   .articles-grid         { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
   .about-preview         { grid-template-columns: 1fr; gap: 32px; }
   .about-photo           { max-width: 400px; }
-  .footer-grid           { grid-template-columns: 1fr; gap: 36px; }
+  .footer-grid           { grid-template-columns: 1fr; gap: 28px; }
   .schools-grid          { grid-template-columns: 1fr; }
   .articles-list         { grid-template-columns: 1fr; }
   .tool-showcase         { grid-template-columns: 1fr; gap: 32px; }
@@ -1380,6 +1395,7 @@ main > .page-hero + .section { padding-top: 58px; }
   .container       { padding: 0 24px; }
   .header-inner    { padding: 0 24px; }
   .ornament        { padding: 0 24px; }
+  .site-footer     { padding: 38px 0 22px; }
 
   .nav             { display: none; }
   .lang-switch     { display: none; }
@@ -1417,6 +1433,12 @@ main > .page-hero + .section { padding-top: 58px; }
   main > .page-hero + .section { padding-top: 40px; }
   .modules-grid      { gap: 20px; }
   .module-card       { padding: 28px 24px 24px; }
+  .footer-grid       { gap: 24px; margin-bottom: 24px; }
+  .footer-brand-desc { max-width: none; }
+  .footer-heading    { margin-bottom: 12px; }
+  .footer-links,
+  .footer-contact-list { gap: 8px; }
+  .footer-bottom     { padding-top: 16px; gap: 10px; }
   .filter-bar        { flex-direction: column; }
   .filter-group      { min-width: unset; }
   .info-row          { flex-direction: column; gap: 4px; }
