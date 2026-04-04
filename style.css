@@ -327,7 +327,15 @@ main > .page-hero + .section { padding-top: 58px; }
 /* ============================================
    Homepage: Hero
    ============================================ */
-.hero { padding: 35px 0 45px; }
+.hero { padding: 35px 0 54px; }
+
+.ornament--hero {
+  margin-top: 6px;
+}
+
+.home-offer-section {
+  padding-top: 52px;
+}
 
 .hero-inner {
   display: grid;
@@ -1424,13 +1432,14 @@ main > .page-hero + .section { padding-top: 58px; }
     border-top: 1px solid var(--border-light);
   }
 
-  .hero              { padding: 48px 0 56px; }
+  .hero              { padding: 48px 0 60px; }
   .hero-title        { font-size: 1.6rem; }
   .section           { padding: 45px 0; }
   .section-title     { font-size: 1.35rem; }
   .page-hero         { padding: 30px 0 26px; }
   .page-hero .section-title { font-size: 1.5rem; }
   main > .page-hero + .section { padding-top: 40px; }
+  .home-offer-section { padding-top: 42px; }
   .modules-grid      { gap: 20px; }
   .module-card       { padding: 28px 24px 24px; }
   .footer-grid       { gap: 24px; margin-bottom: 24px; }

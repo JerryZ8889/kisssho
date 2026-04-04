@@ -4,7 +4,7 @@ var T = {
   zh: {
     'nav.home':'首页','nav.schools':'学校探索','nav.articles':'深度文章',
     'nav.tools':'学习工具','nav.services':'咨询服务','nav.about':'关于我们','nav.contact':'联系',
-    'footer.brand_desc':'面向东京华人家庭的国际学校咨询、选校工具与教育产品。',
+    'footer.brand_desc':'面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'深度文章',
     'footer.nav_tools':'学习工具','footer.nav_services':'咨询服务','footer.nav_about':'关于我们',
     'footer.contact_wechat':'企微号：13732203788',
@@ -122,7 +122,7 @@ var T = {
   en: {
     'nav.home':'Home','nav.schools':'Schools','nav.articles':'Insights',
     'nav.tools':'Tools','nav.services':'Consulting','nav.about':'About','nav.contact':'Contact',
-    'footer.brand_desc':'International school consulting, school search tools, and educational products for Chinese families in Tokyo.',
+    'footer.brand_desc':'International school consulting, admissions guidance, school selection tools, and education IT products for English speakers in Tokyo.',
     'footer.nav_schools':'Schools','footer.nav_articles':'Insights',
     'footer.nav_tools':'Tools','footer.nav_services':'Consulting','footer.nav_about':'About',
     'footer.contact_wechat':'WeChat Work: 13732203788',
@@ -241,7 +241,7 @@ var T = {
   ja: {
     'nav.home':'ホーム','nav.schools':'学校探索','nav.articles':'記事',
     'nav.tools':'学習ツール','nav.services':'相談サービス','nav.about':'私たちについて','nav.contact':'お問い合わせ',
-    'footer.brand_desc':'東京の中国語系ご家族のための国際学校コンサルティング・学校選択ツール・教育製品。',
+    'footer.brand_desc':'東京の日本語話者向けのインターナショナルスクール相談、進学指導、学校選択ツール、教育系ITプロダクト。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'記事',
     'footer.nav_tools':'学習ツール','footer.nav_services':'相談サービス','footer.nav_about':'私たちについて',
     'footer.contact_wechat':'企業WeChat：13732203788',
@@ -410,7 +410,7 @@ function applyI18n(lang) {
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
-        <p class="footer-brand-desc" data-i18n="footer.brand_desc">面向东京华人家庭的国际学校咨询、选校工具与教育产品。</p>
+        <p class="footer-brand-desc" data-i18n="footer.brand_desc">面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。</p>
         <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</p>
       </div>
       <div>
