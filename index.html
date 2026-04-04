@@ -1,444 +1,226 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KISSHO K.K. | 吉祥株式会社</title>
-  <meta name="description" content="KISSHO K.K. — Tokyo international school consulting and educational IT services. Official website under construction." />
+  <title>KISSHO | 吉祥书院 — 东京国际学校咨询</title>
+  <meta name="description" content="面向东京华人家庭的国际学校入学咨询、选校工具、MAP备考与中文练习。吉祥书院官方网站。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Serif+JP:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --red:    #c4362a;
-      --red-lt: #d9534f;
-      --gold:   #d4a853;
-      --gold-lt:#e8c87a;
-      --cream:  #faf8f5;
-      --warm:   #f3efe8;
-      --dark:   #2a2118;
-      --mid:    #6b5d50;
-      --muted:  #a09080;
-      --border: rgba(196, 54, 42, 0.15);
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'EB Garamond', 'Noto Serif JP', Georgia, serif;
-      background: var(--cream);
-      color: var(--dark);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* ─── TOP STRIPE ─── */
-    .top-stripe {
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(to right, var(--red), var(--gold), var(--red));
-    }
-
-    /* ─── MAIN WRAPPER ─── */
-    .page {
-      width: 100%;
-      max-width: 780px;
-      padding: 56px 40px 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-
-    /* ─── LOGO ─── */
-    .logo-wrap {
-      margin-bottom: 32px;
-    }
-
-    .logo-wrap svg {
-      width: 200px;
-      height: 200px;
-    }
-
-    /* ─── STATUS PILL ─── */
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      background: rgba(196, 54, 42, 0.07);
-      border: 1px solid rgba(196, 54, 42, 0.25);
-      border-radius: 40px;
-      padding: 7px 20px;
-      margin-bottom: 44px;
-    }
-
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--red);
-      animation: pulse 2s ease-in-out infinite;
-      flex-shrink: 0;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.35; transform: scale(0.65); }
-    }
-
-    .status-text {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      color: var(--red);
-    }
-
-    /* ─── WELCOME BLOCK ─── */
-    .welcome {
-      text-align: center;
-      margin-bottom: 44px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .welcome-en {
-      font-size: 1.35rem;
-      line-height: 1.75;
-      color: var(--dark);
-      font-weight: 400;
-    }
-
-    .welcome-zh {
-      font-size: 1.05rem;
-      line-height: 1.9;
-      color: var(--mid);
-      font-family: 'Noto Serif SC', 'SimSun', serif;
-    }
-
-    .welcome-ja {
-      font-size: 1rem;
-      line-height: 2;
-      color: var(--mid);
-      font-family: 'Noto Serif JP', 'Yu Mincho', serif;
-    }
-
-    em {
-      font-style: italic;
-      color: var(--red);
-    }
-
-    /* ─── ORNAMENT ─── */
-    .ornament {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      width: 100%;
-      max-width: 400px;
-      margin: 4px auto 40px;
-    }
-
-    .orn-line {
-      flex: 1;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold));
-    }
-
-    .orn-line.rev {
-      background: linear-gradient(to left, transparent, var(--gold));
-    }
-
-    .orn-diamond {
-      width: 7px;
-      height: 7px;
-      background: var(--gold);
-      transform: rotate(45deg);
-      flex-shrink: 0;
-    }
-
-    /* ─── INFO CARD ─── */
-    .info-card {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--red);
-      border-radius: 2px;
-      background: #ffffff;
-      padding: 36px 40px 32px;
-      box-shadow: 0 2px 20px rgba(196, 54, 42, 0.05);
-    }
-
-    .card-heading {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
-      color: var(--red);
-      text-transform: uppercase;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .card-heading::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* info rows */
-    .info-section {
-      display: flex;
-      flex-direction: column;
-      gap: 22px;
-    }
-
-    .info-row {
-      display: flex;
-      gap: 16px;
-    }
-
-    .info-label {
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      min-width: 110px;
-      padding-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .info-value {
-      font-size: 0.97rem;
-      color: var(--dark);
-      line-height: 1.65;
-    }
-
-    /* divider inside card */
-    .card-divider {
-      height: 1px;
-      background: var(--border);
-      margin: 24px 0;
-    }
-
-    /* team */
-    .team-row {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .team-member {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .member-name {
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--dark);
-    }
-
-    .member-title {
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      font-family: 'EB Garamond', Georgia, serif;
-    }
-
-    .member-email a {
-      font-size: 0.88rem;
-      color: var(--red);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-
-    .member-email a:hover {
-      border-color: var(--red);
-    }
-
-    /* ─── SERVICES NOTE ─── */
-    .services-note {
-      margin-top: 36px;
-      background: var(--warm);
-      border-left: 3px solid var(--gold);
-      border-radius: 0 2px 2px 0;
-      padding: 16px 20px;
-    }
-
-    .services-note p {
-      font-size: 0.9rem;
-      color: var(--mid);
-      line-height: 1.75;
-      font-family: 'Noto Serif SC', 'Noto Serif JP', 'EB Garamond', serif;
-    }
-
-    .services-note p + p {
-      margin-top: 6px;
-    }
-
-    /* ─── FOOTER ─── */
-    .footer {
-      margin-top: 48px;
-      text-align: center;
-      font-family: 'EB Garamond', Georgia, serif;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      color: var(--muted);
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 560px) {
-      .page { padding: 40px 20px 60px; }
-      .logo-wrap svg { width: 160px; height: 160px; }
-      .welcome-en { font-size: 1.15rem; }
-      .info-card { padding: 28px 22px 24px; }
-      .info-row { flex-direction: column; gap: 4px; }
-      .info-label { min-width: unset; }
-      .team-row { gap: 24px; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="top-stripe"></div>
 
-  <main class="page">
-
-    <!-- Logo (SVG inline, background removed) -->
-    <div class="logo-wrap">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" aria-label="KISSHO 吉祥株式会社 Logo">
-        <g transform="translate(200, 200) scale(1.25) translate(-200, -200)">
-          <!-- Torii gate with book -->
-          <g transform="translate(200, 139)">
-            <path d="M -55 12 L -55 -18 Q -55 -36 -36 -42 L 0 -54 L 36 -42 Q 55 -36 55 -18 L 55 12"
-              fill="none" stroke="#c4362a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="-62" y1="-6" x2="62" y2="-6" stroke="#c4362a" stroke-width="3.2"/>
-            <line x1="-42" y1="-6" x2="-42" y2="30" stroke="#c4362a" stroke-width="3.8"/>
-            <line x1="42" y1="-6" x2="42" y2="30" stroke="#c4362a" stroke-width="3.8"/>
-            <circle cx="0" cy="-54" r="6" fill="#d4a853"/>
-            <path d="M -15 10 Q 0 3 15 10 M -15 10 L -15 22 Q 0 15 15 22 L 15 10"
-              fill="none" stroke="#d4a853" stroke-width="2" stroke-linecap="round"/>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="KISSHO Logo">
+          <g transform="translate(50, 38)">
+            <path d="M -22 5 L -22 -7 Q -22 -14.5 -14.5 -17 L 0 -22 L 14.5 -17 Q 22 -14.5 22 -7 L 22 5" fill="none" stroke="#c4362a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="-25" y1="-2.5" x2="25" y2="-2.5" stroke="#c4362a" stroke-width="1.5"/>
+            <line x1="-17" y1="-2.5" x2="-17" y2="12" stroke="#c4362a" stroke-width="1.6"/>
+            <line x1="17" y1="-2.5" x2="17" y2="12" stroke="#c4362a" stroke-width="1.6"/>
+            <circle cx="0" cy="-22" r="2.5" fill="#d4a853"/>
+            <path d="M -6 4 Q 0 1 6 4 M -6 4 L -6 9 Q 0 6 6 9 L 6 4" fill="none" stroke="#d4a853" stroke-width="0.9" stroke-linecap="round"/>
           </g>
-          <!-- 吉祥 -->
-          <text x="200" y="239"
-            font-family="'Noto Serif SC', 'STSong', 'SimSun', serif"
-            font-size="64" font-weight="700" fill="#c4362a"
-            text-anchor="middle" letter-spacing="10">吉祥</text>
-          <!-- Divider ornament -->
-          <line x1="105" y1="257" x2="165" y2="257" stroke="#d4a853" stroke-width="1.2"/>
-          <circle cx="200" cy="257" r="3" fill="#d4a853"/>
-          <line x1="235" y1="257" x2="295" y2="257" stroke="#d4a853" stroke-width="1.2"/>
-          <!-- KISSHO K.K. -->
-          <text x="200" y="287"
-            font-family="'Georgia', 'Times New Roman', serif"
-            font-size="16" fill="#8a7a6a"
-            text-anchor="middle" letter-spacing="4">KISSHO K.K.</text>
-          <!-- Tagline -->
-          <text x="200" y="317"
-            font-family="'Noto Serif SC', 'STSong', 'SimSun', serif"
-            font-size="13" fill="#a09080"
-            text-anchor="middle" letter-spacing="5">日本国际学校 · 教育咨询</text>
-        </g>
-      </svg>
-    </div>
-
-    <!-- Status Badge -->
-    <div class="status-pill">
-      <span class="pulse-dot"></span>
-      <span class="status-text">Website Under Construction &nbsp;·&nbsp; 制作中 &nbsp;·&nbsp; 建设中</span>
-    </div>
-
-    <!-- Welcome (trilingual) -->
-    <div class="welcome">
-      <p class="welcome-en">
-        Our official website is currently under construction.<br>
-        We look forward to welcoming you very soon. — <em>Betty &amp; Jerry</em>
-      </p>
-      <p class="welcome-zh">
-        吉祥株式会社官方网站正在建设中，敬请期待。<br>— <em>Betty &amp; Jerry</em>
-      </p>
-      <p class="welcome-ja">
-        吉祥株式会社の公式サイトを現在制作中です。<br>もうすぐお会いできることを楽しみにしています。— <em>Betty &amp; Jerry</em>
-      </p>
-    </div>
-
-    <!-- Ornament divider -->
-    <div class="ornament">
-      <div class="orn-line"></div>
-      <div class="orn-diamond"></div>
-      <div class="orn-line rev"></div>
-    </div>
-
-    <!-- Company Info Card -->
-    <div class="info-card">
-      <div class="card-heading">Company Information &nbsp;·&nbsp; 会社情報 &nbsp;·&nbsp; 公司信息</div>
-
-      <div class="info-section">
-
-        <div class="info-row">
-          <span class="info-label">Company</span>
-          <span class="info-value">KISSHO K.K.（吉祥株式会社）</span>
+          <text x="50" y="78" font-family="'Noto Serif SC', serif" font-size="22" font-weight="700" fill="#c4362a" text-anchor="middle">吉祥</text>
+        </svg>
+        <span class="site-logo-text">
+          <span class="site-logo-zh">吉祥书院</span>
+          <span class="site-logo-en en">KISSHO Co., Ltd</span>
+        </span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a class="nav-link active" href="index.html" data-i18n="nav.home">首页</a>
+        <a class="nav-link" href="schools.html" data-i18n="nav.schools">学校探索</a>
+        <a class="nav-link" href="articles.html" data-i18n="nav.articles">深度文章</a>
+        <a class="nav-link" href="tools.html" data-i18n="nav.tools">学习工具</a>
+        <a class="nav-link" href="services.html" data-i18n="nav.services">咨询服务</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">关于我们</a>
+        <a class="nav-link" href="contact.html" data-i18n="nav.contact">联系</a>
+        <div class="lang-switch">
+          <button class="lang-btn active">中文</button>
+          <button class="lang-btn">EN</button>
+          <button class="lang-btn">日本語</button>
         </div>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
 
-        <div class="info-row">
-          <span class="info-label">Address</span>
-          <span class="info-value">
-            KISSHO BLDG. 101, 5-8-19 MEJIRO<br>
-            TOSHIMA-KU, Tokyo 171-0031, Japan
-          </span>
-        </div>
+  <main>
 
-        <div class="info-row">
-          <span class="info-label">Services</span>
-          <span class="info-value">
-            International School Consulting &nbsp;·&nbsp; Educational IT Products
-          </span>
-        </div>
-
-        <div class="card-divider"></div>
-
-        <!-- Team -->
-        <div class="info-row">
-          <span class="info-label">Contact</span>
-          <div class="team-row">
-            <div class="team-member">
-              <span class="member-name">Betty</span>
-              <span class="member-title">Co-Founder &amp; COO</span>
-              <span class="member-email"><a href="mailto:betty@kissho.school">betty@kissho.school</a></span>
-            </div>
-            <div class="team-member">
-              <span class="member-name">Jerry</span>
-              <span class="member-title">Co-Founder &amp; CTO</span>
-              <span class="member-email"><a href="mailto:jerry@kissho.school">jerry@kissho.school</a></span>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content reveal">
+            <div class="hero-kicker en" data-i18n="index.hero.kicker">Tokyo International School Consulting</div>
+            <h1 class="hero-title" data-i18n-html="index.hero.title">为您找到<em>最适合孩子</em>的国际学校</h1>
+            <p class="hero-desc" data-i18n="index.hero.desc">从选校咨询到入学落地，从 MAP 备考到中文保持 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。</p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="services.html" data-i18n="index.hero.btn_services">了解我们的服务</a>
+              <a class="btn btn-ghost" href="schools.html" data-i18n="index.hero.btn_schools">探索学校</a>
             </div>
           </div>
+          <div class="hero-image reveal">
+            <img src="图片/mejiro.jpg" alt="吉祥书院" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
         </div>
-
-      </div><!-- /info-section -->
-
-      <!-- Services note -->
-      <div class="services-note">
-        <p>我们专注于服务有意入读东京国际学校的学生及家长，提供入学咨询、升学规划，以及教育类IT产品服务。</p>
-        <p>We focus on serving students and families seeking admission to Tokyo international schools, offering admissions consulting, academic planning, and educational IT products.</p>
-        <p>東京のインターナショナルスクールへの入学を目指す生徒・ご家族向けに、入学相談・進学支援、および教育ITサービスを提供しています。</p>
       </div>
+    </section>
 
-    </div><!-- /info-card -->
+    <div class="ornament"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line rev"></div></div>
 
-    <footer class="footer">
-      &copy; 2026 KISSHO K.K. &nbsp;·&nbsp; 吉祥株式会社 &nbsp;·&nbsp; All Rights Reserved
-    </footer>
+    <!-- Core Modules -->
+    <section class="section" style="padding-top: 35px;">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker en" data-i18n="index.offer.kicker">What We Offer</div>
+          <h2 class="section-title" data-i18n="index.offer.title">围绕国际学校，我们做这些事</h2>
+          <p class="section-desc" data-i18n="index.offer.desc">从信息到决策，从入学到学习，一步步陪你走通。</p>
+        </div>
+        <div class="modules-grid">
+          <div class="module-card reveal">
+            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="12"/><line x1="26" y1="26" x2="36" y2="36"/></svg>
+            <span class="module-label en">School Explorer</span>
+            <h3 class="module-title" data-i18n="index.mod.schools.title">学校探索</h3>
+            <p class="module-desc" data-i18n="index.mod.schools.desc">覆盖东京所有国际学校，按区域、课程体系、年级、学费筛选浏览。找到最适合孩子的学校。</p>
+            <a class="module-link en" href="schools.html">Explore</a>
+          </div>
+          <div class="module-card reveal">
+            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h20a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6"/><path d="M6 4v32"/><line x1="14" y1="12" x2="24" y2="12"/><line x1="14" y1="18" x2="24" y2="18"/><line x1="14" y1="24" x2="20" y2="24"/></svg>
+            <span class="module-label en">Insights</span>
+            <h3 class="module-title" data-i18n="index.mod.articles.title">深度文章</h3>
+            <p class="module-desc" data-i18n="index.mod.articles.desc">访校手记、选校方法论、课程体系解读、备考经验。来自真实探访和一线经验的深度内容。</p>
+            <a class="module-link en" href="articles.html">Read</a>
+          </div>
+          <div class="module-card reveal">
+            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="32" height="24" rx="3"/><line x1="4" y1="14" x2="36" y2="14"/><circle cx="20" cy="36" r="2"/><line x1="20" y1="30" x2="20" y2="34"/></svg>
+            <span class="module-label en">Learning Tools</span>
+            <h3 class="module-title" data-i18n="index.mod.tools.title">学习工具</h3>
+            <p class="module-desc" data-i18n="index.mod.tools.desc">MAP 测试练习、中文读写训练 —— 我们为自己的孩子开发的工具，现在也开放给更多家庭。</p>
+            <a class="module-link en" href="tools.html">Try</a>
+          </div>
+          <div class="module-card reveal">
+            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30 Q8 10 20 10 Q32 10 32 30"/><line x1="8" y1="30" x2="8" y2="36"/><line x1="32" y1="30" x2="32" y2="36"/><circle cx="20" cy="6" r="3" fill="none"/></svg>
+            <span class="module-label en">Consulting</span>
+            <h3 class="module-title" data-i18n="index.mod.consulting.title">咨询服务</h3>
+            <p class="module-desc" data-i18n="index.mod.consulting.desc">一对一选校评估、访校陪同、材料指导、面试辅导与口译。从信息到执行落地，全程支持。</p>
+            <a class="module-link en" href="services.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Articles -->
+    <section class="section section--warm">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker en" data-i18n="index.featured.kicker">Featured Insights</div>
+          <h2 class="section-title" data-i18n="index.featured.title">深度文章</h2>
+          <p class="section-desc" data-i18n="index.featured.desc">超过十年的经验总结，帮您在做决定前看清全貌。</p>
+        </div>
+        <div class="articles-grid">
+          <a class="article-card reveal" href="article-school-selection.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="article-image" style="overflow:hidden;">
+              <img src="图片/选校 走进校园.jpg" alt="东京国际学校选校指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+            </div>
+            <div class="article-body">
+              <span class="article-tag en">Methodology</span>
+              <h3 class="article-title" data-i18n="index.article1.title">东京国际学校择校实战指南</h3>
+              <p class="article-excerpt" data-i18n="index.article1.excerpt">从课程体系到申请流程，帮你建立清晰的选校框架，找到最适合自己家庭的方向。</p>
+            </div>
+          </a>
+          <a class="article-card reveal" href="article-curriculum-guide.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="article-image" style="overflow:hidden;">
+              <img src="图片/3 封面.jpg" alt="IB A-Level AP 课程体系" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+            </div>
+            <div class="article-body">
+              <span class="article-tag en">Curriculum</span>
+              <h3 class="article-title" data-i18n="index.article2.title">IB、A-Level、AP — 三大课程体系全解读</h3>
+              <p class="article-excerpt" data-i18n="index.article2.excerpt">IB、A-Level、AP 有什么区别？哪个更适合您的孩子？一次讲清楚。</p>
+            </div>
+          </a>
+          <a class="article-card reveal" href="article-map-guide.html" style="text-decoration:none;color:inherit;display:block;">
+            <div class="article-image" style="overflow:hidden;">
+              <img src="图片/4 封面.png" alt="MAP 测试备考指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+            </div>
+            <div class="article-body">
+              <span class="article-tag en">MAP Prep</span>
+              <h3 class="article-title" data-i18n="index.article3.title">MAP 测试备考指南 — 读懂自适应考试，孩子从容应对</h3>
+              <p class="article-excerpt" data-i18n="index.article3.excerpt">MAP 是什么？RIT 分数怎么看？中国孩子容易踩哪些坑？从考试机制讲到备考策略。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="section">
+      <div class="container">
+        <div class="about-preview">
+          <div class="about-text reveal">
+            <div class="section-kicker en" data-i18n="index.about.kicker">About Us</div>
+            <h2 class="section-title" data-i18n="index.about.title">关于吉祥书院</h2>
+            <blockquote class="about-quote" data-i18n="index.about.quote">"我们陪伴您，走进最适合的国际学校。"</blockquote>
+            <p class="about-desc" data-i18n="index.about.desc1">Betty & Jerry 创办了吉祥书院。我们的四个孩子曾就读于上海德威国际学校（Dulwich College Shanghai），现就读于东京清泉国际学校（Seisen International School）——从选校、备考到面试、入学，每一步都亲身走过。</p>
+            <p class="about-desc" data-i18n="index.about.desc2">Betty 深耕教育行业超过十年，Jerry 用产品思维和数据能力搭建选校工具与知识库。我们热爱这个行业，全心对待每一个家庭，为您找到最适合孩子的学校。</p>
+            <a class="btn btn-ghost" href="about.html" data-i18n="index.about.btn">了解更多</a>
+          </div>
+          <div class="about-photo reveal">
+            <img src="图片/3.1.png" alt="Betty & Jerry — 吉祥书院创始人" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;border-radius:var(--radius);" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ornament"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line rev"></div></div>
 
   </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
+          <p class="footer-brand-desc">面向东京华人家庭的国际学校咨询、选校工具与教育产品。</p>
+          <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</p>
+        </div>
+        <div>
+          <div class="footer-heading en">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="schools.html" data-i18n="nav.schools">学校探索</a></li>
+            <li><a href="articles.html" data-i18n="nav.articles">深度文章</a></li>
+            <li><a href="tools.html" data-i18n="nav.tools">学习工具</a></li>
+            <li><a href="services.html" data-i18n="nav.services">咨询服务</a></li>
+            <li><a href="about.html" data-i18n="nav.about">关于我们</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading en">Contact</div>
+          <ul class="footer-contact-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span>企微号：13732203788</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20a8 8 0 0 1-8-8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a8 8 0 0 1-8 8Z"/><path d="M8 10h8M8 14h5"/></svg><span>小红书：待填充</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.03Z"/></svg><span>待填充：电话号码</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>betty@kissho.school</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
+        <div class="lang-switch" style="border-left:1px solid rgba(255,255,255,0.15);margin-left:0;padding-left:16px;">
+          <button class="lang-btn active" style="color:rgba(255,255,255,0.7);">中文</button>
+          <button class="lang-btn" style="color:rgba(255,255,255,0.4);">EN</button>
+          <button class="lang-btn" style="color:rgba(255,255,255,0.4);">日本語</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

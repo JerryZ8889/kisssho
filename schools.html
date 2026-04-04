@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>学校探索 | KISSHO 吉祥书院</title>
+  <meta name="description" content="东京115所国际学校，按区域、课程体系、年级段、学费筛选浏览。找到值得深入了解的学校。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .btn-search {
+      background: var(--red);
+      color: #fff;
+      border: none;
+      padding: 0 28px;
+      height: 38px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      border-radius: 2px;
+      cursor: pointer;
+      letter-spacing: 0.08em;
+      transition: background 0.2s;
+      align-self: flex-end;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .btn-search:hover { background: #a82a20; }
+    .results-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .results-count {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .results-count strong {
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+    .btn-reset {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-reset:hover { border-color: var(--red); color: var(--red); }
+    .school-card-v2 {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 22px 24px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .school-card-v2:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border-color: #d0c8b8;
+    }
+    .school-card-v2-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .school-card-v2-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin: 0;
+    }
+    .school-tag-v2 {
+      background: var(--warm-bg);
+      color: var(--red);
+      border: 1px solid rgba(196,54,42,0.2);
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      font-family: 'EB Garamond', serif;
+      letter-spacing: 0.03em;
+    }
+    .school-card-v2-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .school-card-v2-meta span {
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .school-card-v2-meta span::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+    .school-card-v2-desc {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.7;
+      margin: 0;
+      opacity: 0.85;
+    }
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+    .no-results p { margin-bottom: 8px; }
+    #searchResultsSection { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="KISSHO Logo"><g transform="translate(50, 38)"><path d="M -22 5 L -22 -7 Q -22 -14.5 -14.5 -17 L 0 -22 L 14.5 -17 Q 22 -14.5 22 -7 L 22 5" fill="none" stroke="#c4362a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="-25" y1="-2.5" x2="25" y2="-2.5" stroke="#c4362a" stroke-width="1.5"/><line x1="-17" y1="-2.5" x2="-17" y2="12" stroke="#c4362a" stroke-width="1.6"/><line x1="17" y1="-2.5" x2="17" y2="12" stroke="#c4362a" stroke-width="1.6"/><circle cx="0" cy="-22" r="2.5" fill="#d4a853"/><path d="M -6 4 Q 0 1 6 4 M -6 4 L -6 9 Q 0 6 6 9 L 6 4" fill="none" stroke="#d4a853" stroke-width="0.9" stroke-linecap="round"/></g><text x="50" y="78" font-family="'Noto Serif SC', serif" font-size="22" font-weight="700" fill="#c4362a" text-anchor="middle">吉祥</text></svg>
+        <span class="site-logo-text"><span class="site-logo-zh">吉祥书院</span><span class="site-logo-en en">KISSHO Co., Ltd</span></span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a class="nav-link" href="index.html" data-i18n="nav.home">首页</a>
+        <a class="nav-link active" href="schools.html" data-i18n="nav.schools">学校探索</a>
+        <a class="nav-link" href="articles.html" data-i18n="nav.articles">深度文章</a>
+        <a class="nav-link" href="tools.html" data-i18n="nav.tools">学习工具</a>
+        <a class="nav-link" href="services.html" data-i18n="nav.services">咨询服务</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">关于我们</a>
+        <a class="nav-link" href="contact.html" data-i18n="nav.contact">联系</a>
+        <div class="lang-switch"><button class="lang-btn active">中文</button><button class="lang-btn">EN</button><button class="lang-btn">日本語</button></div>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-kicker en" data-i18n="schools.kicker">School Explorer</div>
+        <h1 class="section-title" data-i18n="schools.title">东京国际学校探索</h1>
+        <p class="section-desc" data-i18n="schools.desc">涵盖东京及周边 115 所国际学校。23 个区域 · 14 种课程体系 · 学费从 50 万到 300 万日元以上。使用筛选工具缩小范围，找到值得进一步了解的学校。（持续完善中）</p>
+      </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <section class="section" style="padding-top: 45px;">
+      <div class="container">
+
+        <div class="filter-bar reveal">
+          <div class="filter-group">
+            <label class="filter-label en" data-i18n="schools.filter.region.label">Region / 区域</label>
+            <select class="filter-select" id="filterRegion">
+              <option value="" data-i18n="schools.filter.region.all">全部区域</option>
+              <optgroup label="── 东京中心区 ──">
+                <option>港区</option>
+                <option>世田谷区</option>
+                <option>涩谷区</option>
+                <option>目黑区</option>
+                <option>江东区</option>
+                <option>新宿区</option>
+                <option>江户川区</option>
+                <option>文京区</option>
+                <option>丰岛区</option>
+                <option>练马区</option>
+                <option>千代田区</option>
+                <option>品川区</option>
+                <option>板桥区</option>
+                <option>足立区</option>
+                <option>杉并区</option>
+                <option>中央区</option>
+                <option>葛饰区</option>
+                <option>北区</option>
+                <option>大田区</option>
+              </optgroup>
+              <optgroup label="── 东京周边 ──">
+                <option>神奈川县</option>
+                <option>东京都多摩地区</option>
+                <option>千叶县</option>
+                <option>埼玉县</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label en" data-i18n="schools.filter.curr.label">Curriculum / 课程体系</label>
+            <select class="filter-select" id="filterCurr">
+              <option value="" data-i18n="schools.filter.curr.all">全部课程体系</option>
+              <option>IB体系</option>
+              <option>美式课程</option>
+              <option>剑桥 / Cambridge</option>
+              <option>双语课程</option>
+              <option>蒙特梭利</option>
+              <option>英式课程</option>
+              <option>瑞吉欧</option>
+              <option>加拿大课程</option>
+              <option>印度课程 CBSE</option>
+              <option>法国课程</option>
+              <option>台湾课程</option>
+              <option>韩国课程</option>
+              <option>德国课程</option>
+              <option>其他 / 独立课程</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label en" data-i18n="schools.filter.grade.label">Grade / 年级段</label>
+            <select class="filter-select" id="filterGrade">
+              <option value="" data-i18n="schools.filter.grade.all">全部年级</option>
+              <option>幼儿园</option>
+              <option>小学</option>
+              <option>初中</option>
+              <option>高中</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label en" data-i18n="schools.filter.tuition.label">Tuition / 学费区间</label>
+            <select class="filter-select" id="filterTuition">
+              <option value="" data-i18n="schools.filter.tuition.all">全部学费</option>
+              <option value="150万以下">150万日元以下</option>
+              <option value="150—200万">150～200万日元</option>
+              <option value="200—250万">200～250万日元</option>
+              <option value="250—300万">250～300万日元</option>
+              <option value="300万以上">300万日元以上</option>
+            </select>
+          </div>
+          <button class="btn-search" id="searchBtn" data-i18n="schools.btn.search">搜索</button>
+        </div>
+
+        <!-- Search Results -->
+        <div id="searchResultsSection">
+          <div class="results-header">
+            <div class="results-count" id="resultsCount"></div>
+            <button class="btn-reset" id="resetBtn" data-i18n="schools.btn.reset">重置筛选 · 显示全部</button>
+          </div>
+          <div class="schools-grid" id="schoolsGrid"></div>
+        </div>
+
+        <!-- 数据说明 -->
+        <div class="company-info-card reveal" style="margin-top: 40px; text-align: center;">
+          <p style="font-size:0.9rem; color:var(--muted); line-height:1.8;" data-i18n-html="schools.data.note">
+            数据库收录 <strong>115 所</strong>学校 · 覆盖东京 23 区及神奈川、千叶、埼玉、多摩地区<br>
+            如需获取某所学校的详细信息或选校建议，欢迎<a href="contact.html" style="color:var(--red);">联系我们</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--warm" style="text-align: center;">
+      <div class="container reveal">
+        <h2 class="section-title" data-i18n="schools.cta.title">不确定哪所学校适合你的孩子？</h2>
+        <p class="section-desc" style="margin-bottom: 28px; white-space: nowrap;" data-i18n="schools.cta.desc">115 所学校看起来选择很多，但每个家庭的情况不同。我们帮您找到最适合孩子的学校。</p>
+        <a class="btn btn-primary" href="services.html" data-i18n="schools.cta.btn">了解咨询服务</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
+          <p class="footer-brand-desc">面向东京华人家庭的国际学校咨询、选校工具与教育产品。</p>
+          <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</p>
+        </div>
+        <div>
+          <div class="footer-heading en">Navigation</div>
+          <ul class="footer-links"><li><a href="schools.html" data-i18n="nav.schools">学校探索</a></li><li><a href="articles.html" data-i18n="nav.articles">深度文章</a></li><li><a href="tools.html" data-i18n="nav.tools">学习工具</a></li><li><a href="services.html" data-i18n="nav.services">咨询服务</a></li><li><a href="about.html" data-i18n="nav.about">关于我们</a></li></ul>
+        </div>
+        <div>
+          <div class="footer-heading en">Contact</div>
+          <ul class="footer-contact-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span>企微号：13732203788</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>betty@kissho.school</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
+        <div class="lang-switch" style="border-left:1px solid rgba(255,255,255,0.15);margin-left:0;padding-left:16px;"><button class="lang-btn active" style="color:rgba(255,255,255,0.7);">中文</button><button class="lang-btn" style="color:rgba(255,255,255,0.4);">EN</button><button class="lang-btn" style="color:rgba(255,255,255,0.4);">日本語</button></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="schools-data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    (function() {
+      var searchBtn = document.getElementById('searchBtn');
+      var resetBtn = document.getElementById('resetBtn');
+      var resultsSection = document.getElementById('searchResultsSection');
+      var schoolsGrid = document.getElementById('schoolsGrid');
+      var resultsCount = document.getElementById('resultsCount');
+
+      var tuitionMap = {
+        '150万以下': ['150万以下'],
+        '150—200万': ['150—200万'],
+        '200—250万': ['200—250万'],
+        '250—300万': ['250—300万'],
+        '300万以上': ['300万以上']
+      };
+
+      function getFilters() {
+        return {
+          region: document.getElementById('filterRegion').value,
+          curr: document.getElementById('filterCurr').value,
+          grade: document.getElementById('filterGrade').value,
+          tuition: document.getElementById('filterTuition').value
+        };
+      }
+
+      var currAliases = {
+        '剑桥 / Cambridge': ['剑桥/Cambridge', '剑桥 / Cambridge'],
+        '其他 / 独立课程': ['其他', '其他/独立课程', '其他 / 独立课程'],
+        '印度课程 CBSE': ['印度课程', '印度课程CBSE', '印度课程 CBSE']
+      };
+
+      function matchCurr(school, curr) {
+        if (!curr) return true;
+        var aliases = currAliases[curr];
+        if (aliases) return aliases.indexOf(school.currTag) !== -1;
+        return school.currTag === curr;
+      }
+
+      function filterSchools(filters) {
+        return SCHOOLS_DATA.filter(function(s) {
+          if (filters.region && s.region !== filters.region) return false;
+          if (filters.curr && !matchCurr(s, filters.curr)) return false;
+          if (filters.grade && (!s.levels || s.levels.indexOf(filters.grade) === -1)) return false;
+          if (filters.tuition && s.bracket !== filters.tuition) return false;
+          return true;
+        });
+      }
+
+      function renderCard(s) {
+        var tuitionText = s.tuition || window.kisshoT('schools.tuition.contact');
+        var desc = s.desc || '';
+        // Trim desc to ~60 chars if too long
+        if (desc.length > 70) desc = desc.substring(0, 68) + '…';
+        return '<div class="school-card-v2">' +
+          '<div class="school-card-v2-header">' +
+            '<h3 class="school-card-v2-name">' + s.name_zh + '</h3>' +
+            '<span class="school-tag-v2">' + (s.currTag || '') + '</span>' +
+          '</div>' +
+          '<div class="school-card-v2-meta">' +
+            '<span>' + s.region + '</span>' +
+            '<span>' + s.grades + '</span>' +
+            '<span>' + tuitionText + '</span>' +
+          '</div>' +
+          '<p class="school-card-v2-desc">' + desc + '</p>' +
+        '</div>';
+      }
+
+      function showResults(schools, isAll, scroll) {
+        resultsSection.style.display = 'block';
+        if (schools.length === 0) {
+          resultsCount.innerHTML = window.kisshoT('schools.results.none');
+          schoolsGrid.innerHTML = '<div class="no-results"><p>' + window.kisshoT('schools.no_results.text') + '</p><p style="font-size:0.85rem;">' + window.kisshoT('schools.no_results.hint') + '</p></div>';
+        } else {
+          var label = isAll ? window.kisshoT('schools.results.all', {n: schools.length}) : window.kisshoT('schools.results.filtered', {n: schools.length});
+          resultsCount.innerHTML = label;
+          schoolsGrid.innerHTML = schools.map(renderCard).join('');
+        }
+        if (scroll) resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      searchBtn.addEventListener('click', function() {
+        var filters = getFilters();
+        var results = filterSchools(filters);
+        var isAll = !filters.region && !filters.curr && !filters.grade && !filters.tuition;
+        showResults(results, isAll, false);
+      });
+
+      resetBtn.addEventListener('click', function() {
+        document.getElementById('filterRegion').value = '';
+        document.getElementById('filterCurr').value = '';
+        document.getElementById('filterGrade').value = '';
+        document.getElementById('filterTuition').value = '';
+        showResults(SCHOOLS_DATA, true, false);
+      });
+
+      // Show all schools on page load (no scroll)
+      showResults(SCHOOLS_DATA, true, false);
+    })();
+  </script>
+</body>
+</html>
