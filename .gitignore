@@ -1,0 +1,30 @@
+# 依赖包
+node_modules/
+
+# Claude Code 本地配置
+.claude/
+
+# Python 缓存和脚本
+图片/__pycache__/
+图片/retouch_jerry_v2.py
+
+# 临时文件
+*.saving
+圣心国际/.Temp
+
+# 原始数据和文档（内容已包含在 schools-data.js 和 HTML 里）
+东京国际学校.xlsx
+品川/品川.docx
+
+# 开发参考文件
+placeholder-reference.html
+DESIGN.md
+
+# 已被替换的旧版图片
+图片/3.png
+图片/Betty肖像.png
+图片/Jerry肖像.png
+图片/Jerry肖像 2.png
+图片/Jerry肖像 3.png
+图片/Jerry肖像 3-retouched.png
+图片/Jerry肖像-text-swapped.png

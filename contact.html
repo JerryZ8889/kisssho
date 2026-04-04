@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>联系我们 | KISSHO 吉祥书院</title>
+  <meta name="description" content="通过微信、小红书、电话或邮件联系吉祥书院，开始您的东京国际学校咨询。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="KISSHO Logo"><g transform="translate(50, 38)"><path d="M -22 5 L -22 -7 Q -22 -14.5 -14.5 -17 L 0 -22 L 14.5 -17 Q 22 -14.5 22 -7 L 22 5" fill="none" stroke="#c4362a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="-25" y1="-2.5" x2="25" y2="-2.5" stroke="#c4362a" stroke-width="1.5"/><line x1="-17" y1="-2.5" x2="-17" y2="12" stroke="#c4362a" stroke-width="1.6"/><line x1="17" y1="-2.5" x2="17" y2="12" stroke="#c4362a" stroke-width="1.6"/><circle cx="0" cy="-22" r="2.5" fill="#d4a853"/><path d="M -6 4 Q 0 1 6 4 M -6 4 L -6 9 Q 0 6 6 9 L 6 4" fill="none" stroke="#d4a853" stroke-width="0.9" stroke-linecap="round"/></g><text x="50" y="78" font-family="'Noto Serif SC', serif" font-size="22" font-weight="700" fill="#c4362a" text-anchor="middle">吉祥</text></svg>
+        <span class="site-logo-text"><span class="site-logo-zh">吉祥书院</span><span class="site-logo-en en">KISSHO Co., Ltd</span></span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a class="nav-link" href="index.html" data-i18n="nav.home">首页</a>
+        <a class="nav-link" href="schools.html" data-i18n="nav.schools">学校探索</a>
+        <a class="nav-link" href="articles.html" data-i18n="nav.articles">深度文章</a>
+        <a class="nav-link" href="tools.html" data-i18n="nav.tools">学习工具</a>
+        <a class="nav-link" href="services.html" data-i18n="nav.services">咨询服务</a>
+        <a class="nav-link" href="about.html" data-i18n="nav.about">关于我们</a>
+        <a class="nav-link active" href="contact.html" data-i18n="nav.contact">联系</a>
+        <div class="lang-switch"><button class="lang-btn active">中文</button><button class="lang-btn">EN</button><button class="lang-btn">日本語</button></div>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <div class="section-kicker en" data-i18n="contact.kicker">Contact</div>
+        <h1 class="section-title" style="letter-spacing:0.4em;" data-i18n="contact.title">联系我们</h1>
+        <p class="section-desc" data-i18n="contact.desc">选择你方便的方式，和我们聊聊孩子的国际学校想法。</p>
+      </div>
+    </section>
+
+    <!-- Contact Channels -->
+    <section class="section">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <!-- 企业微信 -->
+          <div class="contact-channel reveal">
+            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="18" r="14"/>
+              <path d="M12 15h.01M24 15h.01"/>
+              <path d="M12 22a8 8 0 0 0 12 0"/>
+            </svg>
+            <h3 class="contact-channel-name" data-i18n="contact.wechat.name">企业微信</h3>
+            <div class="contact-qr">
+              <img src="图片/企业微信.jpg" alt="企业微信二维码" style="width:180px;height:180px;object-fit:cover;display:block;" />
+            </div>
+            <p class="contact-channel-desc" data-i18n="contact.wechat.number">企微号：13732203788</p>
+            <p class="contact-channel-desc" style="font-size: 0.82rem;" data-i18n="contact.wechat.hint">请告诉我孩子年级，期待入学的时间奥</p>
+          </div>
+
+          <!-- 小红书 -->
+          <div class="contact-channel reveal">
+            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 30a12 12 0 0 1-12-12V9a3 3 0 0 1 3-3h18a3 3 0 0 1 3 3v9a12 12 0 0 1-12 12Z"/>
+              <path d="M12 14h12M12 20h8"/>
+            </svg>
+            <h3 class="contact-channel-name" data-i18n="contact.xhs.name">小红书</h3>
+            <div class="contact-qr">
+              <img src="图片/小红书.jpg" alt="小红书二维码" style="width:180px;height:180px;object-fit:cover;display:block;" />
+            </div>
+            <p class="contact-channel-desc" data-i18n="contact.xhs.number">贝蒂星妈：422507043</p>
+            <p class="contact-channel-desc" style="font-size: 0.82rem;" data-i18n="contact.xhs.hint">关注我们获取东京国际学校的最新资讯和深度内容</p>
+          </div>
+
+          <!-- 电话 -->
+          <div class="contact-channel reveal">
+            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M33 25.38v4.5a3 3 0 0 1-3.27 3A29.69 29.69 0 0 1 17 28.39a29.25 29.25 0 0 1-9-9A29.69 29.69 0 0 1 3.12 6.27 3 3 0 0 1 6.12 3h4.5a3 3 0 0 1 3 2.58c.19 1.22.54 2.4 1.02 3.51a3 3 0 0 1-.68 3.17L12.1 14.1a24 24 0 0 0 9 9l1.84-1.86a3 3 0 0 1 3.17-.68c1.11.48 2.29.83 3.51 1.02a3 3 0 0 1 2.58 3Z"/>
+            </svg>
+            <h3 class="contact-channel-name" data-i18n="contact.phone.name">电话</h3>
+            <p class="contact-channel-value" style="font-size: 1.2rem; margin-top: 12px;">07069875502</p>
+            <p class="contact-channel-desc" style="font-size: 0.82rem;" data-i18n="contact.phone.hint">欢迎来电，我们一起找到最合适的东京国际学校</p>
+          </div>
+
+          <!-- 邮件 -->
+          <div class="contact-channel reveal">
+            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="6" width="30" height="24" rx="3"/>
+              <path d="m33 10.5-13.46 8.55a2.91 2.91 0 0 1-3.08 0L3 10.5"/>
+            </svg>
+            <h3 class="contact-channel-name" data-i18n="contact.email.name">邮件</h3>
+            <p class="contact-channel-value" style="font-size: 1.05rem; margin-top: 12px;">
+              <a href="mailto:betty@kissho.school">betty@kissho.school</a>
+            </p>
+            <p class="contact-channel-desc" style="font-size: 0.82rem; margin-top: 8px;" data-i18n="contact.email.hint">除深夜，都会很快回复</p>
+          </div>
+
+        </div>
+
+        <!-- Company Info -->
+        <div class="company-info-card reveal" style="margin-top: 56px;">
+          <div class="section-kicker en" style="margin-bottom: 24px;" data-i18n="contact.office.kicker">Office</div>
+          <div class="info-row">
+            <span class="info-label en">Address</span>
+            <span class="info-value" data-i18n="contact.access.value">
+              KISSHO BLDG. 101, 5-8-19 MEJIRO<br>
+              TOSHIMA-KU, Tokyo 171-0031, Japan
+            </span>
+          </div>
+          <div class="info-row">
+            <span class="info-label en" data-i18n="contact.access.label">Access</span>
+            <span class="info-value" data-i18n="contact.access.value">山手线（JR） 目白站（Mejiro），西武池袋线（SI） 椎名町站（Shiinamachi），大江户线（E） 落合南长崎站（Ochiai-Minaminagasaki） 皆可到达</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
+          <p class="footer-brand-desc">面向东京华人家庭的国际学校咨询、选校工具与教育产品。</p>
+        </div>
+        <div>
+          <div class="footer-heading en">Navigation</div>
+          <ul class="footer-links"><li><a href="schools.html" data-i18n="nav.schools">学校探索</a></li><li><a href="articles.html" data-i18n="nav.articles">深度文章</a></li><li><a href="tools.html" data-i18n="nav.tools">学习工具</a></li><li><a href="services.html" data-i18n="nav.services">咨询服务</a></li><li><a href="about.html" data-i18n="nav.about">关于我们</a></li></ul>
+        </div>
+        <div>
+          <div class="footer-heading en">Contact</div>
+          <ul class="footer-contact-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span>企微号：13732203788</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>betty@kissho.school</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
+        <div class="lang-switch" style="border-left:1px solid rgba(255,255,255,0.15);margin-left:0;padding-left:16px;"><button class="lang-btn active" style="color:rgba(255,255,255,0.7);">中文</button><button class="lang-btn" style="color:rgba(255,255,255,0.4);">EN</button><button class="lang-btn" style="color:rgba(255,255,255,0.4);">日本語</button></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
