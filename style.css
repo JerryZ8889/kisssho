@@ -299,7 +299,7 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
    Page Hero (shared for inner pages)
    ============================================ */
 .page-hero {
-  padding: 34px 0 29px;
+  padding: 42px 0 36px;
   text-align: center;
   border-bottom: 1px solid var(--border-light);
 }
@@ -312,8 +312,10 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
 }
 
 .page-hero .section-desc {
-  max-width: 600px;
+  max-width: 640px;
 }
+
+main > .page-hero + .section { padding-top: 58px; }
 
 /* ============================================
    Homepage: Hero
@@ -668,6 +670,11 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
   color: var(--white);
 }
 
+.articles-page-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
 .articles-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -768,6 +775,29 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
   aspect-ratio: 4 / 3;
 }
 
+.tool-showcase--coming-soon {
+  align-items: start;
+}
+
+.tool-showcase--coming-soon .tool-preview {
+  aspect-ratio: 5 / 3;
+  max-width: 420px;
+  justify-self: end;
+  width: 100%;
+}
+
+.tools-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools-section--chinese { order: 1; }
+.tools-ornament--first { order: 2; }
+.tools-section--japanese { order: 3; }
+.tools-ornament--second { order: 4; }
+.tools-section--map { order: 5; }
+.tools-section--note { order: 6; }
+
 /* ============================================
    Services Page
    ============================================ */
@@ -776,6 +806,16 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
   margin-bottom: 64px;
+}
+
+.services-group,
+.services-overview--primary,
+.services-overview--secondary {
+  display: contents;
+}
+
+.services-section-label {
+  display: none;
 }
 
 .service-card {
@@ -789,13 +829,11 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
   gap: 16px;
 }
 
-.service-card--flagship {
-  grid-column: 1 / -1;
-  text-align: center;
-  align-items: center;
-}
-.service-card--flagship .service-desc {
-  max-width: 600px;
+.service-card--flagship,
+.service-card:has(.service-title[data-i18n="services.s7.title"]) {
+  border-color: rgba(196, 54, 42, 0.22);
+  background: linear-gradient(180deg, rgba(212, 168, 83, 0.14), #fff 52%);
+  box-shadow: 0 6px 24px rgba(42, 33, 24, 0.08);
 }
 
 .service-icon { width: 40px; height: 40px; color: var(--red); }
@@ -1374,14 +1412,32 @@ html[lang="ja"] .nav-link { font-size: 0.78rem; }
   .hero-title        { font-size: 1.6rem; }
   .section           { padding: 45px 0; }
   .section-title     { font-size: 1.35rem; }
-  .page-hero         { padding: 24px 0 22px; }
+  .page-hero         { padding: 30px 0 26px; }
   .page-hero .section-title { font-size: 1.5rem; }
+  main > .page-hero + .section { padding-top: 40px; }
   .modules-grid      { gap: 20px; }
   .module-card       { padding: 28px 24px 24px; }
   .filter-bar        { flex-direction: column; }
   .filter-group      { min-width: unset; }
   .info-row          { flex-direction: column; gap: 4px; }
   .info-label        { min-width: unset; }
+  .services-stack    { gap: 40px; }
+  .services-section-label { margin-bottom: 18px; }
+  .contact-grid      {
+    gap: 24px;
+    grid-template-areas:
+      "wechat"
+      "xhs"
+      "phone"
+      "email";
+  }
+  .contact-channel   { padding: 24px; gap: 14px; }
+  .contact-channel--wechat { grid-area: wechat; }
+  .contact-channel--xhs    { grid-area: xhs; }
+  .contact-channel--phone  { grid-area: phone; }
+  .contact-channel--email  { grid-area: email; }
+  .contact-qr        { width: 150px; height: 150px; }
+  .company-info-card { margin-top: 40px; padding: 28px 24px; }
 }
 
 /* ── Article pages: ornament divider spacing ────────────────────── */
