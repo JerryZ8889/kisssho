@@ -63,7 +63,7 @@ var T = {
     'contact.kicker':'Contact','contact.title':'联系我们',
     'contact.desc':'选择你方便的方式，和我们聊聊孩子的国际学校想法。',
     'contact.wechat.name':'企业微信','contact.wechat.number':'企微号：13732203788',
-    'contact.wechat.hint':'请告诉我孩子年级，期待入学的时间奥',
+    'contact.wechat.hint':'请告诉我孩子年级，期待入学的时间',
     'contact.xhs.name':'小红书','contact.xhs.number':'贝蒂星妈：422507043',
     'contact.xhs.hint':'关注我们获取东京国际学校的最新资讯和深度内容',
     'contact.phone.name':'电话','contact.phone.hint':'欢迎来电，我们一起找到最合适的东京国际学校',
