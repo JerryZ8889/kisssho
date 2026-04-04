@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>学校探索 | KISSHO 吉祥书院</title>
-  <meta name="description" content="东京115所国际学校，按区域、课程体系、年级段、学费筛选浏览。找到值得深入了解的学校。" />
+  <title
+    data-i18n-zh="学校探索 | KISSHO 吉祥书院"
+    data-i18n-en="School Explorer | KISSHO"
+    data-i18n-ja="学校検索 | KISSHO"
+  >学校探索 | KISSHO 吉祥书院</title>
+  <meta
+    name="description"
+    content="东京115所国际学校，按区域、课程体系、年级段、学费筛选浏览。找到值得深入了解的学校。"
+    data-i18n-attr="content"
+    data-i18n-zh="东京115所国际学校，按区域、课程体系、年级段、学费筛选浏览。找到值得深入了解的学校。"
+    data-i18n-en="Browse 115 international schools in and around Tokyo by area, curriculum, grade level, and tuition range."
+    data-i18n-ja="東京と周辺のインターナショナルスクール115校を、地域・カリキュラム・学年・学費帯で絞り込めます。"
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -271,7 +282,7 @@
     <section class="section section--warm" style="text-align: center;">
       <div class="container reveal">
         <h2 class="section-title" data-i18n="schools.cta.title">不确定哪所学校适合你的孩子？</h2>
-        <p class="section-desc" style="margin-bottom: 28px; white-space: nowrap;" data-i18n="schools.cta.desc">115 所学校看起来选择很多，但每个家庭的情况不同。我们帮您找到最适合孩子的学校。</p>
+        <p class="section-desc" style="margin-bottom: 28px;" data-i18n="schools.cta.desc">115 所学校看起来选择很多，但每个家庭的情况不同。我们帮您找到最适合孩子的学校。</p>
         <a class="btn btn-primary" href="services.html" data-i18n="schools.cta.btn">了解咨询服务</a>
       </div>
     </section>
@@ -315,94 +326,332 @@
       var schoolsGrid = document.getElementById('schoolsGrid');
       var resultsCount = document.getElementById('resultsCount');
 
-      var tuitionMap = {
-        '150万以下': ['150万以下'],
-        '150—200万': ['150—200万'],
-        '200—250万': ['200—250万'],
-        '250—300万': ['250—300万'],
-        '300万以上': ['300万以上']
+      var translations = {
+        regions: {
+          '港区': { en: 'Minato', ja: '港区' },
+          '世田谷区': { en: 'Setagaya', ja: '世田谷区' },
+          '涩谷区': { en: 'Shibuya', ja: '渋谷区' },
+          '目黑区': { en: 'Meguro', ja: '目黒区' },
+          '江东区': { en: 'Koto', ja: '江東区' },
+          '新宿区': { en: 'Shinjuku', ja: '新宿区' },
+          '江户川区': { en: 'Edogawa', ja: '江戸川区' },
+          '文京区': { en: 'Bunkyo', ja: '文京区' },
+          '丰岛区': { en: 'Toshima', ja: '豊島区' },
+          '练马区': { en: 'Nerima', ja: '練馬区' },
+          '千代田区': { en: 'Chiyoda', ja: '千代田区' },
+          '品川区': { en: 'Shinagawa', ja: '品川区' },
+          '板桥区': { en: 'Itabashi', ja: '板橋区' },
+          '足立区': { en: 'Adachi', ja: '足立区' },
+          '杉并区': { en: 'Suginami', ja: '杉並区' },
+          '中央区': { en: 'Chuo', ja: '中央区' },
+          '葛饰区': { en: 'Katsushika', ja: '葛飾区' },
+          '北区': { en: 'Kita', ja: '北区' },
+          '大田区': { en: 'Ota', ja: '大田区' },
+          '神奈川县（10所学校）': { en: 'Kanagawa', ja: '神奈川県' },
+          '东京都多摩地区': { en: 'Tokyo Tama Area', ja: '東京都多摩地域' },
+          '千叶县': { en: 'Chiba', ja: '千葉県' },
+          '埼玉县': { en: 'Saitama', ja: '埼玉県' }
+        },
+        curricula: {
+          'IB体系': { en: 'IB', ja: 'IB' },
+          '美式课程': { en: 'American', ja: 'アメリカ式' },
+          '剑桥/Cambridge': { en: 'Cambridge', ja: 'ケンブリッジ' },
+          '双语课程': { en: 'Bilingual', ja: 'バイリンガル' },
+          '蒙特梭利': { en: 'Montessori', ja: 'モンテッソーリ' },
+          '英式课程': { en: 'British', ja: '英式' },
+          '瑞吉欧': { en: 'Reggio Emilia', ja: 'レッジョ・エミリア' },
+          '加拿大课程': { en: 'Canadian', ja: 'カナダ式' },
+          '印度课程': { en: 'Indian', ja: 'インド式' },
+          '法国课程': { en: 'French', ja: 'フランス式' },
+          '台湾课程': { en: 'Taiwanese', ja: '台湾課程' },
+          '韩国课程': { en: 'Korean', ja: '韓国課程' },
+          '德国课程': { en: 'German', ja: 'ドイツ課程' },
+          '其他': { en: 'Other', ja: 'その他' }
+        },
+        grades: {
+          '幼儿园': { en: 'Preschool', ja: '幼児部' },
+          '小学': { en: 'Primary', ja: '小学部' },
+          '初中': { en: 'Middle School', ja: '中学部' },
+          '高中': { en: 'High School', ja: '高等部' }
+        },
+        tuition: {
+          '150万以下': { en: 'Under ¥1.5M', ja: '150万円未満' },
+          '150—200万': { en: '¥1.5M–2.0M', ja: '150万〜200万円' },
+          '200—250万': { en: '¥2.0M–2.5M', ja: '200万〜250万円' },
+          '250—300万': { en: '¥2.5M–3.0M', ja: '250万〜300万円' },
+          '300万以上': { en: '¥3.0M+', ja: '300万円以上' },
+          '请联系学校': { en: 'Contact School', ja: '学校へお問い合わせ' }
+        },
+        misc: {
+          groupTokyo: { zh: '东京核心区域', en: 'Central Tokyo', ja: '東京都心エリア' },
+          groupAround: { zh: '东京周边', en: 'Greater Tokyo', ja: '東京周辺' },
+          multipleLevels: { zh: '多学段', en: 'Multiple Age Groups', ja: '複数学年' },
+          tuitionBand: { zh: '学费区间', en: 'Tuition Band', ja: '学費帯' },
+          offering: { zh: '涵盖学段', en: 'Levels Offered', ja: '対象学年' }
+        }
       };
+
+      var selectConfig = {
+        region: {
+          element: document.getElementById('filterRegion'),
+          placeholderKey: 'schools.filter.region.all',
+          groups: [
+            {
+              label: 'groupTokyo',
+              values: ['港区', '世田谷区', '涩谷区', '目黑区', '江东区', '新宿区', '江户川区', '文京区', '丰岛区', '练马区', '千代田区', '品川区', '板桥区', '足立区', '杉并区', '中央区', '葛饰区', '北区', '大田区']
+            },
+            {
+              label: 'groupAround',
+              values: ['神奈川县（10所学校）', '东京都多摩地区', '千叶县', '埼玉县']
+            }
+          ]
+        },
+        curr: {
+          element: document.getElementById('filterCurr'),
+          placeholderKey: 'schools.filter.curr.all',
+          values: ['IB体系', '美式课程', '剑桥/Cambridge', '双语课程', '蒙特梭利', '英式课程', '瑞吉欧', '加拿大课程', '印度课程', '法国课程', '台湾课程', '韩国课程', '德国课程', '其他']
+        },
+        grade: {
+          element: document.getElementById('filterGrade'),
+          placeholderKey: 'schools.filter.grade.all',
+          values: ['幼儿园', '小学', '初中', '高中']
+        },
+        tuition: {
+          element: document.getElementById('filterTuition'),
+          placeholderKey: 'schools.filter.tuition.all',
+          values: ['150万以下', '150—200万', '200—250万', '250—300万', '300万以上']
+        }
+      };
+
+      var optionValueMaps = {
+        region: {
+          '港区': 'minato',
+          '世田谷区': 'setagaya',
+          '涩谷区': 'shibuya',
+          '目黑区': 'meguro',
+          '江东区': 'koto',
+          '新宿区': 'shinjuku',
+          '江户川区': 'edogawa',
+          '文京区': 'bunkyo',
+          '丰岛区': 'toshima',
+          '练马区': 'nerima',
+          '千代田区': 'chiyoda',
+          '品川区': 'shinagawa',
+          '板桥区': 'itabashi',
+          '足立区': 'adachi',
+          '杉并区': 'suginami',
+          '中央区': 'chuo',
+          '葛饰区': 'katsushika',
+          '北区': 'kita',
+          '大田区': 'ota',
+          '神奈川县（10所学校）': 'kanagawa',
+          '东京都多摩地区': 'tokyo-tama',
+          '千叶县': 'chiba',
+          '埼玉县': 'saitama'
+        },
+        curr: {
+          'IB体系': 'ib',
+          '美式课程': 'american',
+          '剑桥/Cambridge': 'cambridge',
+          '双语课程': 'bilingual',
+          '蒙特梭利': 'montessori',
+          '英式课程': 'british',
+          '瑞吉欧': 'reggio',
+          '加拿大课程': 'canadian',
+          '印度课程': 'indian',
+          '法国课程': 'french',
+          '台湾课程': 'taiwanese',
+          '韩国课程': 'korean',
+          '德国课程': 'german',
+          '其他': 'other'
+        },
+        grade: {
+          '幼儿园': 'preschool',
+          '小学': 'primary',
+          '初中': 'middle',
+          '高中': 'high'
+        },
+        tuition: {
+          '150万以下': 'under-150',
+          '150—200万': '150-200',
+          '200—250万': '200-250',
+          '250—300万': '250-300',
+          '300万以上': '300-plus'
+        }
+      };
+
+      var reverseOptionValueMaps = {};
+      Object.keys(optionValueMaps).forEach(function(type) {
+        reverseOptionValueMaps[type] = {};
+        Object.keys(optionValueMaps[type]).forEach(function(canonical) {
+          reverseOptionValueMaps[type][optionValueMaps[type][canonical]] = canonical;
+        });
+      });
+
+      function currentLang() {
+        return localStorage.getItem('kissho-lang') || 'zh';
+      }
+
+      function escapeHtml(value) {
+        return String(value || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function translateValue(group, value, lang) {
+        if (!value) return '';
+        if (lang === 'zh') {
+          if (group === 'regions' && value === '神奈川县（10所学校）') return '神奈川县';
+          return value;
+        }
+        var dict = translations[group] && translations[group][value];
+        return dict && dict[lang] ? dict[lang] : value;
+      }
+
+      function translateMisc(key, lang) {
+        return translations.misc[key] && translations.misc[key][lang] ? translations.misc[key][lang] : translations.misc[key].zh;
+      }
+
+      function optionValue(type, canonical) {
+        return optionValueMaps[type] && optionValueMaps[type][canonical] ? optionValueMaps[type][canonical] : canonical;
+      }
+
+      function toCanonicalValue(type, value) {
+        return reverseOptionValueMaps[type] && reverseOptionValueMaps[type][value] ? reverseOptionValueMaps[type][value] : value;
+      }
+
+      function renderSelectOptions(lang) {
+        Object.keys(selectConfig).forEach(function(key) {
+          var config = selectConfig[key];
+          var select = config.element;
+          var selectedValue = select.value;
+          var html = '<option value="">' + escapeHtml(window.kisshoT(config.placeholderKey)) + '</option>';
+          if (config.groups) {
+            config.groups.forEach(function(group) {
+              html += '<optgroup label="' + escapeHtml(translateMisc(group.label, lang)) + '">';
+              group.values.forEach(function(value) {
+                html += '<option value="' + escapeHtml(optionValue('region', value)) + '">' + escapeHtml(translateValue('regions', value, lang)) + '</option>';
+              });
+              html += '</optgroup>';
+            });
+          } else {
+            config.values.forEach(function(value) {
+              var dictionary = key === 'curr' ? 'curricula' : key === 'grade' ? 'grades' : 'tuition';
+              html += '<option value="' + escapeHtml(optionValue(key, value)) + '">' + escapeHtml(translateValue(dictionary, value, lang)) + '</option>';
+            });
+          }
+          select.innerHTML = html;
+          select.value = selectedValue;
+        });
+      }
 
       function getFilters() {
         return {
-          region: document.getElementById('filterRegion').value,
-          curr: document.getElementById('filterCurr').value,
-          grade: document.getElementById('filterGrade').value,
-          tuition: document.getElementById('filterTuition').value
+          region: toCanonicalValue('region', selectConfig.region.element.value),
+          curr: toCanonicalValue('curr', selectConfig.curr.element.value),
+          grade: toCanonicalValue('grade', selectConfig.grade.element.value),
+          tuition: toCanonicalValue('tuition', selectConfig.tuition.element.value)
         };
       }
 
-      var currAliases = {
-        '剑桥 / Cambridge': ['剑桥/Cambridge', '剑桥 / Cambridge'],
-        '其他 / 独立课程': ['其他', '其他/独立课程', '其他 / 独立课程'],
-        '印度课程 CBSE': ['印度课程', '印度课程CBSE', '印度课程 CBSE']
-      };
-
-      function matchCurr(school, curr) {
-        if (!curr) return true;
-        var aliases = currAliases[curr];
-        if (aliases) return aliases.indexOf(school.currTag) !== -1;
-        return school.currTag === curr;
-      }
-
       function filterSchools(filters) {
-        return SCHOOLS_DATA.filter(function(s) {
-          if (filters.region && s.region !== filters.region) return false;
-          if (filters.curr && !matchCurr(s, filters.curr)) return false;
-          if (filters.grade && (!s.levels || s.levels.indexOf(filters.grade) === -1)) return false;
-          if (filters.tuition && s.bracket !== filters.tuition) return false;
+        return SCHOOLS_DATA.filter(function(school) {
+          if (filters.region && school.region !== filters.region) return false;
+          if (filters.curr && school.currTag !== filters.curr) return false;
+          if (filters.grade && (!school.levels || school.levels.indexOf(filters.grade) === -1)) return false;
+          if (filters.tuition && school.bracket !== filters.tuition) return false;
           return true;
         });
       }
 
-      function renderCard(s) {
-        var tuitionText = s.tuition || window.kisshoT('schools.tuition.contact');
-        var desc = s.desc || '';
-        // Trim desc to ~60 chars if too long
-        if (desc.length > 70) desc = desc.substring(0, 68) + '…';
+      function localizeLevels(levels, lang) {
+        if (!levels || !levels.length) return translateMisc('multipleLevels', lang);
+        return levels.map(function(level) {
+          return translateValue('grades', level, lang);
+        }).join(lang === 'zh' ? ' / ' : ' · ');
+      }
+
+      function localizedTuition(school, lang) {
+        if (lang === 'zh') return school.tuition || window.kisshoT('schools.tuition.contact');
+        return translateValue('tuition', school.bracket || '请联系学校', lang);
+      }
+
+      function localizedSummary(school, lang) {
+        if (lang === 'zh') return school.desc || '';
+        var region = translateValue('regions', school.region, lang);
+        var levels = localizeLevels(school.levels, lang);
+        var curriculum = translateValue('curricula', school.currTag, lang);
+        var tuitionBand = translateValue('tuition', school.bracket || '请联系学校', lang);
+        if (lang === 'ja') {
+          return region + 'にあり、' + levels + 'を対象に' + curriculum + 'を提供しています。学費帯は' + tuitionBand + 'です。';
+        }
+        return 'Located in ' + region + ', offering ' + levels + ' with a ' + curriculum + ' pathway. Tuition band: ' + tuitionBand + '.';
+      }
+
+      function renderCard(school) {
+        var lang = currentLang();
+        var name = lang === 'zh' ? school.name_zh : (school.name_en || school.name_zh);
+        var curriculum = translateValue('curricula', school.currTag, lang);
+        var region = translateValue('regions', school.region, lang);
+        var levels = localizeLevels(school.levels, lang);
+        var tuitionText = localizedTuition(school, lang);
+        var desc = localizedSummary(school, lang);
+
         return '<div class="school-card-v2">' +
           '<div class="school-card-v2-header">' +
-            '<h3 class="school-card-v2-name">' + s.name_zh + '</h3>' +
-            '<span class="school-tag-v2">' + (s.currTag || '') + '</span>' +
+            '<h3 class="school-card-v2-name">' + escapeHtml(name) + '</h3>' +
+            '<span class="school-tag-v2">' + escapeHtml(curriculum) + '</span>' +
           '</div>' +
           '<div class="school-card-v2-meta">' +
-            '<span>' + s.region + '</span>' +
-            '<span>' + s.grades + '</span>' +
-            '<span>' + tuitionText + '</span>' +
+            '<span>' + escapeHtml(region) + '</span>' +
+            '<span>' + escapeHtml(levels) + '</span>' +
+            '<span>' + escapeHtml(tuitionText) + '</span>' +
           '</div>' +
-          '<p class="school-card-v2-desc">' + desc + '</p>' +
+          '<p class="school-card-v2-desc">' + escapeHtml(desc) + '</p>' +
         '</div>';
       }
 
       function showResults(schools, isAll, scroll) {
         resultsSection.style.display = 'block';
-        if (schools.length === 0) {
+        if (!schools.length) {
           resultsCount.innerHTML = window.kisshoT('schools.results.none');
           schoolsGrid.innerHTML = '<div class="no-results"><p>' + window.kisshoT('schools.no_results.text') + '</p><p style="font-size:0.85rem;">' + window.kisshoT('schools.no_results.hint') + '</p></div>';
         } else {
-          var label = isAll ? window.kisshoT('schools.results.all', {n: schools.length}) : window.kisshoT('schools.results.filtered', {n: schools.length});
-          resultsCount.innerHTML = label;
+          resultsCount.innerHTML = isAll
+            ? window.kisshoT('schools.results.all', { n: schools.length })
+            : window.kisshoT('schools.results.filtered', { n: schools.length });
           schoolsGrid.innerHTML = schools.map(renderCard).join('');
         }
         if (scroll) resultsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
 
-      searchBtn.addEventListener('click', function() {
+      function refreshResults(scroll) {
         var filters = getFilters();
-        var results = filterSchools(filters);
         var isAll = !filters.region && !filters.curr && !filters.grade && !filters.tuition;
-        showResults(results, isAll, false);
+        showResults(isAll ? SCHOOLS_DATA : filterSchools(filters), isAll, scroll);
+      }
+
+      searchBtn.addEventListener('click', function() {
+        refreshResults(true);
       });
 
       resetBtn.addEventListener('click', function() {
-        document.getElementById('filterRegion').value = '';
-        document.getElementById('filterCurr').value = '';
-        document.getElementById('filterGrade').value = '';
-        document.getElementById('filterTuition').value = '';
+        selectConfig.region.element.value = '';
+        selectConfig.curr.element.value = '';
+        selectConfig.grade.element.value = '';
+        selectConfig.tuition.element.value = '';
         showResults(SCHOOLS_DATA, true, false);
       });
 
-      // Show all schools on page load (no scroll)
+      document.addEventListener('kissho:langchange', function(event) {
+        renderSelectOptions(event.detail && event.detail.lang ? event.detail.lang : currentLang());
+        refreshResults(false);
+      });
+
+      renderSelectOptions(currentLang());
       showResults(SCHOOLS_DATA, true, false);
     })();
   </script>
