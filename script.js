@@ -1,5 +1,42 @@
 // ── Translations ──────────────────────────────────────────────────────────
 var LANGS = ['zh', 'en', 'ja'];
+var SITE_ORIGIN = 'https://kissho.school';
+var DEFAULT_SHARE_IMAGE = '图片/mejiro.jpg';
+var NAV_TOGGLE_LABELS = {
+  zh: { open: '打开菜单', close: '关闭菜单' },
+  en: { open: 'Open menu', close: 'Close menu' },
+  ja: { open: 'メニューを開く', close: 'メニューを閉じる' }
+};
+var PAGE_META_FALLBACKS = {
+  'index.html': {
+    zh: {
+      title: 'KISSHO | 吉祥书院 — 东京国际学校咨询',
+      description: '面向东京华人家庭的国际学校入学咨询、选校工具、MAP备考与中文练习。吉祥书院官方网站。'
+    },
+    en: {
+      title: 'KISSHO | Tokyo International School Consulting',
+      description: 'International school consulting, school selection tools, MAP prep, and Chinese literacy support for families in Tokyo.'
+    },
+    ja: {
+      title: 'KISSHO | 東京インターナショナルスクール相談',
+      description: '東京のご家庭向けに、インターナショナルスクール相談、学校選択ツール、MAP対策、中国語学習支援を提供しています。'
+    }
+  },
+  'contact.html': {
+    zh: {
+      title: '联系我们 | KISSHO 吉祥书院',
+      description: '通过微信、小红书、电话或邮件联系吉祥书院，开始您的东京国际学校咨询。'
+    },
+    en: {
+      title: 'Contact | KISSHO',
+      description: 'Reach KISSHO via WeChat Work, Xiaohongshu, phone, or email to start your Tokyo international school consultation.'
+    },
+    ja: {
+      title: 'お問い合わせ | KISSHO',
+      description: 'WeChat、電話、メールなどから KISSHO に連絡し、東京のインターナショナルスクール相談を始められます。'
+    }
+  }
+};
 var T = {
   zh: {
     'nav.home':'首页','nav.schools':'学校探索','nav.articles':'深度文章',
@@ -117,6 +154,9 @@ var T = {
     'schools.results.none':'未找到符合条件的学校',
     'schools.no_results.text':'没有符合当前筛选条件的学校。',
     'schools.no_results.hint':'请尝试放宽筛选范围，或<a href="contact.html" style="color:var(--red);">联系我们</a>获取个性化建议。',
+    'schools.pagination.prev':'上一页',
+    'schools.pagination.next':'下一页',
+    'schools.pagination.summary':'第 <strong>{page}</strong> / {pages} 页 · 当前显示 {start}-{end} / {total} 所',
     'schools.tuition.contact':'请联系学校',
   },
   en: {
@@ -236,6 +276,9 @@ var T = {
     'schools.results.none':'No schools found matching your criteria',
     'schools.no_results.text':'No schools match the current filters.',
     'schools.no_results.hint':'Try broadening your search, or <a href="contact.html" style="color:var(--red);">contact us</a> for personalized recommendations.',
+    'schools.pagination.prev':'Previous',
+    'schools.pagination.next':'Next',
+    'schools.pagination.summary':'Page <strong>{page}</strong> of {pages} · Showing {start}-{end} of {total}',
     'schools.tuition.contact':'Contact school',
   },
   ja: {
@@ -355,6 +398,9 @@ var T = {
     'schools.results.none':'条件に一致する学校が見つかりませんでした',
     'schools.no_results.text':'現在のフィルター条件に合う学校はありません。',
     'schools.no_results.hint':'条件を緩めてお試しいただくか、<a href="contact.html" style="color:var(--red);">お問い合わせ</a>ください。',
+    'schools.pagination.prev':'前のページ',
+    'schools.pagination.next':'次のページ',
+    'schools.pagination.summary':'<strong>{page}</strong> / {pages} ページ · {start}-{end} / {total} 校を表示',
     'schools.tuition.contact':'学校にお問い合わせください',
   }
 };
@@ -367,6 +413,114 @@ window.kisshoT = function(key, params) {
   if (params) Object.keys(params).forEach(function(k) { val = val.replace('{' + k + '}', params[k]); });
   return val;
 };
+
+function currentPageFile() {
+  var file = location.pathname.split('/').pop();
+  return file || 'index.html';
+}
+
+function currentPagePath() {
+  var file = currentPageFile();
+  return file === 'index.html' ? '/' : '/' + file;
+}
+
+function absoluteSiteUrl(pathname) {
+  return new URL(pathname, SITE_ORIGIN + '/').href;
+}
+
+function ensureHeadElement(selector, tagName, attrs) {
+  var el = document.head.querySelector(selector);
+  if (!el) {
+    el = document.createElement(tagName);
+    document.head.appendChild(el);
+  }
+  Object.keys(attrs).forEach(function(key) {
+    el.setAttribute(key, attrs[key]);
+  });
+  return el;
+}
+
+function detectShareImageUrl() {
+  var explicit = document.querySelector('meta[name="kissho:share-image"]');
+  if (explicit && explicit.getAttribute('content')) {
+    return absoluteSiteUrl(explicit.getAttribute('content'));
+  }
+
+  var selectors = [
+    '.hero-image img',
+    '.article-cover img',
+    '.about-photo img',
+    '.article-image img',
+    '.tool-visual img',
+    '.contact-qr img',
+    'img'
+  ];
+
+  for (var i = 0; i < selectors.length; i += 1) {
+    var img = document.querySelector(selectors[i]);
+    if (img && img.getAttribute('src')) {
+      return absoluteSiteUrl(img.getAttribute('src'));
+    }
+  }
+
+  return absoluteSiteUrl(DEFAULT_SHARE_IMAGE);
+}
+
+function syncHeadMetadata(lang) {
+  var pageFile = currentPageFile();
+  var localized = PAGE_META_FALLBACKS[pageFile] && PAGE_META_FALLBACKS[pageFile][lang];
+  var titleEl = document.querySelector('title');
+  var descEl = document.querySelector('meta[name="description"]');
+
+  if (localized) {
+    if (titleEl) titleEl.textContent = localized.title;
+    else document.title = localized.title;
+
+    if (!descEl) {
+      descEl = document.createElement('meta');
+      descEl.setAttribute('name', 'description');
+      document.head.appendChild(descEl);
+    }
+    descEl.setAttribute('content', localized.description);
+  }
+
+  var title = titleEl ? titleEl.textContent.trim() : document.title;
+  var description = descEl ? (descEl.getAttribute('content') || '') : '';
+  var canonicalUrl = absoluteSiteUrl(currentPagePath());
+  var locale = lang === 'zh' ? 'zh_CN' : lang === 'ja' ? 'ja_JP' : 'en_US';
+  var ogType = pageFile.indexOf('article-') === 0 ? 'article' : 'website';
+  var shareImage = detectShareImageUrl();
+
+  ensureHeadElement('link[rel="canonical"]', 'link', { rel: 'canonical', href: canonicalUrl });
+  ensureHeadElement('link[rel="icon"]', 'link', {
+    rel: 'icon',
+    type: 'image/svg+xml',
+    href: absoluteSiteUrl('吉祥株式会社 logo 浅色.svg')
+  });
+  ensureHeadElement('meta[property="og:title"]', 'meta', { property: 'og:title', content: title });
+  ensureHeadElement('meta[property="og:description"]', 'meta', { property: 'og:description', content: description });
+  ensureHeadElement('meta[property="og:type"]', 'meta', { property: 'og:type', content: ogType });
+  ensureHeadElement('meta[property="og:url"]', 'meta', { property: 'og:url', content: canonicalUrl });
+  ensureHeadElement('meta[property="og:site_name"]', 'meta', { property: 'og:site_name', content: 'KISSHO 吉祥书院' });
+  ensureHeadElement('meta[property="og:locale"]', 'meta', { property: 'og:locale', content: locale });
+  ensureHeadElement('meta[property="og:image"]', 'meta', { property: 'og:image', content: shareImage });
+  ensureHeadElement('meta[name="twitter:card"]', 'meta', { name: 'twitter:card', content: 'summary_large_image' });
+  ensureHeadElement('meta[name="twitter:title"]', 'meta', { name: 'twitter:title', content: title });
+  ensureHeadElement('meta[name="twitter:description"]', 'meta', { name: 'twitter:description', content: description });
+  ensureHeadElement('meta[name="twitter:image"]', 'meta', { name: 'twitter:image', content: shareImage });
+}
+
+function syncNavToggleAccessibility(lang) {
+  var toggle = document.getElementById('navToggle');
+  if (!toggle) return;
+
+  var labels = NAV_TOGGLE_LABELS[lang] || NAV_TOGGLE_LABELS.zh;
+  var expanded = toggle.getAttribute('aria-expanded') === 'true';
+
+  toggle.setAttribute('aria-controls', 'mainNav');
+  toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  toggle.setAttribute('aria-label', expanded ? labels.close : labels.open);
+}
 
 function applyI18n(lang) {
   var t = T[lang] || T.zh;
@@ -395,6 +549,8 @@ function applyI18n(lang) {
   });
   localStorage.setItem('kissho-lang', lang);
   if (window.kisshoApplyPageContent) window.kisshoApplyPageContent(lang);
+  syncNavToggleAccessibility(lang);
+  syncHeadMetadata(lang);
   if (window.kisshoObserveReveals) window.kisshoObserveReveals(document);
   if (typeof CustomEvent === 'function') {
     document.dispatchEvent(new CustomEvent('kissho:langchange', { detail: { lang: lang } }));
@@ -428,8 +584,8 @@ function applyI18n(lang) {
         <ul class="footer-contact-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span data-i18n="footer.contact_wechat">企微号：13732203788</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20a8 8 0 0 1-8-8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a8 8 0 0 1-8 8Z"/><path d="M8 10h8M8 14h5"/></svg><span data-i18n="footer.contact_xhs">小红书：贝蒂星妈 422507043</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.03Z"/></svg><span data-i18n="footer.contact_phone">（0081）07069875502</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span data-i18n="footer.contact_email">betty@kissho.school</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.03Z"/></svg><a class="footer-contact-link" href="tel:+817069875502" data-i18n="footer.contact_phone">（0081）07069875502</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a class="footer-contact-link" href="mailto:betty@kissho.school" data-i18n="footer.contact_email">betty@kissho.school</a></li>
         </ul>
       </div>
     </div>
@@ -469,11 +625,12 @@ document.addEventListener('click', function(e) {
 var navToggle = document.getElementById('navToggle');
 var mainNav = document.getElementById('mainNav');
 if (navToggle && mainNav) {
+  syncNavToggleAccessibility(localStorage.getItem('kissho-lang') || 'zh');
   navToggle.addEventListener('click', function() {
     mainNav.classList.toggle('open');
     var expanded = mainNav.classList.contains('open');
     navToggle.setAttribute('aria-expanded', expanded);
-    navToggle.setAttribute('aria-label', expanded ? '关闭菜单' : '打开菜单');
+    syncNavToggleAccessibility(localStorage.getItem('kissho-lang') || 'zh');
   });
   document.addEventListener('click', function(e) {
     if (mainNav.classList.contains('open') &&
@@ -481,7 +638,7 @@ if (navToggle && mainNav) {
         !navToggle.contains(e.target)) {
       mainNav.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.setAttribute('aria-label', '打开菜单');
+      syncNavToggleAccessibility(localStorage.getItem('kissho-lang') || 'zh');
     }
   });
 }
