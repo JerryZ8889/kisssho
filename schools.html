@@ -91,7 +91,10 @@
       align-items: flex-start;
       justify-content: space-between;
       gap: 12px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+    .school-card-v2-heading {
+      min-width: 0;
     }
     .school-card-v2-name {
       font-size: 1rem;
@@ -99,6 +102,12 @@
       color: var(--text);
       line-height: 1.4;
       margin: 0;
+    }
+    .school-card-v2-subname {
+      margin: 6px 0 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
     }
     .school-tag-v2 {
       background: var(--warm-bg);
@@ -140,6 +149,18 @@
       line-height: 1.7;
       margin: 0;
       opacity: 0.85;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    @media (max-width: 640px) {
+      .school-card-v2 {
+        padding: 20px;
+      }
+      .school-card-v2-header {
+        flex-direction: column;
+      }
     }
     .no-results {
       text-align: center;
@@ -373,7 +394,7 @@
           '葛饰区': { en: 'Katsushika', ja: '葛飾区' },
           '北区': { en: 'Kita', ja: '北区' },
           '大田区': { en: 'Ota', ja: '大田区' },
-          '神奈川县（10所学校）': { en: 'Kanagawa', ja: '神奈川県' },
+          '神奈川县': { en: 'Kanagawa', ja: '神奈川県' },
           '东京都多摩地区': { en: 'Tokyo Tama Area', ja: '東京都多摩地域' },
           '千叶县': { en: 'Chiba', ja: '千葉県' },
           '埼玉县': { en: 'Saitama', ja: '埼玉県' }
@@ -428,7 +449,7 @@
             },
             {
               label: 'groupAround',
-              values: ['神奈川县（10所学校）', '东京都多摩地区', '千叶县', '埼玉县']
+              values: ['神奈川县', '东京都多摩地区', '千叶县', '埼玉县']
             }
           ]
         },
@@ -470,7 +491,7 @@
           '葛饰区': 'katsushika',
           '北区': 'kita',
           '大田区': 'ota',
-          '神奈川县（10所学校）': 'kanagawa',
+          '神奈川县': 'kanagawa',
           '东京都多摩地区': 'tokyo-tama',
           '千叶县': 'chiba',
           '埼玉县': 'saitama'
@@ -530,7 +551,7 @@
       function translateValue(group, value, lang) {
         if (!value) return '';
         if (lang === 'zh') {
-          if (group === 'regions' && value === '神奈川县（10所学校）') return '神奈川县';
+          if (group === 'regions' && value === '神奈川县') return '神奈川县';
           return value;
         }
         var dict = translations[group] && translations[group][value];
@@ -539,6 +560,32 @@
 
       function translateMisc(key, lang) {
         return translations.misc[key] && translations.misc[key][lang] ? translations.misc[key][lang] : translations.misc[key].zh;
+      }
+
+      function localizeGender(value, lang) {
+        if (!value) return '';
+        var map = {
+          '混校': { en: 'Co-ed', ja: '共学' },
+          '男女共学': { en: 'Co-ed', ja: '共学' },
+          '男校': { en: 'Boys', ja: '男子校' },
+          '男子校': { en: 'Boys', ja: '男子校' },
+          '女校': { en: 'Girls', ja: '女子校' },
+          '女子校': { en: 'Girls', ja: '女子校' }
+        };
+        if (lang === 'zh') return value;
+        return map[value] && map[value][lang] ? map[value][lang] : value;
+      }
+
+      function secondaryName(school, lang) {
+        if (lang === 'zh') return school.name_en || '';
+        if (lang === 'ja') return school.name_en || school.name_zh || '';
+        return school.name_zh || '';
+      }
+
+      function visibleGenderTag(value, lang) {
+        var normalized = String(value || '').trim();
+        if (!normalized || normalized === '混校' || normalized === '男女共学') return '';
+        return localizeGender(normalized, lang);
       }
 
       function optionValue(type, canonical) {
@@ -601,12 +648,12 @@
       }
 
       function localizedTuition(school, lang) {
-        if (lang === 'zh') return school.tuition || window.kisshoT('schools.tuition.contact');
+        if (lang === 'zh') return school.bracket || window.kisshoT('schools.tuition.contact');
         return translateValue('tuition', school.bracket || '请联系学校', lang);
       }
 
       function localizedSummary(school, lang) {
-        if (lang === 'zh') return school.desc || '';
+        if (lang === 'zh') return school.desc || school.features || school.notes || '';
         var region = translateValue('regions', school.region, lang);
         var levels = localizeLevels(school.levels, lang);
         var curriculum = translateValue('curricula', school.currTag, lang);
@@ -619,22 +666,33 @@
 
       function renderCard(school) {
         var lang = currentLang();
-        var name = lang === 'zh' ? school.name_zh : (school.name_en || school.name_zh);
+        var name = lang === 'zh'
+          ? school.name_zh
+          : lang === 'ja'
+            ? (school.name_ja || school.name_en || school.name_zh)
+            : (school.name_en || school.name_zh);
+        var subname = secondaryName(school, lang);
         var curriculum = translateValue('curricula', school.currTag, lang);
         var region = translateValue('regions', school.region, lang);
         var levels = localizeLevels(school.levels, lang);
         var tuitionText = localizedTuition(school, lang);
         var desc = localizedSummary(school, lang);
+        var genderTag = visibleGenderTag(school.gender, lang);
+        var metaItems = [region, levels, tuitionText];
+        if (genderTag) metaItems.push(genderTag);
 
         return '<div class="school-card-v2">' +
           '<div class="school-card-v2-header">' +
-            '<h3 class="school-card-v2-name">' + escapeHtml(name) + '</h3>' +
+            '<div class="school-card-v2-heading">' +
+              '<h3 class="school-card-v2-name">' + escapeHtml(name) + '</h3>' +
+              (subname && subname !== name ? '<p class="school-card-v2-subname">' + escapeHtml(subname) + '</p>' : '') +
+            '</div>' +
             '<span class="school-tag-v2">' + escapeHtml(curriculum) + '</span>' +
           '</div>' +
           '<div class="school-card-v2-meta">' +
-            '<span>' + escapeHtml(region) + '</span>' +
-            '<span>' + escapeHtml(levels) + '</span>' +
-            '<span>' + escapeHtml(tuitionText) + '</span>' +
+            metaItems.map(function(item) {
+              return '<span>' + escapeHtml(item) + '</span>';
+            }).join('') +
           '</div>' +
           '<p class="school-card-v2-desc">' + escapeHtml(desc) + '</p>' +
         '</div>';
