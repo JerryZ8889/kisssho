@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>学习工具 | KISSHO 吉祥书院</title>
-  <meta name="description" content="MAP测试练习、中文读写训练 — 为东京国际学校学生开发的学习工具。" />
+  <title
+    data-i18n-zh="学习工具 | KISSHO 吉祥书院"
+    data-i18n-en="Learning Tools | KISSHO"
+    data-i18n-ja="学習ツール | KISSHO"
+  >学习工具 | KISSHO 吉祥书院</title>
+  <meta
+    name="description"
+    content="MAP测试练习、中文读写训练 — 为东京国际学校学生开发的学习工具。"
+    data-i18n-attr="content"
+    data-i18n-zh="MAP测试练习、中文读写训练 — 为东京国际学校学生开发的学习工具。"
+    data-i18n-en="MAP practice, Chinese literacy, and Japanese kana tools built for families in Tokyo international schools."
+    data-i18n-ja="東京のインターナショナルスクール家庭向けに開発した、MAP練習・中国語学習・かな練習ツールです。"
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -49,7 +60,7 @@
       <div class="container">
         <div class="tool-showcase reveal">
           <div class="tool-info">
-            <span class="tool-badge en">Coming Soon</span>
+            <span class="tool-badge en" data-i18n-zh="开发中" data-i18n-en="In Development" data-i18n-ja="開発中">Coming Soon</span>
             <h2 class="tool-title" data-i18n="tools.map.title">MAP 测试练习（正在开发中）</h2>
             <p class="tool-desc" data-i18n="tools.map.desc">针对国际学校入学 MAP 测试，我们正在开发一套面向各年级、各学科的"模拟测试 + 练习"一体化软件：通过模拟测试了解孩子的真实水平，系统可以根据水平动态给出对应难度的习题，并在测试与练习全程中持续自适应，始终调整下一题难度。完整还原 MAP 测试"永远动态匹配学生真实能力"的核心机制，并在此基础上增加了专项练习功能。</p>
             <ul class="tool-features">
@@ -58,11 +69,14 @@
               <li data-i18n="tools.map.f3">功能特点 3：针对考试能力，提供完整练习题库；</li>
               <li data-i18n="tools.map.f4">功能特点 4：例如"练习后生成水平诊断报告"；</li>
             </ul>
-            <a class="btn btn-primary" href="#">待填充：产品入口链接</a>
+            <span class="btn btn-primary" style="display:inline-flex;align-items:center;justify-content:center;opacity:0.78;cursor:default;pointer-events:none;" data-i18n-zh="开发中，即将开放" data-i18n-en="In Development · Opening Soon" data-i18n-ja="開発中・近日公開">开发中，即将开放</span>
           </div>
           <div class="tool-preview">
             <div class="placeholder" style="height:100%;display:flex;align-items:center;justify-content:center;min-height:300px;">
-              <div><span class="placeholder-label">Product Screenshot</span>待填充：MAP 练习工具的界面截图或演示</div>
+              <div>
+                <span class="placeholder-label" data-i18n-zh="产品预览" data-i18n-en="Product Preview" data-i18n-ja="プロダクトプレビュー">Product Screenshot</span>
+                <span data-i18n-zh="开发中，即将开放" data-i18n-en="The MAP practice product is in development and will be released soon." data-i18n-ja="MAP練習ツールは現在開発中で、まもなく公開予定です。">开发中，即将开放</span>
+              </div>
             </div>
           </div>
         </div>
@@ -111,9 +125,9 @@
     <section class="section section--warm">
       <div class="container reveal">
         <h2 class="section-title" style="text-align: center;" data-i18n="tools.why.title">为什么我们做教育软件？</h2>
-        <p class="section-desc">我们的孩子在上海德威国际学校就读时，学校重视中文教育，同学们虽然拿着各国护照，大多母语还是中文。刚到东京，进入清泉国际学校时，纯正的国际氛围使得孩子课上课下都得说英语，有一个适应环境的过程。</p>
-        <p class="section-desc" style="margin-top: 16px;">因此闲暇时，我们为孩子做了几款练习用的软件——中文读写、数学计算、日语入门、MAP 练习，后来意外受到同学家长们的喜爱，于是我们投入了更多精力不断迭代，现也开放给大家。</p>
-        <p class="section-desc" style="margin-top: 16px;">如果您试用后觉得有其价值，我们会收取很低的费用，用于服务器与数据库的日常运维，让软件持续稳定地为大家服务。</p>
+        <p class="section-desc" data-i18n-zh="我们的孩子在上海德威国际学校就读时，学校重视中文教育，同学们虽然拿着各国护照，大多母语还是中文。刚到东京，进入清泉国际学校时，纯正的国际氛围使得孩子课上课下都得说英语，有一个适应环境的过程。" data-i18n-en="When our children were at Dulwich College Shanghai, Chinese literacy still had a clear place in school life and many classmates were Chinese-speaking at home. After moving to Tokyo and entering Seisen, the environment became much more international, and our children had to operate in English all day, both in and out of class." data-i18n-ja="子どもたちが上海のドゥルウィッチに通っていた頃は、中国語教育にも一定の重みがあり、クラスメートの多くも家庭では中国語を使っていました。東京に移り清泉に入ってからは、より本格的な国際環境となり、授業中も日常生活でも英語で過ごす時間が一気に増えました。">我们的孩子在上海德威国际学校就读时，学校重视中文教育，同学们虽然拿着各国护照，大多母语还是中文。刚到东京，进入清泉国际学校时，纯正的国际氛围使得孩子课上课下都得说英语，有一个适应环境的过程。</p>
+        <p class="section-desc" style="margin-top: 16px;" data-i18n-zh="因此闲暇时，我们为孩子做了几款练习用的软件——中文读写、数学计算、日语入门、MAP 练习，后来意外受到同学家长们的喜爱，于是我们投入了更多精力不断迭代，现也开放给大家。" data-i18n-en="So we started building small tools for our own family: Chinese reading and writing, math fluency, beginner Japanese, and MAP practice. Other parents began asking to use them as well, so we kept improving the tools and eventually opened them to more families." data-i18n-ja="そこで私たちは、家庭用に中国語の読み書き、計算練習、日本語入門、MAP対策の小さな学習ツールを作り始めました。使ってみたいという保護者の声が増え、改良を重ねながら、今ではより多くのご家庭に公開しています。">因此闲暇时，我们为孩子做了几款练习用的软件——中文读写、数学计算、日语入门、MAP 练习，后来意外受到同学家长们的喜爱，于是我们投入了更多精力不断迭代，现也开放给大家。</p>
+        <p class="section-desc" style="margin-top: 16px;" data-i18n-zh="如果您试用后觉得有其价值，我们会收取很低的费用，用于服务器与数据库的日常运维，让软件持续稳定地为大家服务。" data-i18n-en="If the tools prove useful for your family, we may charge a very modest fee later on to cover servers, databases, and ongoing maintenance, so the products can stay stable and keep improving." data-i18n-ja="ご家庭にとって十分な価値があると感じていただけた場合には、将来的にサーバーやデータベース、日常運用費をまかなうためのごく小さな利用料をお願いする可能性があります。安定して使い続けられる状態を保つためです。">如果您试用后觉得有其价值，我们会收取很低的费用，用于服务器与数据库的日常运维，让软件持续稳定地为大家服务。</p>
       </div>
     </section>
 

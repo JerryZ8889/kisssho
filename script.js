@@ -379,12 +379,26 @@ function applyI18n(lang) {
     var key = el.dataset.i18nHtml;
     if (t[key] !== undefined) el.innerHTML = t[key];
   });
+  document.querySelectorAll('[data-i18n-zh], [data-i18n-en], [data-i18n-ja]').forEach(function(el) {
+    var value = el.getAttribute('data-i18n-' + lang);
+    if (value === null) value = el.getAttribute('data-i18n-zh');
+    if (value === null) return;
+    var attrName = el.getAttribute('data-i18n-attr');
+    if (attrName) el.setAttribute(attrName, value);
+    else if (el.getAttribute('data-i18n-mode') === 'html') el.innerHTML = value;
+    else el.textContent = value;
+  });
   document.querySelectorAll('.lang-switch').forEach(function(group) {
     group.querySelectorAll('.lang-btn').forEach(function(btn, i) {
       btn.classList.toggle('active', LANGS[i] === lang);
     });
   });
   localStorage.setItem('kissho-lang', lang);
+  if (window.kisshoApplyPageContent) window.kisshoApplyPageContent(lang);
+  if (window.kisshoObserveReveals) window.kisshoObserveReveals(document);
+  if (typeof CustomEvent === 'function') {
+    document.dispatchEvent(new CustomEvent('kissho:langchange', { detail: { lang: lang } }));
+  }
 }
 
 // ── Shared footer injection ──
@@ -473,7 +487,6 @@ if (navToggle && mainNav) {
 }
 
 // ── Scroll reveal ──
-var revealElements = document.querySelectorAll('.reveal');
 var observer = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
     if (entry.isIntersecting) {
@@ -482,4 +495,12 @@ var observer = new IntersectionObserver(function(entries) {
     }
   });
 }, { threshold: 0.15 });
-revealElements.forEach(function(el) { observer.observe(el); });
+function observeRevealElements(root) {
+  (root || document).querySelectorAll('.reveal').forEach(function(el) {
+    if (el.dataset.revealBound) return;
+    el.dataset.revealBound = 'true';
+    observer.observe(el);
+  });
+}
+window.kisshoObserveReveals = observeRevealElements;
+observeRevealElements(document);
