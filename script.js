@@ -40,10 +40,10 @@ var PAGE_META_FALLBACKS = {
 var T = {
   zh: {
     'nav.home':'首页','nav.schools':'学校探索','nav.articles':'深度文章',
-    'nav.tools':'学习工具','nav.services':'咨询服务','nav.about':'关于我们','nav.contact':'联系',
+    'nav.tools':'教育软件','nav.services':'咨询服务','nav.about':'关于我们','nav.contact':'联系',
     'footer.brand_desc':'面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'深度文章',
-    'footer.nav_tools':'学习工具','footer.nav_services':'咨询服务','footer.nav_about':'关于我们',
+    'footer.nav_tools':'教育软件','footer.nav_services':'咨询服务','footer.nav_about':'关于我们',
     'footer.contact_wechat':'企微号：13732203788',
     'footer.contact_xhs':'小红书：贝蒂星妈 422507043',
     'footer.contact_phone':'（0081）07069875502',
@@ -56,7 +56,7 @@ var T = {
     'index.offer.desc':'从信息到决策，从入学到学习，一步步陪你走通。',
     'index.mod.schools.title':'学校探索','index.mod.schools.desc':'覆盖东京所有国际学校，按区域、课程体系、年级、学费筛选浏览。找到最适合孩子的学校。',
     'index.mod.articles.title':'深度文章','index.mod.articles.desc':'访校手记、选校方法论、课程体系解读、备考经验。来自真实探访和一线经验的深度内容。',
-    'index.mod.tools.title':'学习工具','index.mod.tools.desc':'MAP 测试练习、中文读写训练 —— 我们为自己的孩子开发的工具，现在也开放给更多家庭。',
+    'index.mod.tools.title':'教育软件','index.mod.tools.desc':'MAP 测试练习、中文读写训练 —— 我们为自己的孩子开发的教育软件，现在也开放给更多家庭。',
     'index.mod.consulting.title':'咨询服务','index.mod.consulting.desc':'一对一选校评估、访校陪同、材料指导、面试辅导与口译。从信息到执行落地，全程支持。',
     'index.featured.kicker':'Featured Insights','index.featured.title':'深度文章',
     'index.featured.desc':'超过十年的经验总结，帮您在做决定前看清全貌。',
@@ -108,8 +108,8 @@ var T = {
     'contact.office.kicker':'Office','contact.access.label':'Access',
     'contact.address.value':'KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan',
     'contact.access.value':'山手线（JR） 目白站（Mejiro），西武池袋线（SI） 椎名町站（Shiinamachi），大江户线（E） 落合南长崎站（Ochiai-Minaminagasaki） 皆可到达',
-    'tools.kicker':'Learning Tools','tools.title':'学习工具<span style="letter-spacing:normal;">（限时免费中）</span>',
-    'tools.desc':'我们为自己在东京国际学校就读的孩子开发的学习工具，现在也开放给更多家庭使用。',
+    'tools.kicker':'Software','tools.title':'教育软件<span style="letter-spacing:normal;">（限时免费中）</span>',
+    'tools.desc':'我们为自己在东京国际学校就读的孩子开发的教育软件，现在也开放给更多家庭使用。',
     'tools.map.title':'MAP 测试练习（正在开发中）',
     'tools.map.desc':'针对国际学校入学 MAP 测试，我们正在开发一套面向各年级、各学科的"模拟测试 + 练习"一体化软件：通过模拟测试了解孩子的真实水平，系统可以根据水平动态给出对应难度的习题，并在测试与练习全程中持续自适应，始终调整下一题难度。完整还原 MAP 测试"永远动态匹配学生真实能力"的核心机制，并在此基础上增加了专项练习功能。',
     'tools.map.f1':'功能特点 1：例如"覆盖 Reading、Language Usage、Mathematics 三大科目"；',
@@ -161,10 +161,10 @@ var T = {
   },
   en: {
     'nav.home':'Home','nav.schools':'Schools','nav.articles':'Insights',
-    'nav.tools':'Tools','nav.services':'Consulting','nav.about':'About','nav.contact':'Contact',
+    'nav.tools':'Software','nav.services':'Consulting','nav.about':'About','nav.contact':'Contact',
     'footer.brand_desc':'International school consulting, admissions guidance, school selection tools, and education IT products for English speakers in Tokyo.',
     'footer.nav_schools':'Schools','footer.nav_articles':'Insights',
-    'footer.nav_tools':'Tools','footer.nav_services':'Consulting','footer.nav_about':'About',
+    'footer.nav_tools':'Software','footer.nav_services':'Consulting','footer.nav_about':'About',
     'footer.contact_wechat':'WeChat Work: 13732203788',
     'footer.contact_xhs':'Xiaohongshu: 贝蒂星妈 422507043',
     'footer.contact_phone':'(0081) 070-6987-5502',
@@ -177,7 +177,7 @@ var T = {
     'index.offer.desc':'From information to decision, from enrollment to learning — we guide you every step of the way.',
     'index.mod.schools.title':'Schools','index.mod.schools.desc':'All international schools in Tokyo, searchable by area, curriculum, grade level, and tuition. Find the right school for your child.',
     'index.mod.articles.title':'Insights','index.mod.articles.desc':'School visit notes, selection methodology, curriculum guides, and exam prep — in-depth content from real visits and first-hand experience.',
-    'index.mod.tools.title':'Learning Tools','index.mod.tools.desc':'MAP practice, Chinese reading & writing — tools we built for our own children, now open to all families.',
+    'index.mod.tools.title':'Software','index.mod.tools.desc':'MAP practice, Chinese reading & writing — software we built for our own children, now open to all families.',
     'index.mod.consulting.title':'Consulting','index.mod.consulting.desc':'One-on-one school assessment, visit accompaniment, application guidance, interview coaching, and interpretation. Full support from research to enrollment.',
     'index.featured.kicker':'Featured Insights','index.featured.title':'Insights',
     'index.featured.desc':'Over a decade of experience — helping you see the full picture before you decide.',
@@ -230,8 +230,8 @@ var T = {
     'contact.office.kicker':'Office','contact.access.label':'Access',
     'contact.address.value':'KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan',
     'contact.access.value':'JR Yamanote Line (Mejiro), Seibu Ikebukuro Line (Shiinamachi), Oedo Line (Ochiai-Minaminagasaki)',
-    'tools.kicker':'Learning Tools','tools.title':'Learning Tools<span style="letter-spacing:normal;"> (Free for a Limited Time)</span>',
-    'tools.desc':'Learning tools we built for our own children at Tokyo international schools — now open to all families.',
+    'tools.kicker':'Software','tools.title':'Software<span style="letter-spacing:normal;"> (Free for a Limited Time)</span>',
+    'tools.desc':'Software we built for our own children at Tokyo international schools — now open to all families.',
     'tools.map.title':'MAP Practice (In Development)',
     'tools.map.desc':'We are developing an all-in-one "mock test + practice" platform for the MAP test used in international school admissions, covering all grade levels and subjects. A mock test first reveals your child\'s true level; the system can then dynamically assign practice questions matched to that level, continuously adapting throughout both testing and practice to always adjust the next question\'s difficulty. It fully replicates MAP\'s core mechanism of "always dynamically matching each student\'s true ability" — and adds dedicated practice on top.',
     'tools.map.f1':'Feature 1: e.g. "Covers Reading, Language Usage, and Mathematics";',
@@ -242,7 +242,7 @@ var T = {
     'tools.chinese.desc':'Children at international schools can gradually lose Chinese proficiency in an English-dominant environment. These tools help children maintain and strengthen their Chinese reading and writing skills.',
     'tools.chinese.btn':'Start Practicing','tools.japanese.title':'Japanese Kana Practice',
     'tools.japanese.desc':'Helps children and parents quickly master hiragana and katakana reading and writing — building a foundation for daily life and school communication in Japan.',
-    'tools.japanese.btn':'Start Practicing','tools.why.title':'Why We Build Educational Software',
+    'tools.japanese.btn':'Start Practicing','tools.why.title':'Why We Build Software',
     'articles.kicker':'Insights','articles.title':'Insights',
     'articles.desc':'School visit notes, selection methodology, curriculum guides, and MAP prep — from real visits and years of accumulated experience.',
     'articles.filter.all':'All','articles.filter.visit':'School Visits',
@@ -283,10 +283,10 @@ var T = {
   },
   ja: {
     'nav.home':'ホーム','nav.schools':'学校探索','nav.articles':'記事',
-    'nav.tools':'学習ツール','nav.services':'相談サービス','nav.about':'私たちについて','nav.contact':'お問い合わせ',
+    'nav.tools':'教育ソフトウェア','nav.services':'相談サービス','nav.about':'私たちについて','nav.contact':'お問い合わせ',
     'footer.brand_desc':'東京の日本語話者向けのインターナショナルスクール相談、進学指導、学校選択ツール、教育系ITプロダクト。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'記事',
-    'footer.nav_tools':'学習ツール','footer.nav_services':'相談サービス','footer.nav_about':'私たちについて',
+    'footer.nav_tools':'教育ソフトウェア','footer.nav_services':'相談サービス','footer.nav_about':'私たちについて',
     'footer.contact_wechat':'企業WeChat：13732203788',
     'footer.contact_xhs':'小紅書：贝蒂星妈 422507043',
     'footer.contact_phone':'（0081）07069875502',
@@ -299,7 +299,7 @@ var T = {
     'index.offer.desc':'情報から決断まで、入学から学習まで、一歩ずつご一緒します。',
     'index.mod.schools.title':'学校探索','index.mod.schools.desc':'東京の全国際学校を網羅。地域・カリキュラム・学年・学費で絞り込み。お子様に最適な学校を見つけましょう。',
     'index.mod.articles.title':'記事','index.mod.articles.desc':'学校訪問記、選校方法論、カリキュラム解説、受験対策 — 実際の訪問と現場経験からの深い内容。',
-    'index.mod.tools.title':'学習ツール','index.mod.tools.desc':'MAP練習、中国語読み書き — 私たちの子供のために作ったツールを、より多くのご家族へ。',
+    'index.mod.tools.title':'教育ソフトウェア','index.mod.tools.desc':'MAP練習、中国語読み書き — 私たちの子供のために作った教育ソフトウェアを、より多くのご家族へ。',
     'index.mod.consulting.title':'相談サービス','index.mod.consulting.desc':'マンツーマンの学校選択、訪問同行、書類作成、面接指導、通訳。情報収集から入学まで全面支援。',
     'index.featured.kicker':'Featured Insights','index.featured.title':'注目記事',
     'index.featured.desc':'10年以上の経験をまとめた内容で、決断前に全体像を把握していただけます。',
@@ -352,8 +352,8 @@ var T = {
     'contact.office.kicker':'Office','contact.access.label':'アクセス',
     'contact.address.value':'KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan',
     'contact.access.value':'JR山手線（目白駅）、西武池袋線（椎名町駅）、大江戸線（落合南長崎駅）いずれも利用可',
-    'tools.kicker':'Learning Tools','tools.title':'学習ツール<span style="letter-spacing:normal;">（期間限定無料）</span>',
-    'tools.desc':'東京の国際学校に通う私たちの子供のために作ったツールを、より多くのご家族へ。',
+    'tools.kicker':'Software','tools.title':'教育ソフトウェア<span style="letter-spacing:normal;">（期間限定無料）</span>',
+    'tools.desc':'東京の国際学校に通う私たちの子供のために作った教育ソフトウェアを、より多くのご家族へ。',
     'tools.map.title':'MAP 練習（開発中）',
     'tools.map.desc':'国際学校入学の MAP テストに向けて、全学年・全教科に対応した「模擬テスト＋練習」一体型ソフトウェアを開発中です。模擬テストでお子様の真の実力を把握した後、システムはその水準に応じて動的に適切な難易度の問題を出題できます。テストと練習の全過程で継続的に自己適応し、常に次の問題の難易度を調整します。MAP テストの「常に生徒の真の実力に動的にマッチする」コアメカニズムを完全に再現し、さらに専門練習機能を追加しています。',
     'tools.map.f1':'機能 1：例えば「Reading・Language Usage・Mathematics の3科目に対応」；',
@@ -574,7 +574,7 @@ function applyI18n(lang) {
         <ul class="footer-links">
           <li><a href="schools.html" data-i18n="footer.nav_schools">学校探索</a></li>
           <li><a href="articles.html" data-i18n="footer.nav_articles">深度文章</a></li>
-          <li><a href="tools.html" data-i18n="footer.nav_tools">学习工具</a></li>
+          <li><a href="tools.html" data-i18n="footer.nav_tools">教育软件</a></li>
           <li><a href="services.html" data-i18n="footer.nav_services">咨询服务</a></li>
           <li><a href="about.html" data-i18n="footer.nav_about">关于我们</a></li>
         </ul>
