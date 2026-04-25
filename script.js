@@ -49,7 +49,7 @@ var T = {
     'footer.contact_phone':'（0081）07069875502',
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
-    'index.hero.title':'为您找到<em>最适合孩子</em>的国际学校',
+    'index.hero.title':'陪伴您和孩子走进<em>最适合的国际学校</em>',
     'index.hero.desc':'从选校咨询到入学落地，从 MAP 备考到中文保持 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。',
     'index.hero.btn_services':'了解我们的服务','index.hero.btn_schools':'探索学校',
     'index.offer.kicker':'What We Offer','index.offer.title':'围绕国际学校，我们做这些事',
@@ -556,6 +556,41 @@ function applyI18n(lang) {
     document.dispatchEvent(new CustomEvent('kissho:langchange', { detail: { lang: lang } }));
   }
 }
+
+// ── Shared header injection ──
+(function () {
+  var header = document.querySelector('header.site-header');
+  if (!header) return;
+
+  var page = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  var navItems = [
+    { href: 'index.html', key: 'nav.home', label: '首页', match: function(p) { return p === '' || p === 'index.html'; } },
+    { href: 'schools.html', key: 'nav.schools', label: '学校探索', match: function(p) { return p === 'schools.html'; } },
+    { href: 'articles.html', key: 'nav.articles', label: '深度文章', match: function(p) { return p === 'articles.html' || p.indexOf('article-') === 0; } },
+    { href: 'tools.html', key: 'nav.tools', label: '学习工具', match: function(p) { return p === 'tools.html'; } },
+    { href: 'services.html', key: 'nav.services', label: '咨询服务', match: function(p) { return p === 'services.html'; } },
+    { href: 'about.html', key: 'nav.about', label: '关于我们', match: function(p) { return p === 'about.html'; } },
+    { href: 'contact.html', key: 'nav.contact', label: '联系', match: function(p) { return p === 'contact.html'; } }
+  ];
+
+  var navLinks = navItems.map(function(item) {
+    var active = item.match(page) ? ' active' : '';
+    return '<a class="nav-link' + active + '" href="' + item.href + '" data-i18n="' + item.key + '">' + item.label + '</a>';
+  }).join('');
+
+  header.innerHTML =
+    '<div class="header-inner">' +
+      '<a class="site-logo" href="index.html">' +
+        '<img class="site-logo-mark" src="kissho-logo-mark.svg" alt="" aria-hidden="true" />' +
+        '<span class="site-logo-text"><span class="site-logo-zh">吉祥书院</span><span class="site-logo-en en">KISSHO Co., Ltd</span></span>' +
+      '</a>' +
+      '<nav class="nav" id="mainNav">' +
+        navLinks +
+        '<div class="lang-switch"><button class="lang-btn active">中文</button><button class="lang-btn">EN</button><button class="lang-btn">日本語</button></div>' +
+      '</nav>' +
+      '<button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>' +
+    '</div>';
+})();
 
 // ── Shared footer injection ──
 (function () {
