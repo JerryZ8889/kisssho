@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -19,48 +19,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=shared-header-v2-20260425">
 </head>
 <body>
 
   <div class="top-stripe"></div>
 
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-logo" href="index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="KISSHO Logo">
-          <g transform="translate(50, 38)">
-            <path d="M -22 5 L -22 -7 Q -22 -14.5 -14.5 -17 L 0 -22 L 14.5 -17 Q 22 -14.5 22 -7 L 22 5" fill="none" stroke="#c4362a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <line x1="-25" y1="-2.5" x2="25" y2="-2.5" stroke="#c4362a" stroke-width="1.5"/>
-            <line x1="-17" y1="-2.5" x2="-17" y2="12" stroke="#c4362a" stroke-width="1.6"/>
-            <line x1="17" y1="-2.5" x2="17" y2="12" stroke="#c4362a" stroke-width="1.6"/>
-            <circle cx="0" cy="-22" r="2.5" fill="#d4a853"/>
-            <path d="M -6 4 Q 0 1 6 4 M -6 4 L -6 9 Q 0 6 6 9 L 6 4" fill="none" stroke="#d4a853" stroke-width="0.9" stroke-linecap="round"/>
-          </g>
-          <text x="50" y="78" font-family="'Noto Serif SC', serif" font-size="22" font-weight="700" fill="#c4362a" text-anchor="middle">吉祥</text>
-        </svg>
-        <span class="site-logo-text">
-          <span class="site-logo-zh">吉祥书院</span>
-          <span class="site-logo-en en">KISSHO Co., Ltd</span>
-        </span>
-      </a>
-      <nav class="nav" id="mainNav">
-        <a class="nav-link active" href="index.html" data-i18n="nav.home">首页</a>
-        <a class="nav-link" href="schools.html" data-i18n="nav.schools">学校探索</a>
-        <a class="nav-link" href="articles.html" data-i18n="nav.articles">深度文章</a>
-        <a class="nav-link" href="tools.html" data-i18n="nav.tools">学习工具</a>
-        <a class="nav-link" href="services.html" data-i18n="nav.services">咨询服务</a>
-        <a class="nav-link" href="about.html" data-i18n="nav.about">关于我们</a>
-        <a class="nav-link" href="contact.html" data-i18n="nav.contact">联系</a>
-        <div class="lang-switch">
-          <button class="lang-btn active">中文</button>
-          <button class="lang-btn">EN</button>
-          <button class="lang-btn">日本語</button>
-        </div>
-      </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </header>
+  <header class="site-header"></header>
 
   <main>
 
@@ -70,7 +35,7 @@
         <div class="hero-inner">
           <div class="hero-content reveal">
             <div class="hero-kicker en" data-i18n="index.hero.kicker">Tokyo International School Consulting</div>
-            <h1 class="hero-title" data-i18n-html="index.hero.title">为您找到<em>最适合孩子</em>的国际学校</h1>
+            <h1 class="hero-title" data-i18n-html="index.hero.title">陪伴您和孩子走进<em>最适合的国际学校</em></h1>
             <p class="hero-desc" data-i18n="index.hero.desc">从选校咨询到入学落地，从 MAP 备考到中文保持 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。</p>
             <div class="hero-cta">
               <a class="btn btn-primary" href="services.html" data-i18n="index.hero.btn_services">了解我们的服务</a>
@@ -83,8 +48,6 @@
         </div>
       </div>
     </section>
-
-    <div class="ornament ornament--hero"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line rev"></div></div>
 
     <!-- Core Modules -->
     <section class="section home-offer-section">
@@ -128,7 +91,7 @@
     </section>
 
     <!-- Featured Articles -->
-    <section class="section section--warm">
+    <section class="section section--warm home-featured-section">
       <div class="container">
         <div class="section-header reveal">
           <div class="section-kicker en" data-i18n="index.featured.kicker">Featured Insights</div>
@@ -171,7 +134,7 @@
     </section>
 
     <!-- About Preview -->
-    <section class="section">
+    <section class="section home-about-section">
       <div class="container">
         <div class="about-preview">
           <div class="about-text reveal">
@@ -183,7 +146,7 @@
             <a class="btn btn-ghost" href="about.html" data-i18n="index.about.btn">了解更多</a>
           </div>
           <div class="about-photo reveal">
-            <img loading="lazy" decoding="async" src="图片/3.1.png" alt="Betty & Jerry — 吉祥书院创始人" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;border-radius:var(--radius);" />
+            <img loading="lazy" decoding="async" src="图片/首页图片 7.png" alt="Betty & Jerry — 吉祥书院创始人" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:var(--radius);" />
           </div>
         </div>
       </div>
@@ -193,6 +156,6 @@
 
   <footer class="site-footer"></footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=shared-header-v2-20260425"></script>
 </body>
 </html>
