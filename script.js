@@ -40,7 +40,7 @@ var PAGE_META_FALLBACKS = {
 var T = {
   zh: {
     'nav.home':'首页','nav.schools':'学校探索','nav.articles':'深度文章',
-    'nav.tools':'教育软件','nav.services':'咨询服务','nav.about':'关于我们','nav.contact':'联系',
+    'nav.tools':'教育软件','nav.services':'咨询服务','nav.about':'关于我们','nav.contact':'联系我们',
     'footer.brand_desc':'面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'深度文章',
     'footer.nav_tools':'教育软件','footer.nav_services':'咨询服务','footer.nav_about':'关于我们',
@@ -570,7 +570,7 @@ function applyI18n(lang) {
     { href: 'tools.html', key: 'nav.tools', label: '学习工具', match: function(p) { return p === 'tools.html'; } },
     { href: 'services.html', key: 'nav.services', label: '咨询服务', match: function(p) { return p === 'services.html'; } },
     { href: 'about.html', key: 'nav.about', label: '关于我们', match: function(p) { return p === 'about.html'; } },
-    { href: 'contact.html', key: 'nav.contact', label: '联系', match: function(p) { return p === 'contact.html'; } }
+    { href: 'contact.html', key: 'nav.contact', label: '联系我们', match: function(p) { return p === 'contact.html'; } }
   ];
 
   var navLinks = navItems.map(function(item) {
@@ -635,6 +635,211 @@ function applyI18n(lang) {
   </div>
 </footer>`;
 })();
+
+// Contact page floating message widget
+var CONTACT_MESSAGE_ENDPOINT = 'https://formspree.io/f/xvzldzel';
+var CONTACT_MESSAGE_EMAIL = 'jerry@kissho.school';
+var CONTACT_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+var CONTACT_MESSAGE_LABELS = {
+  zh: {
+    buttonDesktop: '给我们留言',
+    buttonMobile: '给我们留言',
+    title: '您想问的事',
+    contactLabel: '联系方式',
+    contactPlaceholder: '微信 / 电话 / 邮箱都可以',
+    messagePlaceholder: '什么都可以问',
+    submit: '发送',
+    close: '关闭留言窗口',
+    contactRequired: '请留下一个方便回复的联系方式。',
+    messageRequired: '请写一点想问的内容。',
+    sending: '正在发送...',
+    success: '已收到，我们会通过你留下的联系方式回复。',
+    mailFallback: '已为你打开邮件草稿，请在邮件窗口中发送。',
+    sendError: '暂时没有发送成功，请稍后再试或直接发邮件给我们。'
+  },
+  en: {
+    buttonDesktop: 'Leave a message',
+    buttonMobile: 'Leave a message',
+    title: 'What would you like to ask?',
+    contactLabel: 'Contact',
+    contactPlaceholder: 'WhatsApp / phone / email all work',
+    messagePlaceholder: 'Anything is fine',
+    submit: 'Send',
+    close: 'Close message panel',
+    contactRequired: 'Please leave a contact method.',
+    messageRequired: 'Please write a short message.',
+    sending: 'Sending...',
+    success: 'Received. We will reply through the contact you left.',
+    mailFallback: 'An email draft has been opened. Please send it from your mail app.',
+    sendError: 'The message was not sent. Please try again later or email us directly.'
+  },
+  ja: {
+    buttonDesktop: 'メッセージを送る',
+    buttonMobile: 'メッセージを送る',
+    title: 'ご相談内容',
+    contactLabel: '連絡先',
+    contactPlaceholder: 'LINE / 電話 / メール いずれでも大丈夫です',
+    messagePlaceholder: '簡単な内容で大丈夫です',
+    submit: '送信',
+    close: '留言ウィンドウを閉じる',
+    contactRequired: '返信できる連絡先をご記入ください。',
+    messageRequired: 'ご相談内容を少しご記入ください。',
+    sending: '送信中...',
+    success: '受け付けました。ご記入の連絡先へ返信します。',
+    mailFallback: 'メール下書きを開きました。メールアプリから送信してください。',
+    sendError: '送信できませんでした。時間をおいて再度お試しいただくか、直接メールでご連絡ください。'
+  }
+};
+
+function initContactMessageWidget() {
+  if (currentPageFile().toLowerCase() !== 'contact.html') return;
+  if (document.querySelector('.contact-message-widget')) return;
+
+  var widget = document.createElement('div');
+  widget.className = 'contact-message-widget';
+  widget.innerHTML =
+    '<button class="contact-message-toggle" type="button" aria-expanded="false">' +
+      '<span class="contact-message-toggle-text contact-message-toggle-text--desktop"></span>' +
+      '<span class="contact-message-toggle-text contact-message-toggle-text--mobile"></span>' +
+    '</button>' +
+    '<section class="contact-message-panel" aria-hidden="true">' +
+      '<div class="contact-message-panel-head">' +
+        '<h2 class="contact-message-title"></h2>' +
+        '<button class="contact-message-close" type="button" aria-label=""></button>' +
+      '</div>' +
+      '<form class="contact-message-form" novalidate>' +
+        '<label class="contact-message-label" for="contactMessageContact"></label>' +
+        '<input class="contact-message-input" id="contactMessageContact" name="contact" type="text" autocomplete="email" required />' +
+        '<label class="contact-message-sr-only" for="contactMessageBody">Message</label>' +
+        '<textarea class="contact-message-textarea" id="contactMessageBody" name="message" rows="5" required></textarea>' +
+        '<button class="contact-message-submit" type="submit"></button>' +
+        '<p class="contact-message-status" role="status" aria-live="polite"></p>' +
+      '</form>' +
+    '</section>';
+
+  document.body.appendChild(widget);
+
+  var toggle = widget.querySelector('.contact-message-toggle');
+  var panel = widget.querySelector('.contact-message-panel');
+  var closeBtn = widget.querySelector('.contact-message-close');
+  var form = widget.querySelector('.contact-message-form');
+  var contactInput = widget.querySelector('#contactMessageContact');
+  var messageInput = widget.querySelector('#contactMessageBody');
+  var status = widget.querySelector('.contact-message-status');
+  var submit = widget.querySelector('.contact-message-submit');
+
+  function activeLang() {
+    var lang = localStorage.getItem('kissho-lang') || 'zh';
+    return CONTACT_MESSAGE_LABELS[lang] ? lang : 'zh';
+  }
+
+  function labels() {
+    return CONTACT_MESSAGE_LABELS[activeLang()];
+  }
+
+  function updateLabels() {
+    var l = labels();
+    widget.querySelector('.contact-message-toggle-text--desktop').textContent = l.buttonDesktop;
+    widget.querySelector('.contact-message-toggle-text--mobile').textContent = l.buttonMobile;
+    widget.querySelector('.contact-message-title').textContent = l.title;
+    widget.querySelector('.contact-message-label').textContent = l.contactLabel;
+    contactInput.placeholder = l.contactPlaceholder;
+    messageInput.placeholder = l.messagePlaceholder;
+    submit.textContent = l.submit;
+    closeBtn.setAttribute('aria-label', l.close);
+  }
+
+  function setOpen(open) {
+    widget.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+    if (open) contactInput.focus();
+  }
+
+  function setStatus(text, isError) {
+    status.textContent = text || '';
+    status.classList.toggle('is-error', !!isError);
+  }
+
+  toggle.addEventListener('click', function() {
+    setOpen(!widget.classList.contains('is-open'));
+  });
+
+  closeBtn.addEventListener('click', function() {
+    setOpen(false);
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && widget.classList.contains('is-open')) setOpen(false);
+  });
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var l = labels();
+    var contact = contactInput.value.trim();
+    var message = messageInput.value.trim();
+
+    if (!contact) {
+      setStatus(l.contactRequired, true);
+      contactInput.focus();
+      return;
+    }
+    if (!message) {
+      setStatus(l.messageRequired, true);
+      messageInput.focus();
+      return;
+    }
+
+    setStatus(l.sending, false);
+    submit.disabled = true;
+
+    var payload = {
+      name: contact,
+      message: message,
+      subject: 'KISSHO website message',
+      page: window.location.href,
+      language: activeLang()
+    };
+    if (CONTACT_EMAIL_PATTERN.test(contact)) {
+      payload.email = contact;
+    } else {
+      payload.phone = contact;
+      payload.contact = contact;
+    }
+
+    if (!CONTACT_MESSAGE_ENDPOINT) {
+      var subject = encodeURIComponent('[KISSHO] Website message');
+      var body = encodeURIComponent('Contact:\n' + contact + '\n\nMessage:\n' + message + '\n\nPage:\n' + window.location.href);
+      window.location.href = 'mailto:' + CONTACT_MESSAGE_EMAIL + '?subject=' + subject + '&body=' + body;
+      setStatus(l.mailFallback, false);
+      submit.disabled = false;
+      return;
+    }
+
+    fetch(CONTACT_MESSAGE_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    }).then(function(response) {
+      if (!response.ok) throw new Error('Message request failed');
+      form.reset();
+      setStatus(l.success, false);
+    }).catch(function() {
+      setStatus(l.sendError, true);
+    }).finally(function() {
+      submit.disabled = false;
+    });
+  });
+
+  document.addEventListener('kissho:langchange', updateLabels);
+  updateLabels();
+}
+
+initContactMessageWidget();
 
 // ── Apply saved language ──
 (function() {
