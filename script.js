@@ -636,7 +636,7 @@ function applyI18n(lang) {
 </footer>`;
 })();
 
-// Contact page floating message widget
+// Site-wide floating message widget
 var CONTACT_MESSAGE_ENDPOINT = 'https://formspree.io/f/xvzldzel';
 var CONTACT_MESSAGE_EMAIL = 'jerry@kissho.school';
 var CONTACT_EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -692,7 +692,6 @@ var CONTACT_MESSAGE_LABELS = {
 };
 
 function initContactMessageWidget() {
-  if (currentPageFile().toLowerCase() !== 'contact.html') return;
   if (document.querySelector('.contact-message-widget')) return;
 
   var widget = document.createElement('div');
