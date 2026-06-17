@@ -18,187 +18,11 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=floating-message-20260523">
-  <style>
-    .btn-search {
-      background: var(--red);
-      color: #fff;
-      border: none;
-      padding: 0 28px;
-      height: 38px;
-      font-size: 0.92rem;
-      font-family: inherit;
-      border-radius: 2px;
-      cursor: pointer;
-      letter-spacing: 0.08em;
-      transition: background 0.2s;
-      align-self: flex-end;
-      flex-shrink: 0;
-      white-space: nowrap;
-    }
-    .btn-search:hover { background: #a82a20; }
-    .results-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 0 20px;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .results-count {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-    .results-page-info {
-      margin-top: 6px;
-      font-size: 0.82rem;
-      color: var(--mid);
-      line-height: 1.6;
-    }
-    .results-page-info strong {
-      color: var(--text);
-    }
-    .results-count strong {
-      color: var(--text);
-      font-size: 1.05rem;
-    }
-    .btn-reset {
-      background: none;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      padding: 6px 16px;
-      font-size: 0.85rem;
-      font-family: inherit;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .btn-reset:hover { border-color: var(--red); color: var(--red); }
-    .school-card-v2 {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 22px 24px;
-      transition: box-shadow 0.2s, border-color 0.2s;
-    }
-    .school-card-v2:hover {
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      border-color: #d0c8b8;
-    }
-    .school-card-v2-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .school-card-v2-heading {
-      min-width: 0;
-    }
-    .school-card-v2-name {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.4;
-      margin: 0;
-    }
-    .school-card-v2-subname {
-      margin: 6px 0 0;
-      font-size: 0.8rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-    .school-tag-v2 {
-      background: var(--warm-bg);
-      color: var(--red);
-      border: 1px solid rgba(196,54,42,0.2);
-      font-size: 0.72rem;
-      padding: 3px 9px;
-      border-radius: 2px;
-      white-space: nowrap;
-      flex-shrink: 0;
-      font-family: 'EB Garamond', serif;
-      letter-spacing: 0.03em;
-    }
-    .school-card-v2-meta {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 10px;
-    }
-    .school-card-v2-meta span {
-      font-size: 0.82rem;
-      color: var(--muted);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .school-card-v2-meta span::before {
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-    .school-card-v2-desc {
-      font-size: 0.88rem;
-      color: var(--text);
-      line-height: 1.7;
-      margin: 0;
-      opacity: 0.85;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    @media (max-width: 640px) {
-      .school-card-v2 {
-        padding: 20px;
-      }
-      .school-card-v2-header {
-        flex-direction: column;
-      }
-    }
-    .no-results {
-      text-align: center;
-      padding: 60px 20px;
-      color: var(--muted);
-    }
-    .no-results p { margin-bottom: 8px; }
-    .results-pagination {
-      display: flex;
-      justify-content: flex-end;
-      gap: 12px;
-      margin-top: 22px;
-      flex-wrap: wrap;
-    }
-    .btn-page {
-      background: #fff;
-      border: 1px solid var(--border);
-      color: var(--mid);
-      padding: 8px 18px;
-      font-size: 0.84rem;
-      font-family: inherit;
-      border-radius: 2px;
-      cursor: pointer;
-      transition: border-color 0.2s, color 0.2s, background 0.2s;
-    }
-    .btn-page:hover:not(:disabled) {
-      border-color: var(--red);
-      color: var(--red);
-      background: var(--warm-bg);
-    }
-    .btn-page:disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-    }
-    #searchResultsSection { display: none; }
-  </style>
+  <link rel="stylesheet" href="redesign.css?v=redesign-20260614-align">
 </head>
-<body>
+<body class="redesign">
 
   <div class="top-stripe"></div>
 
@@ -206,130 +30,88 @@
 
   <main>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <div class="section-kicker en" data-i18n="schools.kicker">School Explorer</div>
-        <h1 class="section-title" data-i18n="schools.title">东京国际学校探索</h1>
-        <p class="section-desc" data-i18n="schools.desc">涵盖东京及周边 115 所国际学校。23 个区域 · 14 种课程体系 · 学费从 50 万到 300 万日元以上。使用筛选工具缩小范围，找到值得进一步了解的学校。（持续完善中）</p>
+    <!-- Page hero (split: text + stats) -->
+    <section class="page-hero split" data-watermark="探">
+      <div class="container ph-grid">
+        <div>
+          <span class="eyebrow" data-i18n-zh="School Explorer · 学校探索" data-i18n-en="School Explorer" data-i18n-ja="School Explorer · 学校検索">School Explorer · 学校探索</span>
+          <h1 data-i18n="schools.title">东京国际学校探索</h1>
+          <p class="lead" data-i18n-zh="（持续完善中）" data-i18n-en="(Continuously updated)" data-i18n-ja="（随時更新中）">（持续完善中）</p>
+        </div>
+        <div class="ph-stats">
+          <div class="ph-stat"><div class="num">115<small>+</small></div><div class="cap" data-i18n-zh="所国际学校" data-i18n-en="schools" data-i18n-ja="校">所国际学校</div></div>
+          <div class="ph-stat"><div class="num">23<small>+</small></div><div class="cap" data-i18n-zh="个区域" data-i18n-en="areas" data-i18n-ja="エリア">个区域</div></div>
+          <div class="ph-stat"><div class="num">14<small>+</small></div><div class="cap" data-i18n-zh="种课程体系" data-i18n-en="curricula" data-i18n-ja="カリキュラム">种课程体系</div></div>
+          <div class="ph-stat"><div class="num">50<small>–300万</small></div><div class="cap" data-i18n-zh="学费区间（日元/年）" data-i18n-en="tuition ¥/yr" data-i18n-ja="学費（円/年）">学费区间（日元/年）</div></div>
+        </div>
       </div>
     </section>
 
-    <!-- Filter Bar -->
-    <section class="section" style="padding-top: 45px;">
+    <!-- Floating filter card -->
+    <section class="filterbar">
       <div class="container">
-
-        <div class="filter-bar reveal">
-          <div class="filter-group">
-            <label class="filter-label en" data-i18n="schools.filter.region.label">Region / 区域</label>
-            <select class="filter-select" id="filterRegion">
-              <option value="" data-i18n="schools.filter.region.all">全部区域</option>
-              <optgroup label="── 东京中心区 ──">
-                <option>港区</option>
-                <option>世田谷区</option>
-                <option>涩谷区</option>
-                <option>目黑区</option>
-                <option>江东区</option>
-                <option>新宿区</option>
-                <option>江户川区</option>
-                <option>文京区</option>
-                <option>丰岛区</option>
-                <option>练马区</option>
-                <option>千代田区</option>
-                <option>品川区</option>
-                <option>板桥区</option>
-                <option>足立区</option>
-                <option>杉并区</option>
-                <option>中央区</option>
-                <option>葛饰区</option>
-                <option>北区</option>
-                <option>大田区</option>
-              </optgroup>
-              <optgroup label="── 东京周边 ──">
-                <option>神奈川县</option>
-                <option>东京都多摩地区</option>
-                <option>千叶县</option>
-                <option>埼玉县</option>
-              </optgroup>
-            </select>
+        <div class="filter-card">
+          <div class="ffield">
+            <label data-i18n="schools.filter.region.label">Region / 区域</label>
+            <select id="filterRegion"><option value="" data-i18n="schools.filter.region.all">全部区域</option></select>
           </div>
-          <div class="filter-group">
-            <label class="filter-label en" data-i18n="schools.filter.curr.label">Curriculum / 课程体系</label>
-            <select class="filter-select" id="filterCurr">
-              <option value="" data-i18n="schools.filter.curr.all">全部课程体系</option>
-              <option>IB体系</option>
-              <option>美式课程</option>
-              <option>剑桥 / Cambridge</option>
-              <option>双语课程</option>
-              <option>蒙特梭利</option>
-              <option>英式课程</option>
-              <option>瑞吉欧</option>
-              <option>加拿大课程</option>
-              <option>印度课程 CBSE</option>
-              <option>法国课程</option>
-              <option>台湾课程</option>
-              <option>韩国课程</option>
-              <option>德国课程</option>
-              <option>其他 / 独立课程</option>
-            </select>
+          <div class="ffield">
+            <label data-i18n="schools.filter.curr.label">Curriculum / 课程体系</label>
+            <select id="filterCurr"><option value="" data-i18n="schools.filter.curr.all">全部课程体系</option></select>
           </div>
-          <div class="filter-group">
-            <label class="filter-label en" data-i18n="schools.filter.grade.label">Grade / 年级段</label>
-            <select class="filter-select" id="filterGrade">
-              <option value="" data-i18n="schools.filter.grade.all">全部年级</option>
-              <option>幼儿园</option>
-              <option>小学</option>
-              <option>初中</option>
-              <option>高中</option>
-            </select>
+          <div class="ffield">
+            <label data-i18n="schools.filter.grade.label">Grade / 年级段</label>
+            <select id="filterGrade"><option value="" data-i18n="schools.filter.grade.all">全部年级</option></select>
           </div>
-          <div class="filter-group">
-            <label class="filter-label en" data-i18n="schools.filter.tuition.label">Tuition / 学费区间</label>
-            <select class="filter-select" id="filterTuition">
-              <option value="" data-i18n="schools.filter.tuition.all">全部学费</option>
-              <option value="150万以下">150万日元以下</option>
-              <option value="150—200万">150～200万日元</option>
-              <option value="200—250万">200～250万日元</option>
-              <option value="250—300万">250～300万日元</option>
-              <option value="300万以上">300万日元以上</option>
-            </select>
+          <div class="ffield">
+            <label data-i18n="schools.filter.tuition.label">Tuition / 学费区间</label>
+            <select id="filterTuition"><option value="" data-i18n="schools.filter.tuition.all">全部学费</option></select>
           </div>
-          <button class="btn-search" id="searchBtn" data-i18n="schools.btn.search">搜索</button>
+          <button class="btn btn-primary" id="searchBtn" data-i18n="schools.btn.search">搜索</button>
         </div>
+      </div>
+    </section>
 
-        <!-- Search Results -->
+    <!-- Results -->
+    <section class="results">
+      <div class="container">
         <div id="searchResultsSection">
-          <div class="results-header">
+          <div class="res-bar">
             <div>
-              <div class="results-count" id="resultsCount"></div>
-              <div class="results-page-info" id="resultsPageInfo"></div>
+              <div class="count" id="resultsCount"></div>
+              <div class="page-info" id="resultsPageInfo"></div>
             </div>
-            <button class="btn-reset" id="resetBtn" data-i18n="schools.btn.reset">重置筛选 · 显示全部</button>
+            <button class="reset" id="resetBtn" data-i18n="schools.btn.reset">重置筛选 · 显示全部</button>
           </div>
           <div class="schools-grid" id="schoolsGrid"></div>
-          <div class="results-pagination" id="resultsPagination" hidden>
-            <button class="btn-page" id="prevPageBtn" type="button">上一页</button>
-            <button class="btn-page" id="nextPageBtn" type="button">下一页</button>
+          <div class="pager" id="resultsPagination" hidden>
+            <button id="prevPageBtn" type="button">上一页</button>
+            <button id="nextPageBtn" type="button">下一页</button>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- 数据说明 -->
-        <div class="company-info-card reveal" style="margin-top: 40px; text-align: center;">
-          <p style="font-size:0.9rem; color:var(--muted); line-height:1.8;" data-i18n-html="schools.data.note">
-            数据库收录 <strong>115 所</strong>学校 · 覆盖东京 23 区及神奈川、千叶、埼玉、多摩地区<br>
-            如需获取某所学校的详细信息或选校建议，欢迎<a href="contact.html" style="color:var(--red);">联系我们</a>
-          </p>
-        </div>
-
+    <!-- Database note -->
+    <section class="db-note">
+      <div class="container">
+        <p data-i18n-html="schools.data.note">
+          数据库收录 <strong>115 所</strong>学校 · 覆盖东京 23 区及神奈川、千叶、埼玉、多摩地区<br>
+          如需获取某所学校的详细信息或选校建议，欢迎<a href="contact.html">联系我们</a>
+        </p>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="section section--warm" style="text-align: center;">
-      <div class="container reveal">
-        <h2 class="section-title" data-i18n="schools.cta.title">不确定哪所学校适合你的孩子？</h2>
-        <p class="section-desc" style="margin-bottom: 28px;" data-i18n="schools.cta.desc">115 所学校看起来选择很多，但每个家庭的情况不同。我们帮您找到最适合孩子的学校。</p>
-        <a class="btn btn-primary" href="services.html" data-i18n="schools.cta.btn">了解咨询服务</a>
+    <section class="cta" id="cta">
+      <div class="container inner">
+        <span class="eyebrow center" data-i18n-zh="Not Sure Yet?" data-i18n-en="Not Sure Yet?" data-i18n-ja="Not Sure Yet?">Not Sure Yet?</span>
+        <h2 data-i18n="schools.cta.title">不确定哪所学校适合你的孩子？</h2>
+        <p data-i18n="schools.cta.desc">115 所学校看起来选择很多，但每个家庭的情况不同。我们帮您找到最适合孩子的学校。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="services.html" data-i18n="schools.cta.btn">了解咨询服务</a>
+          <a class="btn btn-ghost-light" href="contact.html" data-i18n-zh="添加微信" data-i18n-en="Add us on WeChat" data-i18n-ja="WeChatを追加">添加微信</a>
+        </div>
       </div>
     </section>
 

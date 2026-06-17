@@ -18,10 +18,11 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=floating-message-20260523">
+  <link rel="stylesheet" href="redesign.css?v=redesign-20260612">
 </head>
-<body>
+<body class="redesign">
 
   <div class="top-stripe"></div>
 
@@ -29,162 +30,130 @@
 
   <main>
 
-    <section class="page-hero">
+    <section class="page-hero" data-watermark="询">
       <div class="container">
-        <div class="section-kicker en" data-i18n="services.kicker">Consulting Services</div>
-        <h1 class="section-title" style="letter-spacing:0.4em;" data-i18n="services.title">咨询服务</h1>
-        <p class="section-desc" data-i18n="services.desc">从信息到执行，您负责孩子和家庭节奏，我们负责学校信息、语言沟通和流程推进。</p>
+        <span class="eyebrow center" data-i18n-zh="Consulting Services · 咨询服务" data-i18n-en="Consulting Services" data-i18n-ja="Consulting Services · 相談サービス">Consulting Services · 咨询服务</span>
+        <h1 data-i18n="services.title">咨询服务</h1>
+        <p class="lead" data-i18n="services.desc">从信息到执行，您负责孩子和家庭节奏，我们负责学校信息、语言沟通、专业一对一辅导和流程推进。</p>
       </div>
     </section>
 
     <!-- Services -->
-    <section class="section">
+    <section class="services">
       <div class="container">
-        <div class="section-header reveal">
-          <div class="section-kicker en" data-i18n="services.our.kicker">Services</div>
+        <div class="center-head">
+          <span class="eyebrow center" data-i18n="services.our.kicker">Services</span>
           <h2 class="section-title" data-i18n="services.our.title">我们提供的服务</h2>
         </div>
+        <div class="svc-grid">
 
-        <div class="services-overview">
-          <div class="services-group">
-            <div
-              class="services-section-label"
-              data-i18n-zh="核心支持"
-              data-i18n-en="Core Support"
-              data-i18n-ja="コアサポート"
-            >核心支持</div>
-            <div class="services-overview services-overview--primary">
-
-          <!-- 1. 选校方向咨询 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H22l-4 4-4-4h-2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/><line x1="17" y1="13" x2="27" y2="13"/><line x1="17" y1="18" x2="24" y2="18"/></svg>
-            <h3 class="service-title" data-i18n="services.s1.title">选校方向咨询</h3>
-            <p class="service-desc" data-i18n-zh="通过电话或面谈，了解孩子的年龄、语言背景与家庭目标，根据您的期望，帮您理清方向、圈定候选学校范围。" data-i18n-en="Through a call or in-person meeting, we map your child's age, language background, and family goals, then narrow the school range and clarify the admissions direction." data-i18n-ja="お電話や面談で、お子さまの年齢・言語背景・ご家庭の目標を整理し、候補校の範囲と進むべき方向を明確にします。">通过电话或面谈，了解孩子的年龄、语言背景与家庭目标，根据您的期望，帮您理清方向、圈定候选学校范围。</p>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg></div>
+            <h3 data-i18n="services.s1.title">选校方向咨询</h3>
+            <p data-i18n-zh="通过电话或面谈，了解孩子的年龄、语言背景与家庭目标，根据您的期望，帮您理清方向、圈定候选学校范围。" data-i18n-en="Through a call or in-person meeting, we map your child's age, language background, and family goals, then narrow the school range and clarify the admissions direction." data-i18n-ja="お電話や面談で、お子さまの年齢・言語背景・ご家庭の目標を整理し、候補校の範囲と進むべき方向を明確にします。">通过电话或面谈，了解孩子的年龄、语言背景与家庭目标，根据您的期望，帮您理清方向、圈定候选学校范围。</p>
           </div>
 
-          <!-- 2. 实地访校陪同 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34V16l14-10 14 10v18"/><path d="M6 34h28"/><path d="M16 34V24h8v10"/><line x1="20" y1="16" x2="20" y2="16.01"/></svg>
-            <h3 class="service-title" data-i18n="services.s2.title">实地访校陪同</h3>
-            <p class="service-desc" data-i18n-zh="陪您走进学校。提前调研学校背景与招生要点，现场全程翻译，帮您问到真正想问的问题。访校结束后整理要点与建议，供您参考决策。" data-i18n-en="We accompany you on school visits, research the school beforehand, interpret throughout the meeting, and help you ask the questions that actually matter. Afterward we summarize key takeaways and recommendations." data-i18n-ja="学校訪問に同行し、事前に学校背景と募集の要点を整理したうえで、当日は通訳を含めて伴走します。訪問後は重要ポイントと判断材料をまとめて共有します。">陪您走进学校。提前调研学校背景与招生要点，现场全程翻译，帮您问到真正想问的问题。访校结束后整理要点与建议，供您参考决策。</p>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7" /><path d="M5 10v10h14V10" /><path d="M10 20v-6h4v6" /></svg></div>
+            <h3 data-i18n="services.s2.title">实地访校陪同</h3>
+            <p data-i18n-zh="陪您走进学校。提前调研学校背景与招生要点，现场全程翻译，帮您问到真正想问的问题。访校结束后整理要点与建议，供您参考决策。" data-i18n-en="We accompany you on school visits, research the school beforehand, interpret throughout the meeting, and help you ask the questions that actually matter. Afterward we summarize key takeaways and recommendations." data-i18n-ja="学校訪問に同行し、事前に学校背景と募集の要点を整理したうえで、当日は通訳を含めて伴走します。訪問後は重要ポイントと判断材料をまとめて共有します。">陪您走进学校。提前调研学校背景与招生要点，现场全程翻译，帮您问到真正想问的问题。访校结束后整理要点与建议，供您参考决策。</p>
           </div>
 
-            </div>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 3H6a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 6 21h12a1.5 1.5 0 0 0 1.5-1.5V8.5z" /><path d="M14 3v5.5h5.5" /><path d="M8.5 13h7M8.5 16.5h5" /></svg></div>
+            <h3 data-i18n="services.s3.title">入学申请材料制作</h3>
+            <p data-i18n-zh="不止于填表。根据孩子的性格、兴趣与经历，设计一份打动招生官的学生简历；深度挖掘家庭教育理念与背景，精心撰写家庭信息；按学校要求编写推荐信。让每一份材料都在为孩子加分。" data-i18n-en="We go beyond filling forms. We shape a student profile that reflects your child's personality and strengths, refine family statements, and prepare recommendation materials aligned with each school's expectations." data-i18n-ja="単なる入力代行ではなく、お子さまの個性・興味・経験が伝わるプロフィールを整え、ご家庭の教育方針を言語化し、学校ごとの要件に合わせて推薦資料まで仕上げます。">不止于填表。根据孩子的性格、兴趣与经历，设计一份打动招生官的学生简历；深度挖掘家庭教育理念与背景，精心撰写家庭信息；按学校要求编写推荐信。让每一份材料都在为孩子加分。</p>
           </div>
 
-          <div class="services-group">
-            <div
-              class="services-section-label"
-              data-i18n-zh="延伸支持"
-              data-i18n-en="Extended Support"
-              data-i18n-ja="拡張サポート"
-            >延伸支持</div>
-            <div class="services-overview services-overview--secondary">
-
-          <!-- 3. 入学申请材料制作 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4h14l8 8v22a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M24 4v8h8"/><line x1="14" y1="18" x2="26" y2="18"/><line x1="14" y1="23" x2="26" y2="23"/><line x1="14" y1="28" x2="22" y2="28"/></svg>
-            <h3 class="service-title" data-i18n="services.s3.title">入学申请材料制作</h3>
-            <p class="service-desc" data-i18n-zh="不止于填表。根据孩子的性格、兴趣与经历，设计一份打动招生官的学生简历；深度挖掘家庭教育理念与背景，精心撰写家庭信息；按学校要求编写推荐信。让每一份材料都在为孩子加分。" data-i18n-en="We go beyond filling forms. We shape a student profile that reflects your child's personality and strengths, refine family statements, and prepare recommendation materials aligned with each school's expectations." data-i18n-ja="単なる入力代行ではなく、お子さまの個性・興味・経験が伝わるプロフィールを整え、ご家庭の教育方針を言語化し、学校ごとの要件に合わせて推薦資料まで仕上げます。">不止于填表。根据孩子的性格、兴趣与经历，设计一份打动招生官的学生简历；深度挖掘家庭教育理念与背景，精心撰写家庭信息；按学校要求编写推荐信。让每一份材料都在为孩子加分。</p>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M9 3h6v4H9z" /><path d="M9 5H6.5A1.5 1.5 0 0 0 5 6.5v13A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-13A1.5 1.5 0 0 0 17.5 5H15" /><path d="M8.5 12l2.5 2.5 4.5-4.5" /></svg></div>
+            <h3 data-i18n="services.s4.title">模拟测试与学力报告</h3>
+            <p data-i18n-zh="备考前先摸清底数。根据目标学校的入学评估标准，提供笔试模拟试卷与面试情景模拟；完成后出具学力诊断报告，清晰定位优势与薄弱环节，给出针对性的备考方向。" data-i18n-en="Before prep begins, we establish a clear baseline. We run mock tests and interview simulations aligned to your target schools, then deliver a diagnostic report showing strengths, weak points, and the next prep priorities." data-i18n-ja="まず現状把握から始めます。志望校の評価基準に合わせて模擬試験と面接シミュレーションを行い、その結果をもとに強み・弱点・次の対策を整理したレポートをお渡しします。">备考前先摸清底数。根据目标学校的入学评估标准，提供笔试模拟试卷与面试情景模拟；完成后出具学力诊断报告，清晰定位优势与薄弱环节，给出针对性的备考方向。</p>
           </div>
 
-          <!-- 4. 模拟测试与学力报告 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="4" width="24" height="32" rx="2"/><line x1="14" y1="12" x2="26" y2="12"/><line x1="14" y1="18" x2="26" y2="18"/><line x1="14" y1="24" x2="20" y2="24"/><path d="M22 28l2 2 4-4"/></svg>
-            <h3 class="service-title" data-i18n="services.s4.title">模拟测试与学力报告</h3>
-            <p class="service-desc" data-i18n-zh="备考前先摸清底数。根据目标学校的入学评估标准，提供笔试模拟试卷与面试情景模拟；完成后出具学力诊断报告，清晰定位优势与薄弱环节，给出针对性的备考方向。" data-i18n-en="Before prep begins, we establish a clear baseline. We run mock tests and interview simulations aligned to your target schools, then deliver a diagnostic report showing strengths, weak points, and the next prep priorities." data-i18n-ja="まず現状把握から始めます。志望校の評価基準に合わせて模擬試験と面接シミュレーションを行い、その結果をもとに強み・弱点・次の対策を整理したレポートをお渡しします。">备考前先摸清底数。根据目标学校的入学评估标准，提供笔试模拟试卷与面试情景模拟；完成后出具学力诊断报告，清晰定位优势与薄弱环节，给出针对性的备考方向。</p>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5" /><path d="M5 20.5c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" /></svg></div>
+            <h3 data-i18n="services.s5.title">笔试面试辅导与现场陪同</h3>
+            <p data-i18n-zh="针对目标学校的考核形式，量身制定辅导计划。笔试侧重真题解析与知识点强化，面试侧重表达训练与场景模拟。面试当天全程陪同，现场翻译与沟通支持。让您和孩子都带着信心走进考场。" data-i18n-en="We design coaching around the actual format used by your target schools. Written prep focuses on question types and core knowledge; interview prep focuses on expression, response structure, and simulation. We can also accompany you on the interview day." data-i18n-ja="志望校の選考形式に合わせて対策を組み立てます。筆記は出題傾向と基礎力強化、面接は表現練習と場面別シミュレーションを中心に進め、当日の同行や通訳支援にも対応します。">针对目标学校的考核形式，量身制定辅导计划。笔试侧重真题解析与知识点强化，面试侧重表达训练与场景模拟。面试当天全程陪同，现场翻译与沟通支持。让您和孩子都带着信心走进考场。</p>
           </div>
 
-          <!-- 5. 笔试与面试辅导 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="12" r="6"/><path d="M10 34c0-6 4.5-11 10-11s10 5 10 11"/><path d="M28 10l4-4M32 10l-4-4"/></svg>
-            <h3 class="service-title" data-i18n="services.s5.title">笔试面试辅导与现场陪同</h3>
-            <p class="service-desc" data-i18n-zh="针对目标学校的考核形式，量身制定辅导计划。笔试侧重真题解析与知识点强化，面试侧重表达训练与场景模拟。面试当天全程陪同，现场翻译与沟通支持。让您和孩子都带着信心走进考场。" data-i18n-en="We design coaching around the actual format used by your target schools. Written prep focuses on question types and core knowledge; interview prep focuses on expression, response structure, and simulation. We can also accompany you on the interview day." data-i18n-ja="志望校の選考形式に合わせて対策を組み立てます。筆記は出題傾向と基礎力強化、面接は表現練習と場面別シミュレーションを中心に進め、当日の同行や通訳支援にも対応します。">针对目标学校的考核形式，量身制定辅导计划。笔试侧重真题解析与知识点强化，面试侧重表达训练与场景模拟。面试当天全程陪同，现场翻译与沟通支持。让您和孩子都带着信心走进考场。</p>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="15" height="12" rx="1.5" /><path d="M2.5 7l7.5 5 7.5-5" /><path d="M19 11h3M20.5 9.5v3" /></svg></div>
+            <h3 data-i18n="services.s6.title">入学后家校沟通支持</h3>
+            <p data-i18n-zh="入学后，与学校的沟通才真正开始。我们作为您与学校之间的沟通桥梁，代为处理日常往来邮件，以地道的英语回复各类通知与表格；陪同参加入学说明会、家长会等学校活动，提供现场翻译与沟通支持。从日常事务到重要场合，持续陪伴，让您安心融入学校生活。" data-i18n-en="Enrollment is only the beginning. We help bridge daily communication with the school, draft and reply to emails, support forms and notices, and accompany key events such as orientations and parent meetings when needed." data-i18n-ja="入学してからこそ、学校とのやり取りは本格化します。日常メールの対応、通知や書類の確認、説明会や保護者会への同行などを通じて、ご家庭と学校の橋渡しを続けます。">入学后，与学校的沟通才真正开始。我们作为您与学校之间的沟通桥梁，代为处理日常往来邮件，以地道的英语回复各类通知与表格；陪同参加入学说明会、家长会等学校活动，提供现场翻译与沟通支持。从日常事务到重要场合，持续陪伴，让您安心融入学校生活。</p>
           </div>
 
-          <!-- 6. 入学后家校沟通支持 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="22" height="16" rx="2"/><path d="M4 12l11 7 11-7"/><rect x="22" y="20" width="14" height="14" rx="2" fill="none"/><path d="M26 30h6M29 27v6"/></svg>
-            <h3 class="service-title" data-i18n="services.s6.title">入学后家校沟通支持</h3>
-            <p class="service-desc" data-i18n-zh="入学后，与学校的沟通才真正开始。我们作为您与学校之间的沟通桥梁，代为处理日常往来邮件，以地道的英语回复各类通知与表格；陪同参加入学说明会、家长会等学校活动，提供现场翻译与沟通支持。从日常事务到重要场合，持续陪伴，让您安心融入学校生活。" data-i18n-en="Enrollment is only the beginning. We help bridge daily communication with the school, draft and reply to emails, support forms and notices, and accompany key events such as orientations and parent meetings when needed." data-i18n-ja="入学してからこそ、学校とのやり取りは本格化します。日常メールの対応、通知や書類の確認、説明会や保護者会への同行などを通じて、ご家庭と学校の橋渡しを続けます。">入学后，与学校的沟通才真正开始。我们作为您与学校之间的沟通桥梁，代为处理日常往来邮件，以地道的英语回复各类通知与表格；陪同参加入学说明会、家长会等学校活动，提供现场翻译与沟通支持。从日常事务到重要场合，持续陪伴，让您安心融入学校生活。</p>
+          <div class="svc core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" /><path d="M8.5 12l2.5 2.5 4.5-4.5" /></svg></div>
+            <h3><span data-i18n="services.s7.title">全案托管</span><span class="premium">Premium</span></h3>
+            <p data-i18n-zh="从选校到入学，全程一对一跟进，涵盖以上所有环节，统一协调推进。您只需专注于孩子和家庭节奏，其余交给我们。这条路，由我们陪您一起。" data-i18n-en="This is the full-service option: one-on-one support from school search to enrollment, with all steps coordinated under one plan. You focus on your child and family rhythm; we handle the moving parts." data-i18n-ja="選校から入学までを一気通貫で支えるフルサポートです。すべての工程を一つの流れとして管理し、ご家庭はお子さまと生活のリズムに集中していただけます。">从选校到入学，全程一对一跟进，涵盖以上所有环节，统一协调推进。您只需专注于孩子和家庭节奏，其余交给我们。这条路，由我们陪您一起。</p>
           </div>
 
-          <!-- 7. 全案托管 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4L6 10v10c0 9 6 15 14 18 8-3 14-9 14-18V10L20 4z"/><path d="M14 20l4 4 8-8"/></svg>
-            <h3 class="service-title" data-i18n="services.s7.title">全案托管</h3>
-            <p class="service-desc" data-i18n-zh="从选校到入学，全程一对一跟进，涵盖以上所有环节，统一协调推进。您只需专注于孩子和家庭节奏，其余交给我们。这条路，由我们陪您一起。" data-i18n-en="This is the full-service option: one-on-one support from school search to enrollment, with all steps coordinated under one plan. You focus on your child and family rhythm; we handle the moving parts." data-i18n-ja="選校から入学までを一気通貫で支えるフルサポートです。すべての工程を一つの流れとして管理し、ご家庭はお子さまと生活のリズムに集中していただけます。">从选校到入学，全程一对一跟进，涵盖以上所有环节，统一协调推进。您只需专注于孩子和家庭节奏，其余交给我们。这条路，由我们陪您一起。</p>
+          <div class="svc">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 19V6a2 2 0 0 1 2-2h13v13H6a2 2 0 0 0-2 2zm0 0a2 2 0 0 0 2 2h13" /></svg></div>
+            <h3 data-i18n="services.s8.title">家长英语辅导</h3>
+            <p data-i18n-zh="孩子入学只是开始，家校沟通是长期课题。我们为家长提供持续的英语辅导，帮助您逐步建立与学校独立沟通的能力——从读懂邮件通知，到自信地参加家长会，一步步让您在国际学校的环境中更加从容。" data-i18n-en="School communication is a long-term task. We coach parents in practical English so you can gradually handle school emails, meetings, and day-to-day communication more independently and confidently." data-i18n-ja="入学後の家校コミュニケーションは長期戦です。保護者向けの実用英語サポートを通じて、メール理解から面談参加まで、少しずつ自立して対応できる状態を目指します。">孩子入学只是开始，家校沟通是长期课题。我们为家长提供持续的英语辅导，帮助您逐步建立与学校独立沟通的能力——从读懂邮件通知，到自信地参加家长会，一步步让您在国际学校的环境中更加从容。</p>
           </div>
 
-          <!-- 8. 家长英语辅导 -->
-          <div class="service-card reveal">
-            <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h24a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4V6z"/><path d="M30 14h6a2 2 0 0 1 2 2v16H12v-6"/><circle cx="16" cy="16" r="4"/><path d="M10 26c0-3 2.7-6 6-6s6 3 6 6"/></svg>
-            <h3 class="service-title" data-i18n="services.s8.title">家长英语辅导</h3>
-            <p class="service-desc" data-i18n-zh="孩子入学只是开始，家校沟通是长期课题。我们为家长提供持续的英语辅导，帮助您逐步建立与学校独立沟通的能力——从读懂邮件通知，到自信地参加家长会，一步步让您在国际学校的环境中更加从容。" data-i18n-en="School communication is a long-term task. We coach parents in practical English so you can gradually handle school emails, meetings, and day-to-day communication more independently and confidently." data-i18n-ja="入学後の家校コミュニケーションは長期戦です。保護者向けの実用英語サポートを通じて、メール理解から面談参加まで、少しずつ自立して対応できる状態を目指します。">孩子入学只是开始，家校沟通是长期课题。我们为家长提供持续的英语辅导，帮助您逐步建立与学校独立沟通的能力——从读懂邮件通知，到自信地参加家长会，一步步让您在国际学校的环境中更加从容。</p>
-          </div>
-
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Process Timeline -->
-    <section class="section section--warm">
+    <!-- Process timeline -->
+    <section class="process">
       <div class="container">
-        <div class="section-header reveal">
-          <div class="section-kicker en" data-i18n="services.process.kicker">Process</div>
+        <div class="center-head">
+          <span class="eyebrow center" data-i18n="services.process.kicker">Process</span>
           <h2 class="section-title" data-i18n="services.process.title">服务流程</h2>
-          <p class="section-desc" data-i18n="services.process.desc">从第一次沟通到孩子入学的典型路径。</p>
+          <p class="section-sub" data-i18n="services.process.desc">从第一次沟通到孩子入学的典型路径。</p>
         </div>
-
-        <div class="process-timeline">
-          <div class="process-step reveal">
-            <div class="process-marker en">1</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step1.title">初步沟通</h4>
+        <div class="timeline">
+          <div class="tstep">
+            <div class="n">01</div>
+            <div>
+              <h3 data-i18n="services.step1.title">初步沟通</h3>
               <p data-i18n-zh="了解孩子年龄、语言水平、家庭目标与期望，评估现有条件，明确优先级。" data-i18n-en="Understand your child's profile, language level, family goals, and current constraints, then set priorities." data-i18n-ja="お子さまの年齢・言語力・ご家庭の目標と現状を整理し、優先順位を明確にします。">了解孩子年龄、语言水平、家庭目标与期望，评估现有条件，明确优先级。</p>
             </div>
           </div>
-          <div class="process-step reveal">
-            <div class="process-marker en">2</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step2.title">选校方案</h4>
+          <div class="tstep">
+            <div class="n">02</div>
+            <div>
+              <h3 data-i18n="services.step2.title">选校方案</h3>
               <p data-i18n-zh="基于115所学校数据库，从课程体系、学费、地理位置等维度筛选匹配学校，给出推荐清单与分析。" data-i18n-en="Filter schools across our 115-school database by curriculum, tuition, location, and fit, then build a shortlist with analysis." data-i18n-ja="115校のデータベースをもとに、カリキュラム・学費・立地などの観点から候補校を絞り、分析付きでご提案します。">基于115所学校数据库，从课程体系、学费、地理位置等维度筛选匹配学校，给出推荐清单与分析。</p>
             </div>
           </div>
-          <div class="process-step reveal">
-            <div class="process-marker en">3</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step3.title">实地探校</h4>
+          <div class="tstep">
+            <div class="n">03</div>
+            <div>
+              <h3 data-i18n="services.step3.title">实地探校</h3>
               <p data-i18n-zh="陪同访校，现场翻译，与招生团队直接沟通，帮您获取第一手判断依据。" data-i18n-en="Visit schools together, interpret on site, and speak directly with admissions so you can form a first-hand judgment." data-i18n-ja="学校訪問に同行し、その場で通訳しながら入試担当者と直接話せる状態をつくります。">陪同访校，现场翻译，与招生团队直接沟通，帮您获取第一手判断依据。</p>
             </div>
           </div>
-          <div class="process-step reveal">
-            <div class="process-marker en">4</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step4.title">申请与备考</h4>
+          <div class="tstep">
+            <div class="n">04</div>
+            <div>
+              <h3 data-i18n="services.step4.title">申请与备考</h3>
               <p data-i18n-zh="制作申请材料，安排模拟测试以及各科目的辅导，从材料到考试做全面准备。" data-i18n-en="Prepare application materials, organize mock tests, and arrange subject coaching so both paperwork and assessments are covered." data-i18n-ja="出願資料の準備、模擬試験、科目別対策を組み合わせ、書類から試験本番まで一体で整えます。">制作申请材料，安排模拟测试以及各科目的辅导，从材料到考试做全面准备。</p>
             </div>
           </div>
-          <div class="process-step reveal">
-            <div class="process-marker en">5</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step5.title">面试陪同与翻译</h4>
+          <div class="tstep">
+            <div class="n">05</div>
+            <div>
+              <h3 data-i18n="services.step5.title">面试陪同与翻译</h3>
               <p data-i18n-zh="面试当天全程陪同，现场提供翻译与沟通支持，帮您和孩子从容应对。" data-i18n-en="Accompany the interview day and provide translation and communication support so both parent and child can stay composed." data-i18n-ja="面接当日は同行し、通訳とコミュニケーション支援を行い、ご家族が落ち着いて臨めるようにします。">面试当天全程陪同，现场提供翻译与沟通支持，帮您和孩子从容应对。</p>
             </div>
           </div>
-          <div class="process-step reveal">
-            <div class="process-marker en">6</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step6.title">入学与持续支持</h4>
+          <div class="tstep">
+            <div class="n">06</div>
+            <div>
+              <h3 data-i18n="services.step6.title">入学与持续支持</h3>
               <p data-i18n-zh="收到录取后，协助完成入学手续，托管日常邮件沟通，陪同说明会、家长会等学校活动，作为您与学校之间的沟通桥梁，帮助您顺利适应新环境。" data-i18n-en="After admission, we help with enrollment steps, daily email communication, orientations, and parent events so the transition into school life is smoother." data-i18n-ja="合格後は入学手続き、日常メール、説明会や保護者会への同行まで支え、新しい学校生活への移行をスムーズにします。">收到录取后，协助完成入学手续，托管日常邮件沟通，陪同说明会、家长会等学校活动，作为您与学校之间的沟通桥梁，帮助您顺利适应新环境。</p>
             </div>
           </div>
-          <div class="process-step reveal">
-            <div class="process-marker en">7</div>
-            <div class="process-content">
-              <h4 data-i18n="services.step7.title">家长英语辅导</h4>
+          <div class="tstep">
+            <div class="n">07</div>
+            <div>
+              <h3 data-i18n="services.step7.title">家长英语辅导</h3>
               <p data-i18n-zh="为家长提供持续的英语辅导，帮助您逐步建立与学校独立沟通的能力，从容面对日常家校交流，以及高年级进一步的家校协作。" data-i18n-en="Provide ongoing English support for parents so daily school communication and later-stage collaboration become easier to manage independently." data-i18n-ja="保護者向けの継続英語サポートを通じて、日常連絡から上級学年での連携まで、少しずつ自力で対応できるようにします。">为家长提供持续的英语辅导，帮助您逐步建立与学校独立沟通的能力，从容面对日常家校交流，以及高年级进一步的家校协作。</p>
             </div>
           </div>
@@ -193,11 +162,20 @@
     </section>
 
     <!-- CTA -->
-    <section class="section" style="text-align: center;">
-      <div class="container reveal">
-        <h2 class="section-title" data-i18n="services.cta.title">开始咨询</h2>
-        <p class="section-desc" style="margin-bottom: 28px;" data-i18n="services.cta.desc">每个家庭的情况不同，欢迎先和我们聊聊。</p>
-        <a class="btn btn-primary" href="contact.html" data-i18n="services.cta.btn">联系我们</a>
+    <section class="cta" id="cta">
+      <div class="container inner">
+        <span class="eyebrow center">Let's Talk</span>
+        <h2 data-i18n="services.cta.title">开始咨询</h2>
+        <p data-i18n="services.cta.desc">每个家庭的情况不同，欢迎先和我们聊聊。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="contact.html" data-i18n="services.cta.btn">联系我们</a>
+          <a class="btn btn-ghost-light" href="contact.html" data-i18n-zh="添加微信" data-i18n-en="Add us on WeChat" data-i18n-ja="WeChatを追加">添加微信</a>
+        </div>
+        <div class="contacts">
+          <div><span data-i18n-zh="微信号" data-i18n-en="WeChat" data-i18n-ja="WeChat">微信号</span> <b>13732203788</b></div>
+          <div><span data-i18n-zh="小红书" data-i18n-en="Xiaohongshu" data-i18n-ja="小紅書">小红书</span> <b>Betty 小肉爪 422507043</b></div>
+          <div><span data-i18n-zh="邮箱" data-i18n-en="Email" data-i18n-ja="メール">邮箱</span> <b>betty@kissho.school</b></div>
+        </div>
       </div>
     </section>
 
