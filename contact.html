@@ -13,15 +13,16 @@
     content="通过微信、小红书、电话或邮件联系吉祥书院，开始您的东京国际学校咨询。"
     data-i18n-attr="content"
     data-i18n-zh="通过微信、小红书、电话或邮件联系吉祥书院，开始您的东京国际学校咨询。"
-    data-i18n-en="Reach KISSHO via WeChat Work, Xiaohongshu, phone, or email to start your Tokyo international school consultation."
+    data-i18n-en="Reach KISSHO via WeChat, Xiaohongshu, phone, or email to start your Tokyo international school consultation."
     data-i18n-ja="WeChat、電話、メールなどから KISSHO に連絡し、東京のインターナショナルスクール相談を始められます。"
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=floating-message-20260523">
+  <link rel="stylesheet" href="redesign.css?v=redesign-20260612">
 </head>
-<body>
+<body class="redesign">
 
   <div class="top-stripe"></div>
 
@@ -29,87 +30,65 @@
 
   <main>
 
-    <section class="page-hero">
+    <section class="page-hero" data-watermark="联">
       <div class="container">
-        <div class="section-kicker en" data-i18n="contact.kicker">Contact</div>
-        <h1 class="section-title" style="letter-spacing:0.4em;" data-i18n="contact.title">联系我们</h1>
-        <p class="section-desc" data-i18n="contact.desc">选择你方便的方式，和我们聊聊孩子的国际学校想法。</p>
+        <span class="eyebrow center" data-i18n-zh="Contact · 联系我们" data-i18n-en="Contact" data-i18n-ja="Contact · お問い合わせ">Contact · 联系我们</span>
+        <h1 data-letterspace data-i18n="contact.title">联系我们</h1>
+        <p class="lead" data-i18n="contact.desc">选择你方便的方式，和我们聊聊孩子的国际学校想法。</p>
       </div>
     </section>
 
-    <!-- Contact Channels -->
-    <section class="section">
+    <section class="contact">
       <div class="container">
+        <div class="c-grid">
 
-        <div class="contact-grid">
-
-          <!-- 企业微信 -->
-          <div class="contact-channel contact-channel--wechat reveal">
-            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="18" cy="18" r="14"/>
-              <path d="M12 15h.01M24 15h.01"/>
-              <path d="M12 22a8 8 0 0 0 12 0"/>
-            </svg>
-            <h3 class="contact-channel-name" data-i18n="contact.wechat.name">企业微信</h3>
-            <div class="contact-qr">
-              <img loading="lazy" decoding="async" src="图片/企业微信.jpg" alt="企业微信二维码" style="width:180px;height:180px;object-fit:cover;display:block;" />
-            </div>
-            <p class="contact-channel-desc" data-i18n="contact.wechat.number">企微号：13732203788</p>
-            <p class="contact-channel-desc" style="font-size: 0.82rem;" data-i18n="contact.wechat.hint">请告诉我孩子年级，期待入学的时间</p>
+          <div class="ccard contact-channel--wechat">
+            <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M8.5 10.5h.01M15.5 10.5h.01" /><path d="M8.5 15c1 1 2.2 1.5 3.5 1.5s2.5-.5 3.5-1.5" /></svg></div>
+            <h3 data-i18n="contact.wechat.name">微信</h3>
+            <div class="qr"><img loading="lazy" decoding="async" src="图片/微信.jpg" alt="微信二维码" /></div>
+            <div class="acc-id" data-i18n="contact.wechat.number">微信号：13732203788</div>
+            <p class="note" data-i18n="contact.wechat.hint">请告诉我孩子年级，期待入学的时间</p>
           </div>
 
-          <!-- 小红书 -->
-          <div class="contact-channel contact-channel--xhs reveal">
-            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 30a12 12 0 0 1-12-12V9a3 3 0 0 1 3-3h18a3 3 0 0 1 3 3v9a12 12 0 0 1-12 12Z"/>
-              <path d="M12 14h12M12 20h8"/>
-            </svg>
-            <h3 class="contact-channel-name" data-i18n="contact.xhs.name">小红书</h3>
-            <div class="contact-qr">
-              <img loading="lazy" decoding="async" src="图片/小红书.jpg" alt="小红书二维码" style="width:180px;height:180px;object-fit:cover;display:block;" />
-            </div>
-            <p class="contact-channel-desc" data-i18n="contact.xhs.number">贝蒂星妈：422507043</p>
-            <p class="contact-channel-desc" style="font-size: 0.82rem;" data-i18n="contact.xhs.hint">关注我们获取东京国际学校的最新资讯和深度内容</p>
+          <div class="ccard contact-channel--xhs">
+            <div class="ic"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" /><path d="M8 12h8M12 8v8" /></svg></div>
+            <h3 data-i18n="contact.xhs.name">小红书</h3>
+            <div class="qr"><img loading="lazy" decoding="async" src="图片/小红书.jpg" alt="小红书二维码" /></div>
+            <div class="acc-id" data-i18n="contact.xhs.number">Betty 小肉爪：422507043</div>
+            <p class="note" data-i18n="contact.xhs.hint">关注我们获取东京国际学校的最新资讯和深度内容</p>
           </div>
 
-          <!-- 电话 -->
-          <div class="contact-channel contact-channel--direct contact-channel--phone reveal">
-            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M33 25.38v4.5a3 3 0 0 1-3.27 3A29.69 29.69 0 0 1 17 28.39a29.25 29.25 0 0 1-9-9A29.69 29.69 0 0 1 3.12 6.27 3 3 0 0 1 6.12 3h4.5a3 3 0 0 1 3 2.58c.19 1.22.54 2.4 1.02 3.51a3 3 0 0 1-.68 3.17L12.1 14.1a24 24 0 0 0 9 9l1.84-1.86a3 3 0 0 1 3.17-.68c1.11.48 2.29.83 3.51 1.02a3 3 0 0 1 2.58 3Z"/>
-            </svg>
-            <h3 class="contact-channel-name" data-i18n="contact.phone.name">电话</h3>
-            <p class="contact-channel-value" style="font-size: 1.2rem; margin-top: 12px;"><a href="tel:+817069875502">07069875502</a></p>
-            <p class="contact-channel-desc" style="font-size: 0.82rem;" data-i18n="contact.phone.hint">欢迎来电，我们一起找到最合适的东京国际学校</p>
+          <div class="ccard contact-channel--phone">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg></div>
+            <h3 data-i18n="contact.phone.name">电话</h3>
+            <div class="big"><a href="tel:+817069875502">070-6987-5502</a></div>
+            <p class="note" data-i18n="contact.phone.hint">欢迎来电，我们一起找到最合适的东京国际学校</p>
           </div>
 
-          <!-- 邮件 -->
-          <div class="contact-channel contact-channel--direct contact-channel--email reveal">
-            <svg class="contact-icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="6" width="30" height="24" rx="3"/>
-              <path d="m33 10.5-13.46 8.55a2.91 2.91 0 0 1-3.08 0L3 10.5"/>
-            </svg>
-            <h3 class="contact-channel-name" data-i18n="contact.email.name">邮件</h3>
-            <p class="contact-channel-value" style="font-size: 1.05rem; margin-top: 12px;">
-              <a href="mailto:betty@kissho.school">betty@kissho.school</a>
-            </p>
-            <p class="contact-channel-desc" style="font-size: 0.82rem; margin-top: 8px;" data-i18n="contact.email.hint">除深夜，都会很快回复</p>
+          <div class="ccard contact-channel--email">
+            <div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="M22 6l-10 7L2 6" /></svg></div>
+            <h3 data-i18n="contact.email.name">邮件</h3>
+            <div class="big"><a href="mailto:betty@kissho.school">betty@kissho.school</a></div>
+            <p class="note" data-i18n="contact.email.hint">除深夜，都会很快回复</p>
           </div>
 
         </div>
+      </div>
+    </section>
 
-        <!-- Company Info -->
-        <div class="company-info-card reveal" style="margin-top: 56px;">
-          <div class="section-kicker en" style="margin-bottom: 24px;" data-i18n="contact.office.kicker">Office</div>
-          <div class="info-row">
-            <span class="info-label en">Address</span>
-            <span class="info-value" data-i18n-html="contact.address.value">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</span>
+    <section class="office">
+      <div class="container">
+        <div class="office-card">
+          <span class="ot" data-i18n="contact.office.kicker">Office</span>
+          <div class="o-row">
+            <span class="k" data-i18n-zh="地址" data-i18n-en="Address" data-i18n-ja="所在地">地址</span>
+            <span class="v" data-i18n-html="contact.address.value">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</span>
           </div>
-          <div class="info-row">
-            <span class="info-label en" data-i18n="contact.access.label">Access</span>
-            <span class="info-value" data-i18n="contact.access.value">山手线（JR） 目白站（Mejiro），西武池袋线（SI） 椎名町站（Shiinamachi），大江户线（E） 落合南长崎站（Ochiai-Minaminagasaki） 皆可到达</span>
+          <div class="o-row">
+            <span class="k" data-i18n="contact.access.label">Access</span>
+            <span class="v" data-i18n="contact.access.value">山手线（JR） 目白站（Mejiro），西武池袋线（SI） 椎名町站（Shiinamachi），大江户线（E） 落合南长崎站（Ochiai-Minaminagasaki） 皆可到达</span>
           </div>
         </div>
-
       </div>
     </section>
 

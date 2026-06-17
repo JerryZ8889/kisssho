@@ -18,10 +18,11 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=floating-message-20260523">
+  <link rel="stylesheet" href="redesign.css?v=redesign-20260614-align">
 </head>
-<body>
+<body class="redesign nav-overlay">
 
   <div class="top-stripe"></div>
 
@@ -29,125 +30,317 @@
 
   <main>
 
-    <!-- Hero -->
+    <!-- HERO: full-bleed -->
     <section class="hero">
+      <div class="hero-bg">
+        <img loading="eager" fetchpriority="high" decoding="async" src="图片/mejiro.jpg" alt="东京国际学校" />
+        <div class="hero-veil"></div>
+      </div>
+      <div class="hero-vertical"
+           data-i18n-zh="陪伴 · 选校 · 入学 · 成长"
+           data-i18n-en="Guide · Select · Enroll · Grow"
+           data-i18n-ja="伴走 · 選校 · 入学 · 成長">陪伴 · 选校 · 入学 · 成长</div>
+      <div class="container hero-inner">
+        <span class="eyebrow" data-i18n="index.hero.kicker">Tokyo International School Consulting</span>
+        <h1 data-i18n-html="index.hero.title">陪伴您和孩子走进<em>最适合的国际学校</em></h1>
+        <p class="lead" data-i18n="index.hero.desc">从选校咨询到入学落地，从 MAP 备考到中文保持 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#" data-open-message
+             data-i18n-zh="预约一次咨询" data-i18n-en="Book a Consultation" data-i18n-ja="相談を予約する">预约一次咨询</a>
+          <a class="btn btn-ghost-light" href="schools.html"
+             data-i18n-zh="探索 115 所学校" data-i18n-en="Explore 115 Schools" data-i18n-ja="115校を探す">探索 115 所学校</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="container">
+          <div class="hstat"><span class="num">115<small>+</small></span><span class="cap"
+            data-i18n-zh="所国际学校 深度数据" data-i18n-en="Schools in our database" data-i18n-ja="校の詳細データ">所国际学校 深度数据</span></div>
+          <div class="hstat"><span class="num">23<small>+</small></span><span class="cap"
+            data-i18n-zh="重点区域 东京及周边" data-i18n-en="Areas in & around Tokyo" data-i18n-ja="重点エリア 東京と周辺">重点区域 东京及周边</span></div>
+          <div class="hstat"><span class="num">14<small>+</small></span><span class="cap"
+            data-i18n-zh="种课程体系 精准匹配" data-i18n-en="Curriculum systems matched" data-i18n-ja="カリキュラム体系">种课程体系 精准匹配</span></div>
+          <div class="hstat"><span class="num">100<small>+</small></span><span class="cap"
+            data-i18n-zh="家庭 成功选校经验" data-i18n-en="Families guided to a school" data-i18n-ja="ご家族の選校実績">家庭 成功选校经验</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINDER: mini school filter -->
+    <section class="finder" id="finder">
       <div class="container">
-        <div class="hero-inner">
-          <div class="hero-content reveal">
-            <div class="hero-kicker en" data-i18n="index.hero.kicker">Tokyo International School Consulting</div>
-            <h1 class="hero-title" data-i18n-html="index.hero.title">陪伴您和孩子走进<em>最适合的国际学校</em></h1>
-            <p class="hero-desc" data-i18n="index.hero.desc">从选校咨询到入学落地，从 MAP 备考到中文保持 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。</p>
-            <div class="hero-cta">
-              <a class="btn btn-primary" href="services.html" data-i18n="index.hero.btn_services">了解我们的服务</a>
-              <a class="btn btn-ghost" href="schools.html" data-i18n="index.hero.btn_schools">探索学校</a>
+        <div class="finder-card">
+          <div class="finder-lead">
+            <div class="fl-t" data-i18n-zh="找学校，从这里开始" data-i18n-en="Start finding schools here" data-i18n-ja="学校探しはここから">找学校，从这里开始</div>
+            <div class="fl-s" data-i18n-zh="115 所学校 · 按需求快速缩小范围" data-i18n-en="115 schools · narrow it down fast" data-i18n-ja="115校 · 条件で素早く絞り込み">115 所学校 · 按需求快速缩小范围</div>
+          </div>
+          <div class="finder-fields">
+            <div class="ffield">
+              <label data-i18n-zh="Region / 区域" data-i18n-en="Region" data-i18n-ja="エリア">Region / 区域</label>
+              <select>
+                <option data-i18n-zh="全部区域" data-i18n-en="All areas" data-i18n-ja="すべての地域">全部区域</option>
+                <option data-i18n-zh="港区" data-i18n-en="Minato" data-i18n-ja="港区">港区</option>
+                <option data-i18n-zh="涩谷区" data-i18n-en="Shibuya" data-i18n-ja="渋谷区">涩谷区</option>
+                <option data-i18n-zh="世田谷区" data-i18n-en="Setagaya" data-i18n-ja="世田谷区">世田谷区</option>
+                <option data-i18n-zh="目黑区" data-i18n-en="Meguro" data-i18n-ja="目黒区">目黑区</option>
+                <option data-i18n-zh="神奈川 / 千叶 / 埼玉" data-i18n-en="Kanagawa / Chiba / Saitama" data-i18n-ja="神奈川 / 千葉 / 埼玉">神奈川 / 千叶 / 埼玉</option>
+              </select>
+            </div>
+            <div class="ffield">
+              <label data-i18n-zh="Curriculum / 课程体系" data-i18n-en="Curriculum" data-i18n-ja="カリキュラム">Curriculum / 课程体系</label>
+              <select>
+                <option data-i18n-zh="全部课程体系" data-i18n-en="All curricula" data-i18n-ja="すべて">全部课程体系</option>
+                <option data-i18n-zh="IB 体系" data-i18n-en="IB" data-i18n-ja="IB">IB 体系</option>
+                <option data-i18n-zh="英式课程" data-i18n-en="British" data-i18n-ja="英国式">英式课程</option>
+                <option data-i18n-zh="美式课程" data-i18n-en="American" data-i18n-ja="米国式">美式课程</option>
+                <option data-i18n-zh="双语课程" data-i18n-en="Bilingual" data-i18n-ja="バイリンガル">双语课程</option>
+              </select>
+            </div>
+            <div class="ffield">
+              <label data-i18n-zh="Grade / 年级段" data-i18n-en="Grade level" data-i18n-ja="学年">Grade / 年级段</label>
+              <select>
+                <option data-i18n-zh="全部年级" data-i18n-en="All grades" data-i18n-ja="すべての学年">全部年级</option>
+                <option data-i18n-zh="幼儿园" data-i18n-en="Kindergarten" data-i18n-ja="幼稚園">幼儿园</option>
+                <option data-i18n-zh="小学" data-i18n-en="Elementary" data-i18n-ja="小学">小学</option>
+                <option data-i18n-zh="初中" data-i18n-en="Middle" data-i18n-ja="中学">初中</option>
+                <option data-i18n-zh="高中" data-i18n-en="High" data-i18n-ja="高校">高中</option>
+              </select>
             </div>
           </div>
-          <div class="hero-image reveal">
-            <img loading="eager" fetchpriority="high" decoding="async" src="图片/mejiro.jpg" alt="吉祥书院" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <a class="btn btn-primary" href="schools.html"
+             data-i18n-zh="筛选学校" data-i18n-en="Filter schools" data-i18n-ja="学校を絞り込む">筛选学校</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER: four-things accordion -->
+    <section class="offer" id="offer">
+      <div class="container">
+        <div class="offer-head">
+          <div>
+            <span class="eyebrow" data-i18n="index.offer.kicker">What We Offer</span>
+            <h2 class="section-title" data-i18n-zh="围绕国际学校，我们做四件事" data-i18n-en="Four things we do around international schools" data-i18n-ja="国際学校をめぐる、私たちの4つの仕事">围绕国际学校，我们做四件事</h2>
+          </div>
+          <p class="section-sub" style="margin-top:0;max-width:380px;" data-i18n="index.offer.desc">从信息到决策，从入学到学习，一步步陪你走通。</p>
+        </div>
+        <div class="acc" id="acc">
+          <div class="pane core on">
+            <span class="wm">询</span>
+            <div class="closed"><span class="cn">01</span><span class="ct" data-i18n="index.mod.consulting.title">咨询服务</span><span class="ce">Consulting</span></div>
+            <div class="opened">
+              <div class="o-top"><span class="o-idx">01</span><span class="tag">Consulting</span></div>
+              <h3><span data-i18n="index.mod.consulting.title">咨询服务</span><span class="badge" data-i18n-zh="核心服务" data-i18n-en="Core" data-i18n-ja="コア">核心服务</span></h3>
+              <p class="desc" data-i18n="index.mod.consulting.desc">一对一选校评估、访校陪同、材料指导、面试辅导与口译。从信息到执行落地，全程支持。</p>
+              <div class="pills">
+                <span data-i18n-zh="选校评估" data-i18n-en="Assessment" data-i18n-ja="選校評価">选校评估</span>
+                <span data-i18n-zh="访校陪同" data-i18n-en="School visits" data-i18n-ja="訪問同行">访校陪同</span>
+                <span data-i18n-zh="材料指导" data-i18n-en="Applications" data-i18n-ja="書類指導">材料指导</span>
+                <span data-i18n-zh="面试辅导" data-i18n-en="Interviews" data-i18n-ja="面接指導">面试辅导</span>
+                <span data-i18n-zh="现场口译" data-i18n-en="Interpretation" data-i18n-ja="通訳">现场口译</span>
+              </div>
+              <a class="more" href="services.html"><span data-i18n-zh="了解咨询服务" data-i18n-en="Explore consulting" data-i18n-ja="相談サービスを見る">了解咨询服务</span> <span class="arrow">→</span></a>
+            </div>
+          </div>
+          <div class="pane">
+            <span class="wm">探</span>
+            <div class="closed"><span class="cn">02</span><span class="ct" data-i18n="index.mod.schools.title">学校探索</span><span class="ce">Explorer</span></div>
+            <div class="opened">
+              <div class="o-top"><span class="o-idx">02</span><span class="tag">School Explorer</span></div>
+              <h3 data-i18n="index.mod.schools.title">学校探索</h3>
+              <p class="desc" data-i18n="index.mod.schools.desc">覆盖东京所有国际学校，按区域、课程体系、年级、学费筛选浏览。找到最适合孩子的学校。</p>
+              <div class="pills">
+                <span data-i18n-zh="23 个区域" data-i18n-en="23 areas" data-i18n-ja="23エリア">23 个区域</span>
+                <span data-i18n-zh="14 种课程体系" data-i18n-en="14 curricula" data-i18n-ja="14カリキュラム">14 种课程体系</span>
+                <span data-i18n-zh="学费区间" data-i18n-en="Tuition range" data-i18n-ja="学費レンジ">学费区间</span>
+              </div>
+              <a class="more" href="schools.html"><span>Explore</span> <span class="arrow">→</span></a>
+            </div>
+          </div>
+          <div class="pane">
+            <span class="wm">读</span>
+            <div class="closed"><span class="cn">03</span><span class="ct" data-i18n="index.mod.articles.title">深度文章</span><span class="ce">Insights</span></div>
+            <div class="opened">
+              <div class="o-top"><span class="o-idx">03</span><span class="tag">Insights</span></div>
+              <h3 data-i18n="index.mod.articles.title">深度文章</h3>
+              <p class="desc" data-i18n="index.mod.articles.desc">访校手记、选校方法论、课程体系解读、备考经验。来自真实探访和一线经验的深度内容。</p>
+              <div class="pills">
+                <span data-i18n-zh="访校手记" data-i18n-en="Visit notes" data-i18n-ja="訪問記">访校手记</span>
+                <span data-i18n-zh="课程解读" data-i18n-en="Curriculum" data-i18n-ja="カリキュラム">课程解读</span>
+                <span data-i18n-zh="备考经验" data-i18n-en="Exam prep" data-i18n-ja="受験対策">备考经验</span>
+              </div>
+              <a class="more" href="articles.html"><span>Read</span> <span class="arrow">→</span></a>
+            </div>
+          </div>
+          <div class="pane">
+            <span class="wm">习</span>
+            <div class="closed"><span class="cn">04</span><span class="ct" data-i18n="index.mod.tools.title">教育软件</span><span class="ce">Software</span></div>
+            <div class="opened">
+              <div class="o-top"><span class="o-idx">04</span><span class="tag">Software</span></div>
+              <h3 data-i18n="index.mod.tools.title">教育软件</h3>
+              <p class="desc" data-i18n="index.mod.tools.desc">MAP 测试练习、中文读写训练 —— 我们为自己的孩子开发的工具，现在也开放给更多家庭。</p>
+              <div class="pills">
+                <span data-i18n-zh="MAP 测试练习" data-i18n-en="MAP practice" data-i18n-ja="MAP練習">MAP 测试练习</span>
+                <span data-i18n-zh="中文读写训练" data-i18n-en="Chinese literacy" data-i18n-ja="中国語練習">中文读写训练</span>
+              </div>
+              <a class="more" href="tools.html"><span>Try</span> <span class="arrow">→</span></a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Core Modules -->
-    <section class="section home-offer-section">
+    <!-- JOURNEY: 5 steps + 2 add-ons -->
+    <section class="journey">
       <div class="container">
-        <div class="section-header reveal">
-          <div class="section-kicker en" data-i18n="index.offer.kicker">What We Offer</div>
-          <h2 class="section-title" data-i18n="index.offer.title">围绕国际学校，我们做这些事</h2>
-          <p class="section-desc" data-i18n="index.offer.desc">从信息到决策，从入学到学习，一步步陪你走通。</p>
+        <div class="center-head">
+          <span class="eyebrow center" data-i18n-zh="Full-Journey Support" data-i18n-en="Full-Journey Support" data-i18n-ja="Full-Journey Support">Full-Journey Support</span>
+          <h2 class="section-title" data-i18n-zh="入学旅程的每一步，我们都在" data-i18n-en="With you at every step of the journey" data-i18n-ja="入学までの一歩ごとに、私たちが伴走します">入学旅程的每一步，我们都在</h2>
+          <p class="section-sub" data-i18n-zh="从第一次选校咨询，到孩子入学后的持续支持。" data-i18n-en="From the first consultation to ongoing support after enrollment." data-i18n-ja="最初のご相談から、入学後の継続サポートまで。">从第一次选校咨询，到孩子入学后的持续支持。</p>
         </div>
-        <div class="modules-grid">
-          <div class="module-card reveal">
-            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30 Q8 10 20 10 Q32 10 32 30"/><line x1="8" y1="30" x2="8" y2="36"/><line x1="32" y1="30" x2="32" y2="36"/><circle cx="20" cy="6" r="3" fill="none"/></svg>
-            <span class="module-label en">Consulting</span>
-            <h3 class="module-title" data-i18n="index.mod.consulting.title">咨询服务</h3>
-            <p class="module-desc" data-i18n="index.mod.consulting.desc">一对一选校评估、访校陪同、材料指导、面试辅导与口译。从信息到执行落地，全程支持。</p>
-            <a class="module-link en" href="services.html">Learn more</a>
+        <div class="steps">
+          <div class="step"><div class="n">01</div><div class="st" data-i18n-zh="选校咨询" data-i18n-en="Consultation" data-i18n-ja="選校相談">选校咨询</div><div class="sd" data-i18n-zh="精准定位 · 科学选校" data-i18n-en="Precise direction" data-i18n-ja="精緻な方向付け">精准定位 · 科学选校</div></div>
+          <div class="step"><div class="n">02</div><div class="st" data-i18n-zh="访校陪同" data-i18n-en="School Visits" data-i18n-ja="訪問同行">访校陪同</div><div class="sd" data-i18n-zh="实地探校 · 深度评估" data-i18n-en="On-site assessment" data-i18n-ja="実地評価">实地探校 · 深度评估</div></div>
+          <div class="step"><div class="n">03</div><div class="st" data-i18n-zh="申请材料" data-i18n-en="Applications" data-i18n-ja="申請書類">申请材料</div><div class="sd" data-i18n-zh="个性化文书 · 专业制作" data-i18n-en="Tailored documents" data-i18n-ja="個別文書作成">个性化文书 · 专业制作</div></div>
+          <div class="step"><div class="n">04</div><div class="st" data-i18n-zh="笔面试辅导" data-i18n-en="Test & Interview" data-i18n-ja="筆記・面接">笔面试辅导</div><div class="sd" data-i18n-zh="模拟训练 · 提升表现" data-i18n-en="Mock training" data-i18n-ja="模擬トレーニング">模拟训练 · 提升表现</div></div>
+          <div class="step"><div class="n">05</div><div class="st" data-i18n-zh="入学后支持" data-i18n-en="After Enrollment" data-i18n-ja="入学後支援">入学后支持</div><div class="sd" data-i18n-zh="家校沟通 · 持续陪伴" data-i18n-en="Ongoing support" data-i18n-ja="継続的な伴走">家校沟通 · 持续陪伴</div></div>
+        </div>
+        <div class="addons">
+          <div class="addon">
+            <div class="ai"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" /></svg></div>
+            <div>
+              <span class="at" data-i18n-zh="Premium · 增值服务" data-i18n-en="Premium · Add-on" data-i18n-ja="Premium · 付加サービス">Premium · 增值服务</span>
+              <h3 data-i18n="services.s7.title">全案托管</h3>
+              <p data-i18n-zh="五个阶段全部交给我们，一位顾问从头跟到尾。全程陪伴，省心无忧。" data-i18n-en="Hand all five stages to us — one advisor sees it through, start to finish." data-i18n-ja="5つの段階すべてをお任せ。一人の顧問が最後まで伴走します。">五个阶段全部交给我们，一位顾问从头跟到尾。全程陪伴，省心无忧。</p>
+            </div>
           </div>
-          <div class="module-card reveal">
-            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h20a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H6"/><path d="M6 4v32"/><line x1="14" y1="12" x2="24" y2="12"/><line x1="14" y1="18" x2="24" y2="18"/><line x1="14" y1="24" x2="20" y2="24"/></svg>
-            <span class="module-label en">Insights</span>
-            <h3 class="module-title" data-i18n="index.mod.articles.title">深度文章</h3>
-            <p class="module-desc" data-i18n="index.mod.articles.desc">访校手记、选校方法论、课程体系解读、备考经验。来自真实探访和一线经验的深度内容。</p>
-            <a class="module-link en" href="articles.html">Read</a>
-          </div>
-          <div class="module-card reveal">
-            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="17" cy="17" r="12"/><line x1="26" y1="26" x2="36" y2="36"/></svg>
-            <span class="module-label en">School Explorer</span>
-            <h3 class="module-title" data-i18n="index.mod.schools.title">学校探索</h3>
-            <p class="module-desc" data-i18n="index.mod.schools.desc">覆盖东京所有国际学校，按区域、课程体系、年级、学费筛选浏览。找到最适合孩子的学校。</p>
-            <a class="module-link en" href="schools.html">Explore</a>
-          </div>
-          <div class="module-card reveal">
-            <svg class="module-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="32" height="24" rx="3"/><line x1="4" y1="14" x2="36" y2="14"/><circle cx="20" cy="36" r="2"/><line x1="20" y1="30" x2="20" y2="34"/></svg>
-            <span class="module-label en">Software</span>
-            <h3 class="module-title" data-i18n="index.mod.tools.title">教育软件</h3>
-            <p class="module-desc" data-i18n="index.mod.tools.desc">MAP 测试练习、中文读写训练 —— 我们为自己的孩子开发的工具，现在也开放给更多家庭。</p>
-            <a class="module-link en" href="tools.html">Try</a>
+          <div class="addon">
+            <div class="ai"><svg viewBox="0 0 24 24"><path d="M4 19V6a2 2 0 0 1 2-2h13v13H6a2 2 0 0 0-2 2zm0 0a2 2 0 0 0 2 2h13" /></svg></div>
+            <div>
+              <span class="at" data-i18n-zh="For Parents · 增值服务" data-i18n-en="For Parents · Add-on" data-i18n-ja="For Parents · 付加サービス">For Parents · 增值服务</span>
+              <h3 data-i18n="services.s8.title">家长英语辅导</h3>
+              <p data-i18n-zh="面向家校沟通场景的实用英语提升，让您在面谈、邮件和家长会上更从容。" data-i18n-en="Practical English for school communication — confident at meetings, emails, and interviews." data-i18n-ja="学校とのやり取りに役立つ実用英語。面談・メール・保護者会も安心。">面向家校沟通场景的实用英语提升，让您在面谈、邮件和家长会上更从容。</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Featured Articles -->
-    <section class="section section--warm home-featured-section">
+    <!-- MANIFESTO / ABOUT: dark accent block -->
+    <section class="manifesto" id="about">
+      <div class="container mani-grid">
+        <div class="mani-media">
+          <span class="mcorner"></span>
+          <span class="mcorner br"></span>
+          <img loading="lazy" decoding="async" src="图片/首页图片 7.png" alt="Betty & Jerry — 吉祥书院创始人" />
+        </div>
+        <div>
+          <span class="eyebrow" data-i18n-zh="About Us · 关于吉祥书院" data-i18n-en="About Us · KISSHO" data-i18n-ja="About Us · 吉祥書院について">About Us · 关于吉祥书院</span>
+          <h2 data-i18n-zh="“我们陪伴您，走进<span class=&quot;hl&quot;>最适合的</span>国际学校。”" data-i18n-en="“We walk alongside you, into the <span class=&quot;hl&quot;>right</span> school.”" data-i18n-ja="「ともに歩み、<span class=&quot;hl&quot;>最適な</span>学校へ。」" data-i18n-mode="html">“我们陪伴您，走进<span class="hl">最适合的</span>国际学校。”</h2>
+          <p class="story" data-i18n-html="index.about.desc1">Betty & Jerry 创办了吉祥书院。我们的四个孩子曾就读于上海德威国际学校，现就读于东京清泉国际学校 —— 从选校、备考到面试、入学，每一步都亲身走过。</p>
+          <p class="story" data-i18n-html="index.about.desc2">Betty 深耕教育行业超过十年，Jerry 用产品思维和数据能力搭建选校工具与知识库。我们热爱这个行业，全心对待每一个家庭。</p>
+          <div class="mani-creds">
+            <span data-i18n-zh="上海德威 → 东京清泉" data-i18n-en="Dulwich Shanghai → Seisen Tokyo" data-i18n-ja="上海ダリッジ → 東京清泉">上海德威 → 东京清泉</span>
+            <span data-i18n-zh="教育行业 10+ 年" data-i18n-en="10+ years in education" data-i18n-ja="教育業界10年以上">教育行业 10+ 年</span>
+            <span data-i18n-zh="产品 & 数据驱动" data-i18n-en="Product & data driven" data-i18n-ja="プロダクト・データ駆動">产品 & 数据驱动</span>
+          </div>
+          <div class="mani-sign">
+            <span class="sig">Betty &amp; Jerry</span>
+            <span class="who">FOUNDERS · KISSHO</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES: parent testimonials (placeholder copy) -->
+    <section class="voices">
       <div class="container">
-        <div class="section-header reveal">
-          <div class="section-kicker en" data-i18n="index.featured.kicker">Featured Insights</div>
+        <div class="center-head">
+          <span class="eyebrow center">Family Voices</span>
+          <h2 class="section-title" data-i18n-zh="家长们怎么说" data-i18n-en="What families say" data-i18n-ja="ご家族の声">家长们怎么说</h2>
+          <p class="section-sub" data-i18n-zh="来自真实家庭的反馈（已征得家庭同意展示）" data-i18n-en="Feedback from real families (shown with family consent)" data-i18n-ja="実際のご家族からの声（掲載についてご家族の同意を得ています）">来自真实家庭的反馈（已征得家庭同意展示）</p>
+        </div>
+        <div class="voice-grid">
+          <div class="voice">
+            <div class="qm">“</div>
+            <p data-i18n-zh="Betty，这次 Olivia 能被清泉录取真的很感谢你！我和先生英语不好，本来没什么信心能申请上，你为我们定制了很细致的笔试面试拆解辅导，带着我们磨了一遍又一遍，一路鼓励我们！最终受到学校的肯定，拿到了清泉的 offer。最让我感动的是，快到考试时，你额外为 Olivia 增加了很多补习，这些不在你的计划时间内，却为了她能被录取而没有计较过。希望你能帮助更多家庭把孩子送进心仪的学校。" data-i18n-en="Betty, thank you so much for helping Olivia get accepted by Seisen. My husband and I are not confident in English, and we did not have much confidence at first. You created very detailed written-test and interview coaching for us, practiced with us again and again, and encouraged us all the way. In the end, Olivia was recognized by the school and received Seisen's offer. What moved me most was that close to the exam, you added many extra tutoring sessions for Olivia outside the original plan, without ever counting the extra time, just so she could be accepted. I hope you can help more families send their children to the schools they truly hope for." data-i18n-ja="Bettyさん、今回 Olivia が清泉に合格できたこと、本当に感謝しています。私たち夫婦は英語に自信がなく、最初は合格できる自信もあまりありませんでした。筆記と面接を細かく分解した対策を組んでくださり、何度も一緒に練習し、ずっと励ましてくださいました。最終的に学校にも認められ、清泉のオファーをいただくことができました。特に感動したのは、試験直前に Olivia のために予定外の補習をたくさん追加してくださったことです。もともとの計画時間外だったにもかかわらず、合格のために時間を惜しまず支えてくださいました。これからも、より多くのご家庭がお子さまを希望の学校へ送り出せるよう助けてあげてください。">Betty，这次 Olivia 能被清泉录取真的很感谢你！我和先生英语不好，本来没什么信心能申请上，你为我们定制了很细致的笔试面试拆解辅导，带着我们磨了一遍又一遍，一路鼓励我们！最终受到学校的肯定，拿到了清泉的 offer。最让我感动的是，快到考试时，你额外为 Olivia 增加了很多补习，这些不在你的计划时间内，却为了她能被录取而没有计较过。希望你能帮助更多家庭把孩子送进心仪的学校。</p>
+            <div class="vwho">
+              <span class="ava">L</span>
+              <span><span class="vn">L 妈妈&nbsp;&nbsp;&nbsp;</span><span class="vd" data-i18n-zh="港区 · 高年级转学" data-i18n-en="Minato · Upper-grade transfer" data-i18n-ja="港区 · 高学年編入">港区 · 高年级转学</span></span>
+            </div>
+          </div>
+          <div class="voice">
+            <div class="qm">“</div>
+            <p data-i18n-zh="Betty，我们被 MEES 录取了，太感谢你了！我特别喜欢这个学校和他们的老师，我和先生说我就是没选错人。你比很多机构专业多了，帮我们找合适的学校，陪我们访校，帮我们制定专门的辅导方案，带着我们不断练习，还帮我们给学校发邮件弥补面试的失误 —— 我们没想到的你全都做到了！我要跟身边的妈妈都推荐你，跟她们说有 Betty 助力，肯定能行！" data-i18n-en="Betty, we were accepted by MEES. Thank you so much! I really like this school and its teachers. I told my husband that I truly chose the right person. You are much more professional than many agencies: you helped us find a suitable school, accompanied us on the school visit, created a dedicated coaching plan, practiced with us again and again, and even helped us email the school to make up for mistakes in the interview. You did everything we had not even thought of. I will recommend you to the mothers around me and tell them that with Betty's support, they can definitely do it!" data-i18n-ja="Bettyさん、MEES に合格しました。本当にありがとうございます！この学校と先生方がとても好きです。夫にも、お願いする人を間違えなかったと話しました。多くの機関よりずっと専門的で、私たちに合う学校を探し、学校訪問に同行し、専用の対策プランを作り、何度も練習に付き合ってくださいました。さらに、面接での失敗を補うために学校へメールも送ってくださいました。私たちが思いつかなかったことまで、すべてやってくださいました。周りのママたちにもぜひ Betty さんを紹介します。Betty さんのサポートがあれば、きっと大丈夫だと伝えます！">Betty，我们被 MEES 录取了，太感谢你了！我特别喜欢这个学校和他们的老师，我和先生说我就是没选错人。你比很多机构专业多了，帮我们找合适的学校，陪我们访校，帮我们制定专门的辅导方案，带着我们不断练习，还帮我们给学校发邮件弥补面试的失误 —— 我们没想到的你全都做到了！我要跟身边的妈妈都推荐你，跟她们说有 Betty 助力，肯定能行！</p>
+            <div class="vwho">
+              <span class="ava">W</span>
+              <span><span class="vn">W 妈妈&nbsp;&nbsp;&nbsp;</span><span class="vd" data-i18n-zh="世田谷区 · 小学申请" data-i18n-en="Setagaya · Elementary application" data-i18n-ja="世田谷区 · 小学申請">世田谷区 · 小学申请</span></span>
+            </div>
+          </div>
+          <div class="voice">
+            <div class="qm">“</div>
+            <p data-i18n-zh="刚开始，我是有些怀疑的。我们家孩子基础不算好，时间也比较紧，之前问过的两家，要么说得天花乱坠，要么就是套模板。后来看到你仔细地测试孩子的真实情况，做出报告和我们讨论孩子优秀可以突出的地方，欠缺需要弥补的地方，再帮我们找匹配他优点的学校，坦诚、科学、有理有据。我才放下心来。后面的每一步辅导、文书、申请、模拟……都节奏清晰，该盯的都想在我们前面，最后孩子被录取也是意料之中。找对人，真的少走很多弯路。" data-i18n-en="At first, I was a little skeptical. Our child's foundation was not strong, and time was tight. The two places we had asked before either overpromised or used a template. Later, when I saw how carefully you tested our child's real situation, prepared a report, discussed with us which strengths could be highlighted and which gaps needed to be improved, and then helped us find schools that matched his strengths, everything felt honest, scientific, and well supported. That was when I finally felt reassured. Every later step — coaching, documents, applications, mock practice — had a clear rhythm. You thought ahead of us on everything that needed attention, so in the end our child's admission felt only natural. Finding the right person really saves so many detours." data-i18n-ja="最初は少し半信半疑でした。うちの子は基礎が強いとは言えず、時間もかなり限られていました。以前相談した2か所は、話が大きすぎるか、テンプレートに当てはめるだけでした。その後、Bettyさんが子どもの実際の状況を丁寧にテストし、レポートを作成して、伸ばして見せるべき長所と補うべき不足点を一緒に話し合ってくれました。さらに、その子の長所に合う学校を探してくださり、すべてが率直で、科学的で、根拠のあるものでした。そこでようやく安心できました。その後の指導、書類、申請、模擬練習まで、すべて流れが明確で、注意すべきことは私たちより先に考えてくれました。最後に子どもが合格したのも当然のことのように感じました。お願いする人を正しく選ぶことは、本当に多くの遠回りを減らしてくれます。">刚开始，我是有些怀疑的。我们家孩子基础不算好，时间也比较紧，之前问过的两家，要么说得天花乱坠，要么就是套模板。后来看到你仔细地测试孩子的真实情况，做出报告和我们讨论孩子优秀可以突出的地方，欠缺需要弥补的地方，再帮我们找匹配他优点的学校，坦诚、科学、有理有据。我才放下心来。后面的每一步辅导、文书、申请、模拟……都节奏清晰，该盯的都想在我们前面，最后孩子被录取也是意料之中。找对人，真的少走很多弯路。</p>
+            <div class="vwho">
+              <span class="ava">C</span>
+              <span><span class="vn">C 爸爸&nbsp;&nbsp;&nbsp;</span><span class="vd" data-i18n-zh="千叶区 · 大学申请" data-i18n-en="Chiba · University application" data-i18n-ja="千葉区 · 大学申請">千叶区 · 大学申请</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section class="insights" id="insights">
+      <div class="container">
+        <div class="center-head">
+          <span class="eyebrow center" data-i18n="index.featured.kicker">Featured Insights</span>
           <h2 class="section-title" data-i18n="index.featured.title">深度文章</h2>
-          <p class="section-desc" data-i18n="index.featured.desc">超过十年的经验总结，帮您在做决定前看清全貌。</p>
+          <p class="section-sub" data-i18n="index.featured.desc">超过十年的经验总结，帮您在做决定前看清全貌。</p>
         </div>
-        <div class="articles-grid">
-          <a class="article-card reveal" href="article-school-selection.html" style="text-decoration:none;color:inherit;display:block;">
-            <div class="article-image" style="overflow:hidden;">
-              <img loading="lazy" decoding="async" src="图片/选校 走进校园.jpg" alt="东京国际学校选校指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
-            </div>
-            <div class="article-body">
-              <span class="article-tag en">Methodology</span>
-              <h3 class="article-title" data-i18n="index.article1.title">东京国际学校择校实战指南</h3>
-              <p class="article-excerpt" data-i18n="index.article1.excerpt">从课程体系到申请流程，帮你建立清晰的选校框架，找到最适合自己家庭的方向。</p>
-            </div>
-          </a>
-          <a class="article-card reveal" href="article-curriculum-guide.html" style="text-decoration:none;color:inherit;display:block;">
-            <div class="article-image" style="overflow:hidden;">
-              <img loading="lazy" decoding="async" src="图片/3 封面.jpg" alt="IB A-Level AP 课程体系" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
-            </div>
-            <div class="article-body">
-              <span class="article-tag en">Curriculum</span>
-              <h3 class="article-title" data-i18n="index.article2.title">IB、A-Level、AP — 三大课程体系全解读</h3>
-              <p class="article-excerpt" data-i18n="index.article2.excerpt">IB、A-Level、AP 有什么区别？哪个更适合您的孩子？一次讲清楚。</p>
+        <div class="art-grid">
+          <a class="art" href="article-school-selection.html">
+            <div class="ph"><img loading="lazy" decoding="async" src="图片/选校 走进校园.jpg" alt="东京国际学校选校指南" /></div>
+            <div class="body">
+              <span class="cat">Methodology</span>
+              <h3 data-i18n="index.article1.title">东京国际学校择校实战指南</h3>
+              <p data-i18n="index.article1.excerpt">从课程体系到申请流程，帮你建立清晰的选校框架，找到最适合自己家庭的方向。</p>
+              <span class="read"><span data-i18n-zh="阅读全文" data-i18n-en="Read more" data-i18n-ja="続きを読む">阅读全文</span> <span class="arrow">→</span></span>
             </div>
           </a>
-          <a class="article-card reveal" href="article-map-guide.html" style="text-decoration:none;color:inherit;display:block;">
-            <div class="article-image" style="overflow:hidden;">
-              <img loading="lazy" decoding="async" src="图片/4 封面.png" alt="MAP 测试备考指南" style="width:100%;height:100%;min-height:160px;object-fit:cover;display:block;" />
+          <a class="art" href="article-curriculum-guide.html">
+            <div class="ph"><img loading="lazy" decoding="async" src="图片/3 封面.jpg" alt="IB A-Level AP 课程体系" /></div>
+            <div class="body">
+              <span class="cat">Curriculum</span>
+              <h3 data-i18n="index.article2.title">IB、A-Level、AP — 三大课程体系全解读</h3>
+              <p data-i18n="index.article2.excerpt">IB、A-Level、AP 有什么区别？哪个更适合您的孩子？一次讲清楚。</p>
+              <span class="read"><span data-i18n-zh="阅读全文" data-i18n-en="Read more" data-i18n-ja="続きを読む">阅读全文</span> <span class="arrow">→</span></span>
             </div>
-            <div class="article-body">
-              <span class="article-tag en">MAP Prep</span>
-              <h3 class="article-title" data-i18n="index.article3.title">MAP 测试备考指南 — 读懂自适应考试，孩子从容应对</h3>
-              <p class="article-excerpt" data-i18n="index.article3.excerpt">MAP 是什么？RIT 分数怎么看？中国孩子容易踩哪些坑？从考试机制讲到备考策略。</p>
+          </a>
+          <a class="art" href="article-map-guide.html">
+            <div class="ph"><img loading="lazy" decoding="async" src="图片/4 封面.png" alt="MAP 测试备考指南" /></div>
+            <div class="body">
+              <span class="cat">MAP Prep</span>
+              <h3 data-i18n="index.article3.title">MAP 测试备考指南 — 读懂自适应考试，孩子从容应对</h3>
+              <p data-i18n="index.article3.excerpt">MAP 是什么？RIT 分数怎么看？中国孩子容易踩哪些坑？从考试机制讲到备考策略。</p>
+              <span class="read"><span data-i18n-zh="阅读全文" data-i18n-en="Read more" data-i18n-ja="続きを読む">阅读全文</span> <span class="arrow">→</span></span>
             </div>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- About Preview -->
-    <section class="section home-about-section">
-      <div class="container">
-        <div class="about-preview">
-          <div class="about-text reveal">
-            <div class="section-kicker en" data-i18n="index.about.kicker">About Us</div>
-            <h2 class="section-title" data-i18n="index.about.title">关于吉祥书院</h2>
-            <blockquote class="about-quote" data-i18n="index.about.quote">"我们陪伴您，走进最适合的国际学校。"</blockquote>
-            <p class="about-desc" data-i18n="index.about.desc1">Betty & Jerry 创办了吉祥书院。我们的四个孩子曾就读于上海德威国际学校（Dulwich College Shanghai），现就读于东京清泉国际学校（Seisen International School）——从选校、备考到面试、入学，每一步都亲身走过。</p>
-            <p class="about-desc" data-i18n="index.about.desc2">Betty 深耕教育行业超过十年，Jerry 用产品思维和数据能力搭建选校工具与知识库。我们热爱这个行业，全心对待每一个家庭，为您找到最适合孩子的学校。</p>
-            <a class="btn btn-ghost" href="about.html" data-i18n="index.about.btn">了解更多</a>
-          </div>
-          <div class="about-photo reveal">
-            <img loading="lazy" decoding="async" src="图片/首页图片 7.png" alt="Betty & Jerry — 吉祥书院创始人" style="width:100%;height:100%;object-fit:contain;object-position:center;display:block;border-radius:var(--radius);" />
-          </div>
+    <!-- CTA -->
+    <section class="cta" id="cta">
+      <div class="container inner">
+        <span class="eyebrow center">Let's Talk</span>
+        <h2 data-i18n-zh="准备好为孩子找到最适合的国际学校了吗？" data-i18n-en="Ready to find the right school for your child?" data-i18n-ja="お子様に最適な国際学校を見つけませんか？">准备好为孩子找到最适合的国际学校了吗？</h2>
+        <p data-i18n-zh="留下您的需求，我们会结合孩子的情况，给出第一份选校方向建议。" data-i18n-en="Tell us about your child, and we'll suggest a first direction for your school search." data-i18n-ja="お子様の状況をお聞かせください。最初の選校方針をご提案します。">留下您的需求，我们会结合孩子的情况，给出第一份选校方向建议。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#" data-open-message data-i18n-zh="预约一次咨询" data-i18n-en="Book a Consultation" data-i18n-ja="相談を予約する">预约一次咨询</a>
+          <a class="btn btn-ghost-light" href="contact.html" data-i18n-zh="添加微信" data-i18n-en="Add us on WeChat" data-i18n-ja="WeChatを追加">添加微信</a>
+        </div>
+        <div class="contacts">
+          <div><span data-i18n-zh="微信号" data-i18n-en="WeChat" data-i18n-ja="WeChat">微信号</span> <b>13732203788</b></div>
+          <div><span data-i18n-zh="小红书" data-i18n-en="Xiaohongshu" data-i18n-ja="小紅書">小红书</span> <b>Betty 小肉爪 422507043</b></div>
+          <div><span data-i18n-zh="邮箱" data-i18n-en="Email" data-i18n-ja="メール">邮箱</span> <b>betty@kissho.school</b></div>
         </div>
       </div>
     </section>

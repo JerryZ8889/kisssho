@@ -29,7 +29,7 @@ var PAGE_META_FALLBACKS = {
     },
     en: {
       title: 'Contact | KISSHO',
-      description: 'Reach KISSHO via WeChat Work, Xiaohongshu, phone, or email to start your Tokyo international school consultation.'
+      description: 'Reach KISSHO via WeChat, Xiaohongshu, phone, or email to start your Tokyo international school consultation.'
     },
     ja: {
       title: 'お問い合わせ | KISSHO',
@@ -44,8 +44,8 @@ var T = {
     'footer.brand_desc':'面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'深度文章',
     'footer.nav_tools':'教育软件','footer.nav_services':'咨询服务','footer.nav_about':'关于我们',
-    'footer.contact_wechat':'企微号：13732203788',
-    'footer.contact_xhs':'小红书：贝蒂星妈 422507043',
+    'footer.contact_wechat':'微信号：13732203788',
+    'footer.contact_xhs':'小红书：Betty 小肉爪 422507043',
     'footer.contact_phone':'（0081）07069875502',
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
@@ -73,7 +73,7 @@ var T = {
     'index.about.btn':'了解更多',
     'about.kicker':'About Us','about.title':'吉祥书院',
     'about.tagline':'陪伴每一个家庭，走进最适合的国际学校。',
-    'about.quote':'"我们不是旁观者，而是和您走在同一条路上的家长。"',
+    'about.quote':'我们是和您走在同一条路上的家长',
     'about.story1':'2019 年，我们带着四个孩子从上海来到东京。孩子们从德威国际学校（Dulwich College Shanghai）转入清泉国际学校（Seisen International School），选校、备考、面试、入学——每一步都亲身走过，也切身体会过其中的迷茫与焦虑。',
     'about.story2':'东京的国际学校信息分散，中文资料极少，华人家庭往往只能靠口口相传做判断。我们想把自己走过的路变成一张清晰的地图，让后来的家庭少走弯路。',
     'about.story3':'Betty 深耕教育行业超过十年，亲自负责每一个家庭的咨询、访校与辅导；Jerry 用产品思维和数据能力搭建了覆盖全东京国际学校的课程知识库与选校工具——一个懂教育，一个懂技术，刚好互补。',
@@ -83,7 +83,7 @@ var T = {
     'about.jerry.bio':'巴黎大学数学与计算机应用科班毕业，回国后深耕移动互联网十余年，经营的企业年营业额超过30亿人民币。<br>2019年回归家庭后选择定居东京，将多年积累的商业经验与对教育的思考相结合。用产品思维打磨每一个服务环节，用数据驱动和系统化能力搭建全东京国际学校的课程体系与知识要点库，为每一个家庭量身定制匹配的方案。<br>在吉祥负责课程体系研发、IT产品设计与企业经营管理。',
     'about.company.kicker':'Company Information','about.company.title':'公司信息',
     'services.kicker':'Consulting Services','services.title':'咨询服务',
-    'services.desc':'从信息到执行，您负责孩子和家庭节奏，我们负责学校信息、语言沟通和流程推进。',
+    'services.desc':'从信息到执行，您负责孩子和家庭节奏，我们负责学校信息、语言沟通、专业一对一辅导和流程推进。',
     'services.our.kicker':'Services','services.our.title':'我们提供的服务',
     'services.s1.title':'选校方向咨询','services.s2.title':'实地访校陪同',
     'services.s3.title':'入学申请材料制作','services.s4.title':'模拟测试与学力报告',
@@ -99,9 +99,9 @@ var T = {
     'services.cta.btn':'联系我们',
     'contact.kicker':'Contact','contact.title':'联系我们',
     'contact.desc':'选择你方便的方式，和我们聊聊孩子的国际学校想法。',
-    'contact.wechat.name':'企业微信','contact.wechat.number':'企微号：13732203788',
+    'contact.wechat.name':'微信','contact.wechat.number':'微信号：13732203788',
     'contact.wechat.hint':'请告诉我孩子年级，期待入学的时间',
-    'contact.xhs.name':'小红书','contact.xhs.number':'贝蒂星妈：422507043',
+    'contact.xhs.name':'小红书','contact.xhs.number':'Betty 小肉爪：422507043',
     'contact.xhs.hint':'关注我们获取东京国际学校的最新资讯和深度内容',
     'contact.phone.name':'电话','contact.phone.hint':'欢迎来电，我们一起找到最合适的东京国际学校',
     'contact.email.name':'邮件','contact.email.hint':'除深夜，都会很快回复',
@@ -165,8 +165,8 @@ var T = {
     'footer.brand_desc':'International school consulting, admissions guidance, school selection tools, and education IT products for English speakers in Tokyo.',
     'footer.nav_schools':'Schools','footer.nav_articles':'Insights',
     'footer.nav_tools':'Software','footer.nav_services':'Consulting','footer.nav_about':'About',
-    'footer.contact_wechat':'WeChat Work: 13732203788',
-    'footer.contact_xhs':'Xiaohongshu: 贝蒂星妈 422507043',
+    'footer.contact_wechat':'WeChat: 13732203788',
+    'footer.contact_xhs':'Xiaohongshu: Betty 小肉爪 422507043',
     'footer.contact_phone':'(0081) 070-6987-5502',
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
@@ -194,7 +194,7 @@ var T = {
     'index.about.btn':'Learn More',
     'about.kicker':'About Us','about.title':'KISSHO',
     'about.tagline':'Guiding every family to the right international school.',
-    'about.quote':'"We are not bystanders — we are parents walking the same path as you."',
+    'about.quote':'We are parents walking the same path as you',
     'about.story1':'In 2019, we moved from Shanghai to Tokyo with our four children. They transferred from Dulwich College Shanghai to Seisen International School — we navigated every step: school selection, exam preparation, interviews, and enrollment. We lived through every moment of uncertainty and anxiety.',
     'about.story2':'Information about international schools in Tokyo is scattered and rarely available in Chinese. Chinese-speaking families often rely only on word of mouth. We wanted to turn the path we\'d walked into a clear map — so that families who come after us can find their way more easily.',
     'about.story3':'Betty has over ten years in education and personally handles every family\'s consultation, school visits, and coaching. Jerry applies product thinking and data capabilities to build a curriculum knowledge base and school matching tools covering all international schools in Tokyo. One understands education, the other understands technology — a perfect complement.',
@@ -221,9 +221,9 @@ var T = {
     'services.cta.btn':'Contact Us',
     'contact.kicker':'Contact','contact.title':'Contact Us',
     'contact.desc':'Choose whichever channel works best for you, and let\'s talk about your child\'s international school journey.',
-    'contact.wechat.name':'WeChat Work','contact.wechat.number':'WeChat Work ID: 13732203788',
+    'contact.wechat.name':'WeChat','contact.wechat.number':'WeChat ID: 13732203788',
     'contact.wechat.hint':'Please share your child\'s grade and expected enrollment year',
-    'contact.xhs.name':'Xiaohongshu','contact.xhs.number':'贝蒂星妈: 422507043',
+    'contact.xhs.name':'Xiaohongshu','contact.xhs.number':'Betty 小肉爪: 422507043',
     'contact.xhs.hint':'Follow us for the latest news and in-depth content on Tokyo international schools',
     'contact.phone.name':'Phone','contact.phone.hint':'Call us — let\'s find the right Tokyo international school together',
     'contact.email.name':'Email','contact.email.hint':'We reply quickly, except late at night',
@@ -287,8 +287,8 @@ var T = {
     'footer.brand_desc':'東京の日本語話者向けのインターナショナルスクール相談、進学指導、学校選択ツール、教育系ITプロダクト。',
     'footer.nav_schools':'学校探索','footer.nav_articles':'記事',
     'footer.nav_tools':'教育ソフトウェア','footer.nav_services':'相談サービス','footer.nav_about':'私たちについて',
-    'footer.contact_wechat':'企業WeChat：13732203788',
-    'footer.contact_xhs':'小紅書：贝蒂星妈 422507043',
+    'footer.contact_wechat':'WeChat：13732203788',
+    'footer.contact_xhs':'小紅書：Betty 小肉爪 422507043',
     'footer.contact_phone':'（0081）07069875502',
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
@@ -316,7 +316,7 @@ var T = {
     'index.about.btn':'詳しく見る',
     'about.kicker':'About Us','about.title':'吉祥書院',
     'about.tagline':'すべてのご家族に寄り添い、最適な国際学校へ。',
-    'about.quote':'「私たちは傍観者ではなく、同じ道を歩む親です。」',
+    'about.quote':'私たちは同じ道を歩む親です',
     'about.story1':'2019年、私たちは4人の子供を連れて上海から東京へ移りました。Dulwich College ShanghaiからSeisen International Schoolへの転校 — 学校選択、受験準備、面接、入学まで、すべてを歩み、迷いや不安も肌で感じました。',
     'about.story2':'東京の国際学校情報は分散しており、中国語の資料はごくわずかです。中国語系ご家族は口コミだけで判断せざるを得ないことが多い。私たちが歩んだ道を明確な地図に変え、後から来るご家族の遠回りを減らしたいと思っています。',
     'about.story3':'Bettyは教育業界10年超のベテランで、すべてのご家族のコンサルティング・訪問・指導を直接担当。Jerryはプロダクト思考とデータ能力で、東京全域の国際学校カリキュラム知識ベースと学校選択ツールを構築しました。教育と技術、二人で補い合っています。',
@@ -343,9 +343,9 @@ var T = {
     'services.cta.btn':'お問い合わせ',
     'contact.kicker':'Contact','contact.title':'お問い合わせ',
     'contact.desc':'ご都合のよい方法で、お子様の国際学校についてお話しください。',
-    'contact.wechat.name':'企業WeChat','contact.wechat.number':'企業WeChat ID：13732203788',
+    'contact.wechat.name':'WeChat','contact.wechat.number':'WeChat ID：13732203788',
     'contact.wechat.hint':'お子様の学年と入学希望時期をお知らせください',
-    'contact.xhs.name':'小紅書','contact.xhs.number':'贝蒂星妈：422507043',
+    'contact.xhs.name':'小紅書','contact.xhs.number':'Betty 小肉爪：422507043',
     'contact.xhs.hint':'フォローして東京国際学校の最新情報と深い内容をチェック',
     'contact.phone.name':'電話','contact.phone.hint':'お気軽にお電話ください。最適な東京国際学校を一緒に見つけましょう',
     'contact.email.name':'メール','contact.email.hint':'深夜以外はすぐにご返信します',
@@ -617,8 +617,8 @@ function applyI18n(lang) {
       <div>
         <div class="footer-heading en">Contact</div>
         <ul class="footer-contact-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span data-i18n="footer.contact_wechat">企微号：13732203788</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20a8 8 0 0 1-8-8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a8 8 0 0 1-8 8Z"/><path d="M8 10h8M8 14h5"/></svg><span data-i18n="footer.contact_xhs">小红书：贝蒂星妈 422507043</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9Z"/><path d="M9 10h.01M15 10h.01M9.5 15a5 5 0 0 0 5 0"/></svg><span data-i18n="footer.contact_wechat">微信号：13732203788</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20a8 8 0 0 1-8-8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6a8 8 0 0 1-8 8Z"/><path d="M8 10h8M8 14h5"/></svg><span data-i18n="footer.contact_xhs">小红书：Betty 小肉爪 422507043</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.25a2 2 0 0 1 2.11-.45c.74.32 1.53.55 2.34.68a2 2 0 0 1 1.72 2.03Z"/></svg><a class="footer-contact-link" href="tel:+817069875502" data-i18n="footer.contact_phone">（0081）07069875502</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a class="footer-contact-link" href="mailto:betty@kissho.school" data-i18n="footer.contact_email">betty@kissho.school</a></li>
         </ul>
@@ -626,11 +626,6 @@ function applyI18n(lang) {
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
-      <div class="lang-switch" style="border-left:1px solid rgba(255,255,255,0.15);margin-left:0;padding-left:16px;">
-        <button class="lang-btn" style="color:rgba(255,255,255,0.7);">中文</button>
-        <button class="lang-btn" style="color:rgba(255,255,255,0.4);">EN</button>
-        <button class="lang-btn" style="color:rgba(255,255,255,0.4);">日本語</button>
-      </div>
     </div>
   </div>
 </footer>`;
@@ -647,7 +642,7 @@ var CONTACT_MESSAGE_LABELS = {
     title: '您想问的事',
     contactLabel: '联系方式',
     contactPlaceholder: '微信 / 电话 / 邮箱都可以',
-    messagePlaceholder: '什么都可以问',
+    messagePlaceholder: '和我们说说您的困惑，我们一定很快联系您',
     submit: '发送',
     close: '关闭留言窗口',
     contactRequired: '请留下一个方便回复的联系方式。',
@@ -663,7 +658,7 @@ var CONTACT_MESSAGE_LABELS = {
     title: 'What would you like to ask?',
     contactLabel: 'Contact',
     contactPlaceholder: 'WhatsApp / phone / email all work',
-    messagePlaceholder: 'Anything is fine',
+    messagePlaceholder: 'Tell us what you\'re unsure about, and we will contact you soon',
     submit: 'Send',
     close: 'Close message panel',
     contactRequired: 'Please leave a contact method.',
@@ -679,7 +674,7 @@ var CONTACT_MESSAGE_LABELS = {
     title: 'ご相談内容',
     contactLabel: '連絡先',
     contactPlaceholder: 'LINE / 電話 / メール いずれでも大丈夫です',
-    messagePlaceholder: '簡単な内容で大丈夫です',
+    messagePlaceholder: 'お悩みをお聞かせください。折り返しご連絡いたします',
     submit: '送信',
     close: '留言ウィンドウを閉じる',
     contactRequired: '返信できる連絡先をご記入ください。',
@@ -900,3 +895,40 @@ function observeRevealElements(root) {
 }
 window.kisshoObserveReveals = observeRevealElements;
 observeRevealElements(document);
+
+// ── Redesign enhancements (header overlay + four-things accordion) ──
+(function () {
+  if (!document.body.classList.contains('redesign')) return;
+
+  // Transparent-over-hero header that solidifies on scroll (overlay pages only)
+  var header = document.querySelector('.site-header');
+  if (header && document.body.classList.contains('nav-overlay')) {
+    var onScroll = function () {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // Buttons that open the floating "leave a message" widget
+  document.querySelectorAll('[data-open-message]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      var widget = document.querySelector('.contact-message-widget');
+      var toggle = widget && widget.querySelector('.contact-message-toggle');
+      if (toggle && !widget.classList.contains('is-open')) toggle.click();
+    });
+  });
+
+  // Four-things accordion: hover/click to expand a pane (desktop only)
+  var panes = [].slice.call(document.querySelectorAll('.acc .pane'));
+  if (panes.length) {
+    var activate = function (pane) {
+      panes.forEach(function (p) { p.classList.toggle('on', p === pane); });
+    };
+    panes.forEach(function (pane) {
+      pane.addEventListener('mouseenter', function () { if (window.innerWidth > 980) activate(pane); });
+      pane.addEventListener('click', function () { if (window.innerWidth > 980) activate(pane); });
+    });
+  }
+})();

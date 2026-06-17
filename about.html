@@ -18,10 +18,11 @@
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=floating-message-20260523">
+  <link rel="stylesheet" href="redesign.css?v=redesign-20260612">
 </head>
-<body>
+<body class="redesign">
 
   <div class="top-stripe"></div>
 
@@ -29,61 +30,57 @@
 
   <main>
 
-    <section class="page-hero">
+    <!-- Page hero (dark) -->
+    <section class="page-hero" data-watermark="院">
       <div class="container">
-        <div class="section-kicker en" data-i18n="about.kicker">About Us</div>
-        <h1 class="section-title" style="letter-spacing:0.4em;" data-i18n="about.title">吉祥书院</h1>
-        <p class="section-desc" style="color:var(--red);" data-i18n="about.tagline">陪伴每一个家庭，走进最适合的国际学校。</p>
+        <span class="eyebrow center" data-i18n-zh="About Us · 关于我们" data-i18n-en="About Us" data-i18n-ja="About Us · 私たちについて">About Us · 关于我们</span>
+        <h1 data-i18n="about.title">吉祥书院</h1>
+        <p class="lead" data-i18n="about.tagline">陪伴每一个家庭，走进最适合的国际学校。</p>
       </div>
     </section>
 
-    <!-- Our Story -->
-    <section class="section">
+    <!-- Story -->
+    <section class="story">
       <div class="container">
-        <div class="about-story reveal">
-          <blockquote class="about-quote" data-i18n="about.quote">
-            "我们不是旁观者，而是和您走在同一条路上的家长。"
-          </blockquote>
-          <p data-i18n="about.story1">2019 年，我们带着四个孩子从上海来到东京。孩子们从德威国际学校（Dulwich College Shanghai）转入清泉国际学校（Seisen International School），选校、备考、面试、入学——每一步都亲身走过，也切身体会过其中的迷茫与焦虑。</p>
-          <p data-i18n="about.story2">东京的国际学校信息分散，中文资料极少，华人家庭往往只能靠口口相传做判断。我们想把自己走过的路变成一张清晰的地图，让后来的家庭少走弯路。</p>
-          <p data-i18n="about.story3">Betty 深耕教育行业超过十年，亲自负责每一个家庭的咨询、访校与辅导；Jerry 用产品思维和数据能力搭建了覆盖全东京国际学校的课程知识库与选校工具——一个懂教育，一个懂技术，刚好互补。</p>
-          <p data-i18n="about.story4">我们全心对待每一个家庭，不推荐最贵或最有名的，只帮您找到最适合孩子的那一所。这条路，我们陪您一起走。</p>
+        <div class="inner">
+          <div class="quote">
+            <span data-i18n-zh="我们是和您走在同一条路上的家长" data-i18n-en="We are parents walking the same path as you" data-i18n-ja="私たちは同じ道を歩む親です" data-i18n-mode="html">我们是和您走在同一条路上的家长</span>
+          </div>
+          <div class="story-body">
+            <p data-i18n="about.story1">2019 年，我们带着四个孩子从上海来到东京。孩子们从德威国际学校（Dulwich College Shanghai）转入清泉国际学校（Seisen International School），选校、备考、面试、入学——每一步都亲身走过，也切身体会过其中的迷茫与焦虑。</p>
+            <p data-i18n="about.story2">东京的国际学校信息分散，中文资料极少，华人家庭往往只能靠口口相传做判断。我们想把自己走过的路变成一张清晰的地图，让后来的家庭少走弯路。</p>
+            <p data-i18n="about.story3">Betty 深耕教育行业超过十年，亲自负责每一个家庭的咨询、访校与辅导；Jerry 用产品思维和数据能力搭建了覆盖全东京国际学校的课程知识库与选校工具——一个懂教育，一个懂技术，刚好互补。</p>
+            <p data-i18n="about.story4">我们全心对待每一个家庭，不推荐最贵或最有名的，只帮您找到最适合孩子的那一所。这条路，我们陪您一起走。</p>
+          </div>
+          <div class="divider"><span></span></div>
         </div>
       </div>
     </section>
 
-    <div class="ornament"><div class="orn-line"></div><div class="orn-diamond"></div><div class="orn-line rev"></div></div>
-
-    <!-- Team -->
-    <section class="section section--warm" style="padding-top: 45px;">
+    <!-- Founding team -->
+    <section class="team">
       <div class="container">
-        <div class="section-header reveal">
-          <div class="section-kicker en" data-i18n="about.team.kicker">Team</div>
+        <div class="center-head">
+          <span class="eyebrow center" data-i18n="about.team.kicker">Team</span>
           <h2 class="section-title" data-i18n="about.team.title">创始团队</h2>
         </div>
-
         <div class="team-grid">
 
-          <div class="team-member reveal">
-            <div class="team-photo">
-              <img loading="lazy" decoding="async" src="图片/Betty2.png" alt="Betty" style="width:100%;height:100%;min-height:240px;object-fit:cover;display:block;object-position:center 30%;" />
-            </div>
-
-            <div class="team-info">
-              <h3 class="team-name">Betty</h3>
-              <div class="team-role en">Co-Founder & COO</div>
-              <p class="team-bio" data-i18n-html="about.betty.bio">英国杜伦大学（英国前五）研究生毕业，回国后在阿里巴巴负责在线教育业务的运营与增长策略，在教育领域深耕超过十年，深刻理解教育产品设计与用户需求。在过往工作经历中建立了与众多学校的招生团队长期稳定的沟通关系，对IB、A-Level、AP等主流课程体系及其入学评估标准有系统深入的研究。<br>目前是四个孩子的妈妈，前上海德威国际学校（Dulwich College Shanghai）、现清泉国际学校（Seisen International School）学生家长，孩子们均一次通过入学考核。<br>每一次咨询我们都会全力以赴，每一个家庭我们都会用心对待。<br>在吉祥负责客户咨询、访校陪同、笔试面试辅导与学校对接等核心服务交付。</p>
+          <div class="member">
+            <div class="ph"><img loading="lazy" decoding="async" src="图片/Betty2.png" alt="Betty" /></div>
+            <div class="body">
+              <h3>Betty</h3>
+              <div class="role">Co-Founder &amp; COO</div>
+              <p data-i18n-html="about.betty.bio">英国杜伦大学（英国前五）研究生毕业，回国后在阿里巴巴负责在线教育业务的运营与增长策略，在教育领域深耕超过十年。</p>
             </div>
           </div>
 
-          <div class="team-member reveal">
-            <div class="team-photo">
-              <img loading="lazy" decoding="async" src="图片/Jerry.png" alt="Jerry" style="width:100%;height:100%;min-height:240px;object-fit:cover;display:block;object-position:center 30%;" />
-            </div>
-            <div class="team-info">
-              <h3 class="team-name">Jerry</h3>
-              <div class="team-role en">Co-Founder & CTO</div>
-              <p class="team-bio" data-i18n-html="about.jerry.bio">巴黎大学数学与计算机应用科班毕业，回国后深耕移动互联网十余年，经营的企业年营业额超过30亿人民币。<br>2019年回归家庭后选择定居东京，将多年积累的商业经验与对教育的思考相结合。用产品思维打磨每一个服务环节，用数据驱动和系统化能力搭建全东京国际学校的课程体系与知识要点库，为每一个家庭量身定制匹配的方案。<br>在吉祥负责课程体系研发、IT产品设计与企业经营管理。</p>
+          <div class="member">
+            <div class="ph"><img loading="lazy" decoding="async" src="图片/Jerry.png" alt="Jerry" /></div>
+            <div class="body">
+              <h3>Jerry</h3>
+              <div class="role">Co-Founder &amp; CTO</div>
+              <p data-i18n-html="about.jerry.bio">巴黎大学数学与计算机应用科班毕业，回国后深耕移动互联网十余年，经营的企业年营业额超过30亿人民币。</p>
             </div>
           </div>
 
@@ -91,28 +88,26 @@
       </div>
     </section>
 
-    <!-- Company Info -->
-    <section class="section">
-      <div class="container container--narrow">
-        <div class="section-header reveal">
-          <div class="section-kicker en" data-i18n="about.company.kicker">Company Information</div>
+    <!-- Company info -->
+    <section class="company">
+      <div class="container">
+        <div class="center-head">
+          <span class="eyebrow center" data-i18n="about.company.kicker">Company Information</span>
           <h2 class="section-title" data-i18n="about.company.title">公司信息</h2>
         </div>
-
-        <div class="company-info-card reveal">
+        <div class="info-card">
           <div class="info-row">
-            <span class="info-label en" data-i18n-zh="公司" data-i18n-en="Company" data-i18n-ja="会社名">Company</span>
-            <span class="info-value">KISSHO Co., Ltd</span>
+            <span class="k" data-i18n-zh="公司" data-i18n-en="Company" data-i18n-ja="会社名">公司</span>
+            <span class="v">KISSHO Co., Ltd · 吉祥株式会社</span>
           </div>
           <div class="info-row">
-            <span class="info-label en" data-i18n-zh="地址" data-i18n-en="Address" data-i18n-ja="所在地">Address</span>
-            <span class="info-value">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</span>
+            <span class="k" data-i18n-zh="地址" data-i18n-en="Address" data-i18n-ja="所在地">地址</span>
+            <span class="v">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</span>
           </div>
           <div class="info-row">
-            <span class="info-label en" data-i18n-zh="服务" data-i18n-en="Services" data-i18n-ja="事業内容">Services</span>
-            <span class="info-value" data-i18n-zh="国际学校咨询 &middot; 教育 IT 产品" data-i18n-en="International School Consulting &middot; Educational IT Products" data-i18n-ja="インターナショナルスクール相談 &middot; 教育 IT プロダクト" data-i18n-mode="html">International School Consulting &middot; Educational IT Products</span>
+            <span class="k" data-i18n-zh="服务" data-i18n-en="Services" data-i18n-ja="事業内容">服务</span>
+            <span class="v" data-i18n-zh="国际学校咨询 · 教育 IT 产品" data-i18n-en="International School Consulting · Educational IT Products" data-i18n-ja="インターナショナルスクール相談 · 教育 IT プロダクト">国际学校咨询 · 教育 IT 产品</span>
           </div>
-
         </div>
       </div>
     </section>
