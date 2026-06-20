@@ -106,7 +106,7 @@ var T = {
     'contact.phone.name':'电话','contact.phone.hint':'欢迎来电，我们一起找到最合适的东京国际学校',
     'contact.email.name':'邮件','contact.email.hint':'除深夜，都会很快回复',
     'contact.office.kicker':'Office','contact.access.label':'Access',
-    'contact.address.value':'KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan',
+    'contact.address.value':'TOSHIMA-KU, Tokyo 171-0031, Japan',
     'contact.access.value':'山手线（JR） 目白站（Mejiro），西武池袋线（SI） 椎名町站（Shiinamachi），大江户线（E） 落合南长崎站（Ochiai-Minaminagasaki） 皆可到达',
     'tools.kicker':'Software','tools.title':'教育软件<span style="letter-spacing:normal;">（限时免费中）</span>',
     'tools.desc':'我们为自己在东京国际学校就读的孩子开发的教育软件，现在也开放给更多家庭使用。',
@@ -228,7 +228,7 @@ var T = {
     'contact.phone.name':'Phone','contact.phone.hint':'Call us — let\'s find the right Tokyo international school together',
     'contact.email.name':'Email','contact.email.hint':'We reply quickly, except late at night',
     'contact.office.kicker':'Office','contact.access.label':'Access',
-    'contact.address.value':'KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan',
+    'contact.address.value':'TOSHIMA-KU, Tokyo 171-0031, Japan',
     'contact.access.value':'JR Yamanote Line (Mejiro), Seibu Ikebukuro Line (Shiinamachi), Oedo Line (Ochiai-Minaminagasaki)',
     'tools.kicker':'Software','tools.title':'Software<span style="letter-spacing:normal;"> (Free for a Limited Time)</span>',
     'tools.desc':'Software we built for our own children at Tokyo international schools — now open to all families.',
@@ -350,7 +350,7 @@ var T = {
     'contact.phone.name':'電話','contact.phone.hint':'お気軽にお電話ください。最適な東京国際学校を一緒に見つけましょう',
     'contact.email.name':'メール','contact.email.hint':'深夜以外はすぐにご返信します',
     'contact.office.kicker':'Office','contact.access.label':'アクセス',
-    'contact.address.value':'KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan',
+    'contact.address.value':'TOSHIMA-KU, Tokyo 171-0031, Japan',
     'contact.access.value':'JR山手線（目白駅）、西武池袋線（椎名町駅）、大江戸線（落合南長崎駅）いずれも利用可',
     'tools.kicker':'Software','tools.title':'教育ソフトウェア<span style="letter-spacing:normal;">（期間限定無料）</span>',
     'tools.desc':'東京の国際学校に通う私たちの子供のために作った教育ソフトウェアを、より多くのご家族へ。',
@@ -602,7 +602,7 @@ function applyI18n(lang) {
       <div class="footer-brand">
         <div class="footer-logo-text"><span style="letter-spacing:0.2em;">吉祥书院</span> <span class="en" style="font-weight:400;font-size:0.85rem;opacity:0.6;margin-left:1.1em;">KISSHO Co., Ltd</span></div>
         <p class="footer-brand-desc" data-i18n="footer.brand_desc">面向东京华人家庭的国际学校咨询、升学辅导、选校工具和教育类IT产品。</p>
-        <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">KISSHO BLDG. 101, 5-8-19 MEJIRO<br>TOSHIMA-KU, Tokyo 171-0031, Japan</p>
+        <p class="footer-brand-desc" style="font-size:0.78rem;opacity:0.5;">TOSHIMA-KU, Tokyo 171-0031, Japan</p>
       </div>
       <div>
         <div class="footer-heading en">Navigation</div>
