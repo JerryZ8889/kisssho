@@ -625,7 +625,7 @@ function applyI18n(lang) {
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 KISSHO Co., Ltd &middot; 吉祥株式会社 &middot; All Rights Reserved</span>
+      <span>&copy; 2026 KISSHO Co., Ltd &middot; All Rights Reserved</span>
     </div>
   </div>
 </footer>`;
