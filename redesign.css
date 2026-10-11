@@ -582,7 +582,6 @@ body.redesign .prod .map-note { margin-top: 16px; font-size: 12px; line-height: 
 body.redesign .map-note a { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
 body.redesign .prod .map-preview .frame { display: block; }
 body.redesign .prod .map-preview .frame img { height: auto; max-height: none; object-fit: contain; }
-body.redesign .map-caption { margin-top: 12px; font-size: 12px; line-height: 1.6; color: var(--ink-mute); text-align: center; }
 body.redesign .dev-box { border: 1.5px dashed var(--gold-soft); border-radius: 4px; height: 380px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; background: rgba(255,255,255,.45); }
 body.redesign .dev-box .t { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
 body.redesign .dev-box .s { font-family: var(--serif); font-size: 19px; color: var(--ink-soft); }
