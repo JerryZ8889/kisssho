@@ -1,6 +1,6 @@
 // ── Translations ──────────────────────────────────────────────────────────
 var LANGS = ['zh', 'en', 'ja'];
-var SITE_ORIGIN = 'https://kissho.school';
+var SITE_ORIGIN = 'https://www.kissho.school';
 var DEFAULT_SHARE_IMAGE = '图片/mejiro.jpg';
 var NAV_TOGGLE_LABELS = {
   zh: { open: '打开菜单', close: '关闭菜单' },
