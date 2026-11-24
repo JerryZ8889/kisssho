@@ -8,20 +8,6 @@ var NAV_TOGGLE_LABELS = {
   ja: { open: 'メニューを開く', close: 'メニューを閉じる' }
 };
 var PAGE_META_FALLBACKS = {
-  'index.html': {
-    zh: {
-      title: 'KISSHO | 吉祥书院 — 东京国际学校咨询',
-      description: '面向东京华人家庭的国际学校入学咨询、选校工具、MAP备考与中文练习。吉祥书院官方网站。'
-    },
-    en: {
-      title: 'KISSHO | Tokyo International School Consulting',
-      description: 'International school consulting, school selection tools, MAP prep, and Chinese literacy support for families in Tokyo.'
-    },
-    ja: {
-      title: 'KISSHO | 東京インターナショナルスクール相談',
-      description: '東京のご家庭向けに、インターナショナルスクール相談、学校選択ツール、MAP対策、中国語学習支援を提供しています。'
-    }
-  },
   'contact.html': {
     zh: {
       title: '联系我们 | KISSHO 吉祥书院',
@@ -50,7 +36,7 @@ var T = {
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
     'index.hero.title':'陪伴您和孩子走进<em>最适合的国际学校</em>',
-    'index.hero.desc':'从选校咨询到入学落地，从 MAP 备考到以 AI 为基础面向次时代的教育系统 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。',
+    'index.hero.desc':'从选校咨询到入学落地，从 MAP 备考到以 AI 为基础的教育系统 —— 我们自己的孩子也在东京的国际学校，深知这条路上的每一个选择有多重要。',
     'index.hero.btn_services':'了解我们的服务','index.hero.btn_schools':'探索学校',
     'index.offer.kicker':'What We Offer','index.offer.title':'围绕国际学校，我们做这些事',
     'index.offer.desc':'从信息到决策，从入学到学习，一步步陪你走通。',
@@ -172,7 +158,7 @@ var T = {
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
     'index.hero.title':'Finding the <em>right international school</em> for your child',
-    'index.hero.desc':'From school selection to enrollment, from MAP prep to an AI-powered education system for the next generation — our own children attend international schools in Tokyo, and we know firsthand how much every decision matters.',
+    'index.hero.desc':'From school selection to enrollment, from MAP prep to an AI-based education system — our own children attend international schools in Tokyo, and we know firsthand how much every decision matters.',
     'index.hero.btn_services':'Our Services','index.hero.btn_schools':'Explore Schools',
     'index.offer.kicker':'What We Offer','index.offer.title':'What We Do',
     'index.offer.desc':'From information to decision, from enrollment to learning — we guide you every step of the way.',
@@ -295,7 +281,7 @@ var T = {
     'footer.contact_email':'betty@kissho.school',
     'index.hero.kicker':'Tokyo International School Consulting',
     'index.hero.title':'お子様に<em>最適な国際学校</em>を見つけます',
-    'index.hero.desc':'学校選択から入学まで、MAP対策からAIを基盤とした次世代の教育システムまで — 私たち自身の子供も東京の国際学校に通っており、一つひとつの選択がいかに大切かを身をもって知っています。',
+    'index.hero.desc':'学校選択から入学まで、MAP対策からAIを基盤とした教育システムまで — 私たち自身の子供も東京の国際学校に通っており、一つひとつの選択がいかに大切かを身をもって知っています。',
     'index.hero.btn_services':'サービスを見る','index.hero.btn_schools':'学校を探す',
     'index.offer.kicker':'What We Offer','index.offer.title':'私たちができること',
     'index.offer.desc':'情報から決断まで、入学から学習まで、一歩ずつご一緒します。',
