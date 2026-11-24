@@ -10,17 +10,17 @@
   >教育软件 | KISSHO 吉祥书院</title>
   <meta
     name="description"
-    content="MAP 测试+练习、中文读写训练 — 为东京国际学校家庭开发的教育软件。"
+    content="吉祥书院教育软件，包括 Catherine 私人老师、MAP 测试与练习、中文读写和日文假名练习。"
     data-i18n-attr="content"
-    data-i18n-zh="MAP 测试+练习、中文读写训练 — 为东京国际学校家庭开发的教育软件。"
-    data-i18n-en="Software for families in Tokyo international schools, including MAP testing + practice, Chinese literacy, and Japanese kana tools."
-    data-i18n-ja="東京のインターナショナルスクール家庭向けに開発した、MAP テスト+練習・中国語学習・かな練習を含む教育ソフトウェアです。"
+    data-i18n-zh="吉祥书院教育软件，包括 Catherine 私人老师、MAP 测试与练习、中文读写和日文假名练习。"
+    data-i18n-en="KISSHO educational software includes Catherine, an AI-native personal tutor, MAP testing and practice, Chinese literacy, and Japanese kana practice."
+    data-i18n-ja="KISSHO の教育ソフトウェア。Catherine AI 家庭教師、MAP テスト対策、中国語の読み書き、日本語のかな練習を紹介します。"
   />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=floating-message-20260523">
-  <link rel="stylesheet" href="redesign.css?v=map-math-v1-screen-20261012">
+  <link rel="stylesheet" href="redesign.css?v=catherine-home-screenshot">
 </head>
 <body class="redesign">
 
@@ -35,40 +35,53 @@
         <span class="eyebrow center" data-i18n-zh="Software · 教育软件" data-i18n-en="Software" data-i18n-ja="Software · 教育ソフトウェア">Software · 教育软件</span>
         <div class="ph-title">
           <h1 data-i18n-zh="教育软件" data-i18n-en="Software" data-i18n-ja="教育ソフトウェア">教育软件</h1>
-          <span class="free-pill" data-i18n-zh="限时免费中" data-i18n-en="Free for a Limited Time" data-i18n-ja="期間限定無料">限时免费中</span>
+          <span class="free-pill" data-i18n-zh="部分工具限时免费" data-i18n-en="Selected Tools Free for a Limited Time" data-i18n-ja="一部ツールは期間限定無料">部分工具限时免费</span>
         </div>
-        <p class="lead" data-i18n="tools.desc">我们为自己在东京国际学校就读的孩子开发的教育软件，现在也开放给更多家庭使用。</p>
+        <p class="lead" data-i18n-zh="吉祥书院自主研发了 AI 私人老师、MAP 评测与练习系统及语言学习等智能工具，以科技赋能因材施教，助力每个孩子高效学习、快乐成长。" data-i18n-en="KISSHO develops its own learning tools, including an AI personal tutor, MAP assessment and practice, and language learning software. We use technology to tailor learning to each child so they can learn effectively and enjoy making progress." data-i18n-ja="KISSHO は、AI 家庭教師、MAP の評価・練習システム、語学学習ツールなどを独自に開発しています。テクノロジーで一人ひとりに合った学びを支え、すべてのお子さまが効率よく学び、楽しく成長できるようにします。">吉祥书院自主研发了 AI 私人老师、MAP 评测与练习系统及语言学习等智能工具，以科技赋能因材施教，助力每个孩子高效学习、快乐成长。</p>
       </div>
     </section>
 
     <section class="prods">
       <div class="container">
 
-        <div class="prod">
+        <section class="prod" id="catherine" aria-labelledby="catherine-title">
           <div>
-            <span class="status avail" data-i18n-zh="Available · 开放使用" data-i18n-en="Available" data-i18n-ja="Available · 公開中">Available · 开放使用</span>
-            <h2 data-i18n="tools.chinese.title">中文练习</h2>
-            <p class="desc" data-i18n="tools.chinese.desc">国际学校的孩子容易在英语环境中逐渐弱化中文能力。这套工具帮助孩子在日常学习之余，保持和提升中文读写水平。</p>
-            <a class="btn btn-primary" href="https://chinese.sophia.beer/" target="_blank" rel="noopener"><span data-i18n="tools.chinese.btn">开始练习</span> <span class="arrow">→</span></a>
+            <h2 id="catherine-title" data-i18n-zh="Catherine 私人老师" data-i18n-en="Catherine AI Personal Tutor" data-i18n-ja="Catherine AI 家庭教師">Catherine 私人老师</h2>
+            <p class="desc"
+              data-i18n-zh="我们判断，在人工智能持续演进的世界背景下，未来人类的核心价值在于思考的深度、源于自身成长经历的独特视角，以及不可复制的创造力。AI 会成为人类实现目标的“手脚”，而控制手脚的大脑，仍然是每一个有生命的个体。"
+              data-i18n-en="As AI continues to evolve, we believe that what will matter most about being human is how deeply we think, the unique perspectives shaped by our experiences, and the creativity that only we can bring. AI can be the ‘hands and feet’ that help us achieve our goals. Each living person remains the mind that guides them."
+              data-i18n-ja="私たちは、AI が進化し続ける時代に、人間の価値の中心にあるのは、深く考える力、自らの成長の過程で培った独自の視点、そして一人ひとりにしか生み出せない創造性だと考えています。AI は、私たちが目標を実現するための「手足」になります。その手足を動かす頭脳は、命を持つ私たち一人ひとりです。">我们判断，在人工智能持续演进的世界背景下，未来人类的核心价值在于思考的深度、源于自身成长经历的独特视角，以及不可复制的创造力。AI 会成为人类实现目标的“手脚”，而控制手脚的大脑，仍然是每一个有生命的个体。</p>
+            <p class="desc" data-i18n-mode="html"
+              data-i18n-zh="基于这一理念，我们研发了专属你自己的 AI 原生私人老师 &lt;strong&gt;Catherine&lt;/strong&gt;——她理解你、陪伴你，从你的兴趣出发，因材施教、循序渐进，真正为你服务，让学习不再枯燥，不再充满压力。"
+              data-i18n-en="That belief led us to create &lt;strong&gt;Catherine&lt;/strong&gt;, an AI-native personal tutor of your own. She gets to know you and stays by your side as you learn, starting with your interests and guiding you step by step at a pace that suits you. She works for you, making learning more engaging and less stressful."
+              data-i18n-ja="この考えから、あなた専用の AI 家庭教師 &lt;strong&gt;Catherine&lt;/strong&gt; を開発しました。あなたを理解し、興味のあることから一歩ずつ、あなたに合った方法で学習を支えます。学びをもっと楽しく、気軽に続けられるように寄り添います。">基于这一理念，我们研发了专属你自己的 AI 原生私人老师 <strong>Catherine</strong>——她理解你、陪伴你，从你的兴趣出发，因材施教、循序渐进，真正为你服务，让学习不再枯燥，不再充满压力。</p>
+            <p class="desc"
+              data-i18n-zh="我们相信，AI 教育将带来教育平权，让过去昂贵的定制化教育服务团队，走到每一个人的身边。"
+              data-i18n-en="We believe AI can make education more equitable by giving everyone access to the kind of personalized support that once required an expensive team of educators."
+              data-i18n-ja="AI によって教育の機会がより公平になり、かつては高額な専門チームに頼る必要があった個別の教育支援が、誰にとっても身近になると考えています。">我们相信，AI 教育将带来教育平权，让过去昂贵的定制化教育服务团队，走到每一个人的身边。</p>
+            <p class="desc"
+              data-i18n-zh="在产品中，你可以建立任何感兴趣的学习内容——如诗词、数学、艺术、运动，系统会按你期望的学习节奏拆解安排，每次学一点，并根据你每周的学习动态生成下一周计划。"
+              data-i18n-en="You can set up a learning plan for anything that interests you, from poetry and math to art and sports. Catherine breaks it into short sessions at your chosen pace and creates the following week’s plan based on how your learning progresses each week."
+              data-i18n-ja="詩歌、数学、芸術、スポーツなど、興味のあることなら何でも学習テーマにできます。希望するペースに合わせて少しずつ取り組めるように内容を分け、毎週の学習状況をもとに翌週の計画を立てます。">在产品中，你可以建立任何感兴趣的学习内容——如诗词、数学、艺术、运动，系统会按你期望的学习节奏拆解安排，每次学一点，并根据你每周的学习动态生成下一周计划。</p>
+            <p class="desc"
+              data-i18n-zh="有每日总结、自己能力图谱，上过的内容可随时复习。提供日语、英语、中文等多语言环境。"
+              data-i18n-en="You get daily summaries and a personal skill map, and you can review anything you have studied at any time. The platform supports learning in Japanese, English, Chinese, and other languages."
+              data-i18n-ja="毎日の学習のまとめと自分のスキルマップを確認でき、学んだ内容はいつでも復習できます。日本語、英語、中国語などの言語に対応しています。">有每日总结、自己能力图谱，上过的内容可随时复习。提供日语、英语、中文等多语言环境。</p>
+            <a class="btn btn-primary" href="https://tutor.kissho.school/" target="_blank" rel="noopener"><span data-i18n-zh="见见 Catherine" data-i18n-en="Meet Catherine" data-i18n-ja="Catherine に会う">见见 Catherine</span> <span class="arrow">→</span></a>
           </div>
-          <div class="shot">
-            <div class="frame"><img loading="lazy" decoding="async" src="图片/chinese-tool.png" alt="中文练习工具截图" /></div>
+          <div class="shot catherine-preview">
+            <div class="frame">
+              <img loading="lazy" decoding="async" src="图片/catherine-home-screenshot.png" width="1093" height="1018" data-i18n-attr="alt" data-i18n-zh="Catherine 私人老师家庭首页，显示家庭学习概览、各学习者的学科和进度" data-i18n-en="Catherine AI Personal Tutor family homepage, showing a learning overview, subjects, and progress for each learner" data-i18n-ja="Catherine AI 家庭教師のホーム画面。家族の学習概要と各学習者の科目・進捗を表示" alt="Catherine 私人老师家庭首页，显示家庭学习概览、各学习者的学科和进度" />
+            </div>
           </div>
-        </div>
+        </section>
 
         <div class="prod">
-          <div class="shot">
-            <div class="frame"><img loading="lazy" decoding="async" src="图片/japanese-tool.png" alt="日文假名练习工具截图" /></div>
+          <div class="shot map-preview">
+            <a class="frame" href="https://map.kissho.school" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n-zh="打开 MAP 数学练习家长空间" data-i18n-en="Open the MAP Mathematics parent space" data-i18n-ja="MAP 数学練習の保護者画面を開く" aria-label="打开 MAP 数学练习家长空间">
+              <img loading="lazy" decoding="async" src="图片/map-parent-v1-three-clean.jpg" width="1088" height="872" data-i18n-attr="alt" data-i18n-zh="MAP 数学 V1 家长空间：孩子档案、最近学习与成长记录" data-i18n-en="MAP Mathematics V1 parent space with child profiles, recent learning, and learning history" data-i18n-ja="MAP 数学 V1 の保護者画面：子どものプロフィール、最近の学習、学習履歴" alt="MAP 数学 V1 家长空间：孩子档案、最近学习与成长记录" />
+            </a>
           </div>
-          <div>
-            <span class="status avail" data-i18n-zh="Available · 开放使用" data-i18n-en="Available" data-i18n-ja="Available · 公開中">Available · 开放使用</span>
-            <h2 data-i18n="tools.japanese.title">日文假名练习</h2>
-            <p class="desc" data-i18n="tools.japanese.desc">帮助孩子和家长快速掌握日语平假名与片假名的认读与书写，为在日本的日常生活和学校沟通打下基础。</p>
-            <a class="btn btn-primary" href="https://japanese.sophia.beer/" target="_blank" rel="noopener"><span data-i18n="tools.japanese.btn">开始练习</span> <span class="arrow">→</span></a>
-          </div>
-        </div>
-
-        <div class="prod">
           <div>
             <span class="status avail" data-i18n-zh="Available · 数学已上线" data-i18n-en="Available · Mathematics Live" data-i18n-ja="Available · 数学公開中">Available · 数学已上线</span>
             <h2 data-i18n="tools.map.title">MAP 测试+练习</h2>
@@ -83,10 +96,29 @@
             <a class="btn btn-primary" href="https://map.kissho.school" target="_blank" rel="noopener"><span data-i18n="tools.map.btn">开始练习</span> <span class="arrow">→</span></a>
             <p class="map-note"><a href="contact.html" data-i18n-zh="当前采用家庭邀请制，请联系吉祥书院开通账号。" data-i18n-en="Access is currently by family invitation. Contact KISSHO to set up an account." data-i18n-ja="現在はご家庭ごとの招待制です。アカウント開設は KISSHO にお問い合わせください。">当前采用家庭邀请制，请联系吉祥书院开通账号。</a></p>
           </div>
-          <div class="shot map-preview">
-            <a class="frame" href="https://map.kissho.school" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n-zh="打开 MAP 数学练习家长空间" data-i18n-en="Open the MAP Mathematics parent space" data-i18n-ja="MAP 数学練習の保護者画面を開く" aria-label="打开 MAP 数学练习家长空间">
-              <img loading="lazy" decoding="async" src="图片/map-parent-v1-three-clean.jpg" width="1088" height="872" data-i18n-attr="alt" data-i18n-zh="MAP 数学 V1 家长空间：孩子档案、最近学习与成长记录" data-i18n-en="MAP Mathematics V1 parent space with child profiles, recent learning, and learning history" data-i18n-ja="MAP 数学 V1 の保護者画面：子どものプロフィール、最近の学習、学習履歴" alt="MAP 数学 V1 家长空间：孩子档案、最近学习与成长记录" />
-            </a>
+        </div>
+
+        <div class="prod">
+          <div>
+            <span class="status avail" data-i18n-zh="Available · 开放使用" data-i18n-en="Available" data-i18n-ja="Available · 公開中">Available · 开放使用</span>
+            <h2 data-i18n="tools.japanese.title">日文假名练习</h2>
+            <p class="desc" data-i18n="tools.japanese.desc">帮助孩子和家长快速掌握日语平假名与片假名的认读与书写，为在日本的日常生活和学校沟通打下基础。</p>
+            <a class="btn btn-primary" href="https://japanese.sophia.beer/" target="_blank" rel="noopener"><span data-i18n="tools.japanese.btn">开始练习</span> <span class="arrow">→</span></a>
+          </div>
+          <div class="shot">
+            <div class="frame"><img loading="lazy" decoding="async" src="图片/japanese-tool.png" alt="日文假名练习工具截图" /></div>
+          </div>
+        </div>
+
+        <div class="prod">
+          <div class="shot">
+            <div class="frame"><img loading="lazy" decoding="async" src="图片/chinese-tool.png" alt="中文练习工具截图" /></div>
+          </div>
+          <div>
+            <span class="status avail" data-i18n-zh="Available · 开放使用" data-i18n-en="Available" data-i18n-ja="Available · 公開中">Available · 开放使用</span>
+            <h2 data-i18n="tools.chinese.title">中文练习</h2>
+            <p class="desc" data-i18n="tools.chinese.desc">国际学校的孩子容易在英语环境中逐渐弱化中文能力。这套工具帮助孩子在日常学习之余，保持和提升中文读写水平。</p>
+            <a class="btn btn-primary" href="https://chinese.sophia.beer/" target="_blank" rel="noopener"><span data-i18n="tools.chinese.btn">开始练习</span> <span class="arrow">→</span></a>
           </div>
         </div>
 
